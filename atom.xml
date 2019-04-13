@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://berlin520.cn/"/>
+  <link href="http://www.berlin520.cn/"/>
   <updated>2019-04-13T09:35:27.708Z</updated>
-  <id>http://berlin520.cn/</id>
+  <id>http://www.berlin520.cn/</id>
   
   <author>
     <name>小憧憬</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://berlin520.cn/2019/04/13/hello-world/"/>
-    <id>http://berlin520.cn/2019/04/13/hello-world/</id>
+    <link href="http://www.berlin520.cn/2019/04/13/hello-world/"/>
+    <id>http://www.berlin520.cn/2019/04/13/hello-world/</id>
     <published>2019-04-13T10:00:51.049Z</published>
     <updated>2019-04-13T09:35:27.708Z</updated>
     
