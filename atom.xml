@@ -65,6 +65,30 @@
   </entry>
   
   <entry>
+    <title>pyspider加密主窗口</title>
+    <link href="http://zengbolin.github.io/2019/05/09/pyspider%E5%8A%A0%E5%AF%86%E4%B8%BB%E7%AA%97%E5%8F%A3/"/>
+    <id>http://zengbolin.github.io/2019/05/09/pyspider加密主窗口/</id>
+    <published>2019-05-09T12:30:08.000Z</published>
+    <updated>2019-05-09T13:19:33.879Z</updated>
+    
+    <content type="html"><![CDATA[<p>在你使用pyspider的时候，直接登入localhost：5000端口，很容易被别人看到自己的项目，需要加密</p><a id="more"></a><blockquote><p>在你使用pyspider的时候，直接登入localhost：5000端口，很容易被别人看到自己的项目，需要加密</p></blockquote><h5 id="加密方法（弹窗认证）："><a href="#加密方法（弹窗认证）：" class="headerlink" title="加密方法（弹窗认证）："></a>加密方法（弹窗认证）：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">打开终端：cat db.json</span><br><span class="line">修改文件： 加入自己的账号密码：</span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"webui"</span>:&#123;</span><br><span class="line">           <span class="string">"user_name"</span>:<span class="string">"user"</span>,</span><br><span class="line">           <span class="string">"password"</span>:<span class="string">"password"</span>,</span><br><span class="line">           <span class="string">"need-anth"</span>:true</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>问题解决！！</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在你使用pyspider的时候，直接登入localhost：5000端口，很容易被别人看到自己的项目，需要加密&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习合集" scheme="http://zengbolin.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%90%88%E9%9B%86/"/>
+    
+    
+      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
+    
+      <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>pyspider框架爆599证书问题</title>
     <link href="http://zengbolin.github.io/2019/05/09/pyspider%E6%A1%86%E6%9E%B6%E7%88%86599%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98/"/>
     <id>http://zengbolin.github.io/2019/05/09/pyspider框架爆599证书问题/</id>
@@ -76,6 +100,30 @@
     <summary type="html">
     
       &lt;p&gt;真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="错误解决合集" scheme="http://zengbolin.github.io/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%90%88%E9%9B%86/"/>
+    
+    
+      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
+    
+      <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决“RecursionError”的问题</title>
+    <link href="http://zengbolin.github.io/2019/05/09/%E8%A7%A3%E5%86%B3%E2%80%9CRecursionError%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://zengbolin.github.io/2019/05/09/解决“RecursionError”的问题/</id>
+    <published>2019-05-09T12:30:08.000Z</published>
+    <updated>2019-05-09T13:41:48.895Z</updated>
+    
+    <content type="html"><![CDATA[<p>在学习爬虫的时候，在IP代理池使用的情况下，总是爬取到一大半的时候会弹出“RecursionError”的错误。<br><a id="more"></a></p><blockquote><p>在学习爬虫的时候，在IP代理池使用的情况下，总是爬取到一大半的时候会弹出“RecursionError”的错误。经过多番资料查找，原因为：<strong><em>python默认的递归深度是很有限的（默认是1000），因此当递归深度超过999的样子，就会引发这样的一个异常。</em></strong></p></blockquote><h4 id="解决方法：将递归深度调高"><a href="#解决方法：将递归深度调高" class="headerlink" title="解决方法：将递归深度调高"></a>解决方法：将递归深度调高</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.setrecursionlimit(<span class="number">100000</span>) <span class="comment">#你想设置的递归深度（可为任意值）</span></span><br></pre></td></tr></table></figure><p>有时候爆出这个错误，不能单单只用这种方法解决，更应该注重代码的优化。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在学习爬虫的时候，在IP代理池使用的情况下，总是爬取到一大半的时候会弹出“RecursionError”的错误。&lt;br&gt;
     
     </summary>
     
@@ -137,30 +185,6 @@
   </entry>
   
   <entry>
-    <title>pyspider加密主窗口</title>
-    <link href="http://zengbolin.github.io/2019/05/09/pyspider%E5%8A%A0%E5%AF%86%E4%B8%BB%E7%AA%97%E5%8F%A3/"/>
-    <id>http://zengbolin.github.io/2019/05/09/pyspider加密主窗口/</id>
-    <published>2019-05-09T12:30:08.000Z</published>
-    <updated>2019-05-09T13:19:33.879Z</updated>
-    
-    <content type="html"><![CDATA[<p>在你使用pyspider的时候，直接登入localhost：5000端口，很容易被别人看到自己的项目，需要加密</p><a id="more"></a><blockquote><p>在你使用pyspider的时候，直接登入localhost：5000端口，很容易被别人看到自己的项目，需要加密</p></blockquote><h5 id="加密方法（弹窗认证）："><a href="#加密方法（弹窗认证）：" class="headerlink" title="加密方法（弹窗认证）："></a>加密方法（弹窗认证）：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">打开终端：cat db.json</span><br><span class="line">修改文件： 加入自己的账号密码：</span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"webui"</span>:&#123;</span><br><span class="line">           <span class="string">"user_name"</span>:<span class="string">"user"</span>,</span><br><span class="line">           <span class="string">"password"</span>:<span class="string">"password"</span>,</span><br><span class="line">           <span class="string">"need-anth"</span>:true</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>问题解决！！</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在你使用pyspider的时候，直接登入localhost：5000端口，很容易被别人看到自己的项目，需要加密&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="学习合集" scheme="http://zengbolin.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%90%88%E9%9B%86/"/>
-    
-    
-      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
-    
-      <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>有关于ip代理池（python）编码错误的解决办法</title>
     <link href="http://zengbolin.github.io/2019/05/09/%E6%9C%89%E5%85%B3%E4%BA%8Eip%E4%BB%A3%E7%90%86%E6%B1%A0%EF%BC%88python%EF%BC%89%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
     <id>http://zengbolin.github.io/2019/05/09/有关于ip代理池（python）编码错误的解决办法/</id>
@@ -181,78 +205,6 @@
       <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
     
       <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决“RecursionError”的问题</title>
-    <link href="http://zengbolin.github.io/2019/05/09/%E8%A7%A3%E5%86%B3%E2%80%9CRecursionError%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://zengbolin.github.io/2019/05/09/解决“RecursionError”的问题/</id>
-    <published>2019-05-09T12:30:08.000Z</published>
-    <updated>2019-05-09T13:41:48.895Z</updated>
-    
-    <content type="html"><![CDATA[<p>在学习爬虫的时候，在IP代理池使用的情况下，总是爬取到一大半的时候会弹出“RecursionError”的错误。<br><a id="more"></a></p><blockquote><p>在学习爬虫的时候，在IP代理池使用的情况下，总是爬取到一大半的时候会弹出“RecursionError”的错误。经过多番资料查找，原因为：<strong><em>python默认的递归深度是很有限的（默认是1000），因此当递归深度超过999的样子，就会引发这样的一个异常。</em></strong></p></blockquote><h4 id="解决方法：将递归深度调高"><a href="#解决方法：将递归深度调高" class="headerlink" title="解决方法：将递归深度调高"></a>解决方法：将递归深度调高</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.setrecursionlimit(<span class="number">100000</span>) <span class="comment">#你想设置的递归深度（可为任意值）</span></span><br></pre></td></tr></table></figure><p>有时候爆出这个错误，不能单单只用这种方法解决，更应该注重代码的优化。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在学习爬虫的时候，在IP代理池使用的情况下，总是爬取到一大半的时候会弹出“RecursionError”的错误。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="错误解决合集" scheme="http://zengbolin.github.io/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%90%88%E9%9B%86/"/>
-    
-    
-      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
-    
-      <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微博图床请对我好点，谢谢</title>
-    <link href="http://zengbolin.github.io/2019/05/09/%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E8%AF%B7%E5%AF%B9%E6%88%91%E5%A5%BD%E7%82%B9%EF%BC%8C%E8%B0%A2%E8%B0%A2/"/>
-    <id>http://zengbolin.github.io/2019/05/09/微博图床请对我好点，谢谢/</id>
-    <published>2019-05-09T01:30:08.000Z</published>
-    <updated>2019-05-09T13:39:03.616Z</updated>
-    
-    <content type="html"><![CDATA[<p>写Markdown文档或者博客，图床必须少不了！</p><a id="more"></a><h3 id="找一个能用的图床真难"><a href="#找一个能用的图床真难" class="headerlink" title="找一个能用的图床真难"></a>找一个能用的图床真难</h3><blockquote><p>在百度中，图床是<a href="https://baike.baidu.com/item/%E5%9B%BE%E5%BA%8A/10721348?fr=aladdin" target="_blank" rel="noopener">这样解释</a>的：</p></blockquote><blockquote><p>图床一般是指储存图片的服务器，有国内和国外之分。国外的图床由于有空间距离等因素决定访问速度很慢影响图片显示速度。国内也分为单线空间、多线空间和cdn加速三种。通常是指专门用来存放图片，同时允许你把图片对外连接的网上空间，不少图床都是免费的。</p></blockquote><blockquote><p>例如用markdown写的图片都是用链接形式的，<code>图床的用处就显得很重要</code></p></blockquote><h3 id="推荐几个国外图床"><a href="#推荐几个国外图床" class="headerlink" title="推荐几个国外图床"></a>推荐几个国外图床</h3><h4 id="1-美国TripnTale无限免费旅游网络图片相册"><a href="#1-美国TripnTale无限免费旅游网络图片相册" class="headerlink" title="1.美国TripnTale无限免费旅游网络图片相册"></a><strong>1.美国TripnTale无限免费旅游网络图片相册</strong></h4><blockquote><p>美国TripnTale是一个免费旅游图片存储空间，提供无限量的存储空间，但有个要求是你上传的图片必须和旅游相关的。支持上传jpeg、gif、bmp、png格式图片，单个图片最大为6M，图片可以从flickr、picasa等中直接导入，然后给上传的图片进行注释，在地图上进行标注，最后发布即可。另外，还支持视频文件上传存储，单个视频最大为100M，上传速度还可以，图片能支持外链，后台能对图片进行管理，还能写日记，很适合旅游爱好者。</p></blockquote><blockquote><p>网址：<strong><code>www.tripntale.com</code></strong></p></blockquote><blockquote><p>ps：小编没有用过，毕竟服务器在外国，可能速度不如意，而且上传的图片还有要求。不过无限空间还是很良心</p></blockquote><h4 id="2-瑞士overpic-net免费无限网络相册"><a href="#2-瑞士overpic-net免费无限网络相册" class="headerlink" title="2.瑞士overpic.net免费无限网络相册"></a><strong>2.瑞士overpic.net免费无限网络相册</strong></h4><blockquote><p>瑞士overpic提供免费的无限网络相册，无需注册就能上传，能支持外部链接，同时能上传10张图片，单个上传图片的大小限制为10M，支持的图片格式为：JPEG、JPG、BMP、PNG、GIF。可设置保存时间（一天、一周、一个月、三个月、六个月、永久）</p></blockquote><blockquote><p>网址：<strong><code>www.overpic.net</code></strong></p></blockquote><blockquote><p>ps：不需要注册，没有限制，没有保存时间限制。比国内某些图床良心多了</p></blockquote><h5 id="在这里我必须要推荐使用国内的图床，优缺点也是很明显"><a href="#在这里我必须要推荐使用国内的图床，优缺点也是很明显" class="headerlink" title="在这里我必须要推荐使用国内的图床，优缺点也是很明显"></a>在这里我必须要推荐使用国内的图床，优缺点也是很明显</h5><ul><li>国内的服务器足够稳定</li><li>国内图片上传速度、质量等都要好</li><li>在中国，国内图床更贴近我们的感受（最主要，我们看外国网站都要科学上网…）</li><li>国内图床当然也有耍流氓行为，收费不合理，每天限制上传图片大小或者数量…</li></ul><hr><h4 id="推荐几个国内图床"><a href="#推荐几个国内图床" class="headerlink" title="推荐几个国内图床"></a>推荐几个国内图床</h4><h5 id="1-七牛云存储"><a href="#1-七牛云存储" class="headerlink" title="1.七牛云存储"></a><strong>1.七牛云存储</strong></h5><blockquote><p>七牛作为国内领先的云服务商，全网 CDN 加速，全国访问速度都不错，API 很详细，对开发者比较友好。免费用户提供 10GB 存储空间，国内和海外分别提供 10 GB 的 HTTP 免费流量，七牛的 HTTPS 流量是收费的，没有免费额度。此外，七牛还提供了针对图片的各种服务，包括图片裁剪，压缩，鉴黄等等衍生服务。如果你觉得图片尺寸太大，可以在外链后面添加参数，访问的时候七牛会自动根据你的参数对图片进行处理。图片可以备份到本地，可删可改，对站长来说这点比较好。</p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/11019384-ec1bea18e06a2e32.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="七牛云图床"></p><blockquote><p>七牛免费 10GB 存储空间申请链接：<a href="https://portal.qiniu.com/signup/choice?code=3lia9uiard2s2" target="_blank" rel="noopener">点击申请</a></p></blockquote><blockquote><p>ps:如果你觉得10GB足够用的话，可以尝试一下七牛云。毕竟七牛云在国内也是数一数二的</p></blockquote><h5 id="2-微博图床"><a href="#2-微博图床" class="headerlink" title="2.微博图床"></a><strong>2.微博图床</strong></h5><blockquote><p>由于微博本身就是面向公众提供服务，每个人发微博基本都得带上几张图片，以微博的体量，每天的新增图片数也不是个小数字。但是微博对于图片上传服务也没有接口说明文档，上传的接口还是在开发者们从微博产品里找出来的，可能微博只希望上传的图片仅仅用于微博产品本身吧。</p></blockquote><blockquote><p>微博图床的特点是免费，没有容量限制，全网 CDN 加速，支持 HTTPS，到哪里都很快。但是免费的服务也有不足的地方，上传的图片会被转成 jpg，图片中可能加上了肉眼难以识别的水印，另外微博的图片鉴别服务也可能会随时删除你的图片。</p></blockquote><blockquote><p>对于学生党的我，微博图床就很适宜了。不仅由免费的容量，还有支持HTTP，小编现在也是用着微博图床，美滋滋的。</p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/11019384-fa26e61adf9b26d7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="借极简图床访问微博图床"></p><p><code>其他的图床也有其特点和优点，我就不一一介绍了，这四款足够你使用了。那小编接下来着重介绍如何使用微博图床吧（我自己在使用）</code></p><hr><h3 id="介绍微博图床的使用"><a href="#介绍微博图床的使用" class="headerlink" title="介绍微博图床的使用"></a>介绍微博图床的使用</h3><ul><li>所用到的工具：谷歌浏览器、微博账号</li><li>步骤：</li></ul><ol><li>注册一个微博的小号，记住是小号！不登录的，只用来储存图片的，也不要在小号里发布什么图片之类的，避免搞乱图床。要记得去微博网页版登陆你的账号（今天就是没有先登陆账号，然后一直提示无法使用，也重启浏览器无数次，满满都是泪啊）</li><li>打开谷歌浏览器，打开<a href="https://jiantuku.com" target="_blank" rel="noopener">极简图床</a>网页（或者<a href="https://jiantuku.com" target="_blank" rel="noopener">点击链接</a>），然后可以去注册一个账号（虽然没什么用）。<br><img src="http://upload-images.jianshu.io/upload_images/11019384-bcde7e5b1ddee54f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></li><li>选择微博图床，然后它会提醒安装谷歌插件，然后按步骤下载插件（<a href="http://oh8ltug8l.bkt.clouddn.com/jiantuku-2.22.0.crx" target="_blank" rel="noopener">链接</a>）。</li><li>注：因为插件不是谷歌商店版，不能直接安装（甚至不能直接拖拽安装）。具体如何安装可以参考：<code>https://jingyan.baidu.com/article/5552ef479b1e53518ffbc928.html</code>。当然我这里也会讲的：</li></ol><ul><li><ul><li>把下载后的<code>.crx</code>扩展名的离线Chrome插件的文件扩展名改成<code>.zip</code>或者<code>.rar</code>（如何查看Chrome插件的扩展名？<code>文件夹&gt;工具&gt;文件夹&gt;查看&gt;隐藏已知文件类型的扩展名</code>），如图所示：<br><img src="http://upload-images.jianshu.io/upload_images/11019384-c7b1a5dcdb1fb4ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="改文件后缀"></li></ul></li><li><ul><li>右键点击该文件，并使用压缩软件（如winrar、好压、360压缩等）对该压缩文件进行<code>解压</code>，并保存到系统的一个任意文件夹下，如图所示：<br><img src="http://upload-images.jianshu.io/upload_images/11019384-df411fff27f0dee9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解压文件"></li></ul></li><li><ul><li>解压成功以后，该Chrome插件就会以文件夹的形式存在于操作系统的某一个目录下面，如图所示：<br><img src="http://upload-images.jianshu.io/upload_images/11019384-c8b241edb96d25a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="找到文件"></li></ul></li><li><ul><li>在Chrome的地址栏中输入：<code>chrome://extensions/</code> 打开Chrome浏览器的扩展程序管理界面，并在该界面的右上方的<code>开发者模式</code>按钮上打勾，如图所示：<br><img src="http://upload-images.jianshu.io/upload_images/11019384-1eb48c4ab3e2da44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打勾“开发者模式”"></li></ul></li><li><ul><li>在勾选<code>开发者模式</code>选项以后，在该页面就会出现加载正在开发的扩展程序等按钮，点击<code>“加载正在开发的扩展程序”</code>按钮，并选择刚刚解压的Chrome插件文件夹的位置，然后就成功了。如图所示：<br><img src="http://upload-images.jianshu.io/upload_images/11019384-ae6255913c87b6a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="选择你的插件"></li></ul></li><li>这部分内容参照：<code>http://www.cnplugins.com/zhuanti/how-to-make-crx-install.html</code><br>5.安装完<code>极简图床插件</code>那就可以为所欲为上传图片了。<br><img src="http://upload-images.jianshu.io/upload_images/11019384-adc5e01e7dc3517d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="为所欲为"></li></ul><hr><p><code>以后有机会再更新了，有什么问题可以来问我哦</code></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;写Markdown文档或者博客，图床必须少不了！&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="私人干货" scheme="http://zengbolin.github.io/categories/%E7%A7%81%E4%BA%BA%E5%B9%B2%E8%B4%A7/"/>
-    
-    
-      <category term="Markdown" scheme="http://zengbolin.github.io/tags/Markdown/"/>
-    
-      <category term="图床" scheme="http://zengbolin.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>百度网盘小神器，你值得拥有！</title>
-    <link href="http://zengbolin.github.io/2019/05/09/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%B0%8F%E7%A5%9E%E5%99%A8%EF%BC%8C%E4%BD%A0%E5%80%BC%E5%BE%97%E6%8B%A5%E6%9C%89!/"/>
-    <id>http://zengbolin.github.io/2019/05/09/百度网盘小神器，你值得拥有!/</id>
-    <published>2019-05-09T01:30:08.000Z</published>
-    <updated>2019-05-09T13:43:26.496Z</updated>
-    
-    <content type="html"><![CDATA[<p>我们来介绍几款不会封号的百度网盘小神器</p><a id="more"></a><h3 id="我们来介绍几款不会封号的百度网盘小神器"><a href="#我们来介绍几款不会封号的百度网盘小神器" class="headerlink" title="我们来介绍几款不会封号的百度网盘小神器"></a>我们来介绍几款不会封号的百度网盘小神器</h3><blockquote><p>可能，现在在中国吧，最好用的网盘之一就是百度网盘，但是呢，百度网盘却以它那昂贵的会员费出名，而且限速贼厉害。明明在我家里宽带可以达到10M/s，但是在百度云里面，它把你限速到100k/s，我真的是服。因此，我在这里向大家推荐几个百度网盘小神器，愿能助君一把。</p></blockquote><h4 id="PanDownload"><a href="#PanDownload" class="headerlink" title="PanDownload"></a><strong>PanDownload</strong></h4><ol><li>它没有封号风险，因为你压根都可以不登录你自己的百度账号。</li><li>直接使用分享链接下载，就很方便</li><li>当然你还可以登录你自己的百度账号下载网盘的东西。</li></ol><blockquote><p>链接奉上:<strong><code>http://pandownload.com/</code></strong></p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/11019384-fef66c8f19322216.jpg?imageMogr2/auto-orient/strip" alt="pandownload操作"></p><h4 id="速盘"><a href="#速盘" class="headerlink" title="速盘"></a><strong>速盘</strong></h4><ol><li>免下载，免登陆，和第一款软件相似</li><li>自带搜索资源功能，具体功能自己实现吧</li></ol><blockquote><p>链接奉上：<strong><code>https://www.speedpan.com/</code></strong></p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/11019384-b7a8f498d124a45f.jpg?imageMogr2/auto-orient/strip" alt="速盘操作"></p><h4 id="proxyee-Dowm"><a href="#proxyee-Dowm" class="headerlink" title="proxyee-Dowm"></a><strong>proxyee-Dowm</strong></h4><ol><li>它是一个谷歌浏览器的插件，非常好用</li><li>可以在线解压文件</li></ol><blockquote><p>链接奉上：<strong><code>https://github.com/proxyee-down-org/proxyee-down</code></strong></p></blockquote><p><strong>安装步骤</strong></p><ul><li>先点击安装</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-b39350732200ea17.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="proxyee-Dowm"></p><ul><li>再点击“是”，用来安装证书</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-27bda737e590e3a7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="要点击“是”"></p><ul><li>点击安装，再点击左上角的全局代理</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-8b6efd7c621c2a9d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="安装"></p><p><img src="http://upload-images.jianshu.io/upload_images/11019384-0e850df7af37f790.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="全局代理"></p><ul><li>在打开上述全局代理之后，随便打开一个百度云链接，都会多出现一个【pd下载】，直接点击直链下载即可。会满速下载的哦</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-23706c3dd136ed14.jpg?imageMogr2/auto-orient/strip" alt="满速下载哦"></p><hr><p><code>本文的三款百度网盘神器，小编体验良好，可以摆脱百度网盘超级会员了。</code>本文所用的部分图片源于公众号“资源库爱分享”，有侵权请联系我删除。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我们来介绍几款不会封号的百度网盘小神器&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="私人干货" scheme="http://zengbolin.github.io/categories/%E7%A7%81%E4%BA%BA%E5%B9%B2%E8%B4%A7/"/>
-    
-    
-      <category term="下载" scheme="http://zengbolin.github.io/tags/%E4%B8%8B%E8%BD%BD/"/>
-    
-      <category term="软件" scheme="http://zengbolin.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
@@ -281,6 +233,30 @@
   </entry>
   
   <entry>
+    <title>百度网盘小神器，你值得拥有！</title>
+    <link href="http://zengbolin.github.io/2019/05/09/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%B0%8F%E7%A5%9E%E5%99%A8%EF%BC%8C%E4%BD%A0%E5%80%BC%E5%BE%97%E6%8B%A5%E6%9C%89!/"/>
+    <id>http://zengbolin.github.io/2019/05/09/百度网盘小神器，你值得拥有!/</id>
+    <published>2019-05-09T01:30:08.000Z</published>
+    <updated>2019-05-09T13:43:26.496Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们来介绍几款不会封号的百度网盘小神器</p><a id="more"></a><h3 id="我们来介绍几款不会封号的百度网盘小神器"><a href="#我们来介绍几款不会封号的百度网盘小神器" class="headerlink" title="我们来介绍几款不会封号的百度网盘小神器"></a>我们来介绍几款不会封号的百度网盘小神器</h3><blockquote><p>可能，现在在中国吧，最好用的网盘之一就是百度网盘，但是呢，百度网盘却以它那昂贵的会员费出名，而且限速贼厉害。明明在我家里宽带可以达到10M/s，但是在百度云里面，它把你限速到100k/s，我真的是服。因此，我在这里向大家推荐几个百度网盘小神器，愿能助君一把。</p></blockquote><h4 id="PanDownload"><a href="#PanDownload" class="headerlink" title="PanDownload"></a><strong>PanDownload</strong></h4><ol><li>它没有封号风险，因为你压根都可以不登录你自己的百度账号。</li><li>直接使用分享链接下载，就很方便</li><li>当然你还可以登录你自己的百度账号下载网盘的东西。</li></ol><blockquote><p>链接奉上:<strong><code>http://pandownload.com/</code></strong></p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/11019384-fef66c8f19322216.jpg?imageMogr2/auto-orient/strip" alt="pandownload操作"></p><h4 id="速盘"><a href="#速盘" class="headerlink" title="速盘"></a><strong>速盘</strong></h4><ol><li>免下载，免登陆，和第一款软件相似</li><li>自带搜索资源功能，具体功能自己实现吧</li></ol><blockquote><p>链接奉上：<strong><code>https://www.speedpan.com/</code></strong></p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/11019384-b7a8f498d124a45f.jpg?imageMogr2/auto-orient/strip" alt="速盘操作"></p><h4 id="proxyee-Dowm"><a href="#proxyee-Dowm" class="headerlink" title="proxyee-Dowm"></a><strong>proxyee-Dowm</strong></h4><ol><li>它是一个谷歌浏览器的插件，非常好用</li><li>可以在线解压文件</li></ol><blockquote><p>链接奉上：<strong><code>https://github.com/proxyee-down-org/proxyee-down</code></strong></p></blockquote><p><strong>安装步骤</strong></p><ul><li>先点击安装</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-b39350732200ea17.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="proxyee-Dowm"></p><ul><li>再点击“是”，用来安装证书</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-27bda737e590e3a7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="要点击“是”"></p><ul><li>点击安装，再点击左上角的全局代理</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-8b6efd7c621c2a9d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="安装"></p><p><img src="http://upload-images.jianshu.io/upload_images/11019384-0e850df7af37f790.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="全局代理"></p><ul><li>在打开上述全局代理之后，随便打开一个百度云链接，都会多出现一个【pd下载】，直接点击直链下载即可。会满速下载的哦</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-23706c3dd136ed14.jpg?imageMogr2/auto-orient/strip" alt="满速下载哦"></p><hr><p><code>本文的三款百度网盘神器，小编体验良好，可以摆脱百度网盘超级会员了。</code>本文所用的部分图片源于公众号“资源库爱分享”，有侵权请联系我删除。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;我们来介绍几款不会封号的百度网盘小神器&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="私人干货" scheme="http://zengbolin.github.io/categories/%E7%A7%81%E4%BA%BA%E5%B9%B2%E8%B4%A7/"/>
+    
+    
+      <category term="下载" scheme="http://zengbolin.github.io/tags/%E4%B8%8B%E8%BD%BD/"/>
+    
+      <category term="软件" scheme="http://zengbolin.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>利用Aria2+Oneindex等脚本搭建自动上传onedrive离线下载在线播放私人网盘</title>
     <link href="http://zengbolin.github.io/2019/05/09/%E5%88%A9%E7%94%A8Aria2+Oneindex%E7%AD%89%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0onedrive%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E5%9C%A8%E7%BA%BF%E6%92%AD%E6%94%BE%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98/"/>
     <id>http://zengbolin.github.io/2019/05/09/利用Aria2+Oneindex等脚本搭建自动上传onedrive离线下载在线播放私人网盘/</id>
@@ -301,6 +277,30 @@
       <category term="网站搭建" scheme="http://zengbolin.github.io/tags/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
     
       <category term="私有网盘" scheme="http://zengbolin.github.io/tags/%E7%A7%81%E6%9C%89%E7%BD%91%E7%9B%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微博图床请对我好点，谢谢</title>
+    <link href="http://zengbolin.github.io/2019/05/09/%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E8%AF%B7%E5%AF%B9%E6%88%91%E5%A5%BD%E7%82%B9%EF%BC%8C%E8%B0%A2%E8%B0%A2/"/>
+    <id>http://zengbolin.github.io/2019/05/09/微博图床请对我好点，谢谢/</id>
+    <published>2019-05-09T01:30:08.000Z</published>
+    <updated>2019-05-09T13:39:03.616Z</updated>
+    
+    <content type="html"><![CDATA[<p>写Markdown文档或者博客，图床必须少不了！</p><a id="more"></a><h3 id="找一个能用的图床真难"><a href="#找一个能用的图床真难" class="headerlink" title="找一个能用的图床真难"></a>找一个能用的图床真难</h3><blockquote><p>在百度中，图床是<a href="https://baike.baidu.com/item/%E5%9B%BE%E5%BA%8A/10721348?fr=aladdin" target="_blank" rel="noopener">这样解释</a>的：</p></blockquote><blockquote><p>图床一般是指储存图片的服务器，有国内和国外之分。国外的图床由于有空间距离等因素决定访问速度很慢影响图片显示速度。国内也分为单线空间、多线空间和cdn加速三种。通常是指专门用来存放图片，同时允许你把图片对外连接的网上空间，不少图床都是免费的。</p></blockquote><blockquote><p>例如用markdown写的图片都是用链接形式的，<code>图床的用处就显得很重要</code></p></blockquote><h3 id="推荐几个国外图床"><a href="#推荐几个国外图床" class="headerlink" title="推荐几个国外图床"></a>推荐几个国外图床</h3><h4 id="1-美国TripnTale无限免费旅游网络图片相册"><a href="#1-美国TripnTale无限免费旅游网络图片相册" class="headerlink" title="1.美国TripnTale无限免费旅游网络图片相册"></a><strong>1.美国TripnTale无限免费旅游网络图片相册</strong></h4><blockquote><p>美国TripnTale是一个免费旅游图片存储空间，提供无限量的存储空间，但有个要求是你上传的图片必须和旅游相关的。支持上传jpeg、gif、bmp、png格式图片，单个图片最大为6M，图片可以从flickr、picasa等中直接导入，然后给上传的图片进行注释，在地图上进行标注，最后发布即可。另外，还支持视频文件上传存储，单个视频最大为100M，上传速度还可以，图片能支持外链，后台能对图片进行管理，还能写日记，很适合旅游爱好者。</p></blockquote><blockquote><p>网址：<strong><code>www.tripntale.com</code></strong></p></blockquote><blockquote><p>ps：小编没有用过，毕竟服务器在外国，可能速度不如意，而且上传的图片还有要求。不过无限空间还是很良心</p></blockquote><h4 id="2-瑞士overpic-net免费无限网络相册"><a href="#2-瑞士overpic-net免费无限网络相册" class="headerlink" title="2.瑞士overpic.net免费无限网络相册"></a><strong>2.瑞士overpic.net免费无限网络相册</strong></h4><blockquote><p>瑞士overpic提供免费的无限网络相册，无需注册就能上传，能支持外部链接，同时能上传10张图片，单个上传图片的大小限制为10M，支持的图片格式为：JPEG、JPG、BMP、PNG、GIF。可设置保存时间（一天、一周、一个月、三个月、六个月、永久）</p></blockquote><blockquote><p>网址：<strong><code>www.overpic.net</code></strong></p></blockquote><blockquote><p>ps：不需要注册，没有限制，没有保存时间限制。比国内某些图床良心多了</p></blockquote><h5 id="在这里我必须要推荐使用国内的图床，优缺点也是很明显"><a href="#在这里我必须要推荐使用国内的图床，优缺点也是很明显" class="headerlink" title="在这里我必须要推荐使用国内的图床，优缺点也是很明显"></a>在这里我必须要推荐使用国内的图床，优缺点也是很明显</h5><ul><li>国内的服务器足够稳定</li><li>国内图片上传速度、质量等都要好</li><li>在中国，国内图床更贴近我们的感受（最主要，我们看外国网站都要科学上网…）</li><li>国内图床当然也有耍流氓行为，收费不合理，每天限制上传图片大小或者数量…</li></ul><hr><h4 id="推荐几个国内图床"><a href="#推荐几个国内图床" class="headerlink" title="推荐几个国内图床"></a>推荐几个国内图床</h4><h5 id="1-七牛云存储"><a href="#1-七牛云存储" class="headerlink" title="1.七牛云存储"></a><strong>1.七牛云存储</strong></h5><blockquote><p>七牛作为国内领先的云服务商，全网 CDN 加速，全国访问速度都不错，API 很详细，对开发者比较友好。免费用户提供 10GB 存储空间，国内和海外分别提供 10 GB 的 HTTP 免费流量，七牛的 HTTPS 流量是收费的，没有免费额度。此外，七牛还提供了针对图片的各种服务，包括图片裁剪，压缩，鉴黄等等衍生服务。如果你觉得图片尺寸太大，可以在外链后面添加参数，访问的时候七牛会自动根据你的参数对图片进行处理。图片可以备份到本地，可删可改，对站长来说这点比较好。</p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/11019384-ec1bea18e06a2e32.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="七牛云图床"></p><blockquote><p>七牛免费 10GB 存储空间申请链接：<a href="https://portal.qiniu.com/signup/choice?code=3lia9uiard2s2" target="_blank" rel="noopener">点击申请</a></p></blockquote><blockquote><p>ps:如果你觉得10GB足够用的话，可以尝试一下七牛云。毕竟七牛云在国内也是数一数二的</p></blockquote><h5 id="2-微博图床"><a href="#2-微博图床" class="headerlink" title="2.微博图床"></a><strong>2.微博图床</strong></h5><blockquote><p>由于微博本身就是面向公众提供服务，每个人发微博基本都得带上几张图片，以微博的体量，每天的新增图片数也不是个小数字。但是微博对于图片上传服务也没有接口说明文档，上传的接口还是在开发者们从微博产品里找出来的，可能微博只希望上传的图片仅仅用于微博产品本身吧。</p></blockquote><blockquote><p>微博图床的特点是免费，没有容量限制，全网 CDN 加速，支持 HTTPS，到哪里都很快。但是免费的服务也有不足的地方，上传的图片会被转成 jpg，图片中可能加上了肉眼难以识别的水印，另外微博的图片鉴别服务也可能会随时删除你的图片。</p></blockquote><blockquote><p>对于学生党的我，微博图床就很适宜了。不仅由免费的容量，还有支持HTTP，小编现在也是用着微博图床，美滋滋的。</p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/11019384-fa26e61adf9b26d7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="借极简图床访问微博图床"></p><p><code>其他的图床也有其特点和优点，我就不一一介绍了，这四款足够你使用了。那小编接下来着重介绍如何使用微博图床吧（我自己在使用）</code></p><hr><h3 id="介绍微博图床的使用"><a href="#介绍微博图床的使用" class="headerlink" title="介绍微博图床的使用"></a>介绍微博图床的使用</h3><ul><li>所用到的工具：谷歌浏览器、微博账号</li><li>步骤：</li></ul><ol><li>注册一个微博的小号，记住是小号！不登录的，只用来储存图片的，也不要在小号里发布什么图片之类的，避免搞乱图床。要记得去微博网页版登陆你的账号（今天就是没有先登陆账号，然后一直提示无法使用，也重启浏览器无数次，满满都是泪啊）</li><li>打开谷歌浏览器，打开<a href="https://jiantuku.com" target="_blank" rel="noopener">极简图床</a>网页（或者<a href="https://jiantuku.com" target="_blank" rel="noopener">点击链接</a>），然后可以去注册一个账号（虽然没什么用）。<br><img src="http://upload-images.jianshu.io/upload_images/11019384-bcde7e5b1ddee54f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></li><li>选择微博图床，然后它会提醒安装谷歌插件，然后按步骤下载插件（<a href="http://oh8ltug8l.bkt.clouddn.com/jiantuku-2.22.0.crx" target="_blank" rel="noopener">链接</a>）。</li><li>注：因为插件不是谷歌商店版，不能直接安装（甚至不能直接拖拽安装）。具体如何安装可以参考：<code>https://jingyan.baidu.com/article/5552ef479b1e53518ffbc928.html</code>。当然我这里也会讲的：</li></ol><ul><li><ul><li>把下载后的<code>.crx</code>扩展名的离线Chrome插件的文件扩展名改成<code>.zip</code>或者<code>.rar</code>（如何查看Chrome插件的扩展名？<code>文件夹&gt;工具&gt;文件夹&gt;查看&gt;隐藏已知文件类型的扩展名</code>），如图所示：<br><img src="http://upload-images.jianshu.io/upload_images/11019384-c7b1a5dcdb1fb4ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="改文件后缀"></li></ul></li><li><ul><li>右键点击该文件，并使用压缩软件（如winrar、好压、360压缩等）对该压缩文件进行<code>解压</code>，并保存到系统的一个任意文件夹下，如图所示：<br><img src="http://upload-images.jianshu.io/upload_images/11019384-df411fff27f0dee9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解压文件"></li></ul></li><li><ul><li>解压成功以后，该Chrome插件就会以文件夹的形式存在于操作系统的某一个目录下面，如图所示：<br><img src="http://upload-images.jianshu.io/upload_images/11019384-c8b241edb96d25a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="找到文件"></li></ul></li><li><ul><li>在Chrome的地址栏中输入：<code>chrome://extensions/</code> 打开Chrome浏览器的扩展程序管理界面，并在该界面的右上方的<code>开发者模式</code>按钮上打勾，如图所示：<br><img src="http://upload-images.jianshu.io/upload_images/11019384-1eb48c4ab3e2da44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打勾“开发者模式”"></li></ul></li><li><ul><li>在勾选<code>开发者模式</code>选项以后，在该页面就会出现加载正在开发的扩展程序等按钮，点击<code>“加载正在开发的扩展程序”</code>按钮，并选择刚刚解压的Chrome插件文件夹的位置，然后就成功了。如图所示：<br><img src="http://upload-images.jianshu.io/upload_images/11019384-ae6255913c87b6a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="选择你的插件"></li></ul></li><li>这部分内容参照：<code>http://www.cnplugins.com/zhuanti/how-to-make-crx-install.html</code><br>5.安装完<code>极简图床插件</code>那就可以为所欲为上传图片了。<br><img src="http://upload-images.jianshu.io/upload_images/11019384-adc5e01e7dc3517d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="为所欲为"></li></ul><hr><p><code>以后有机会再更新了，有什么问题可以来问我哦</code></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;写Markdown文档或者博客，图床必须少不了！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="私人干货" scheme="http://zengbolin.github.io/categories/%E7%A7%81%E4%BA%BA%E5%B9%B2%E8%B4%A7/"/>
+    
+    
+      <category term="Markdown" scheme="http://zengbolin.github.io/tags/Markdown/"/>
+    
+      <category term="图床" scheme="http://zengbolin.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
