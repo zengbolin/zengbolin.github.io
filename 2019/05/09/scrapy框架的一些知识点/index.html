@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="小憧憬个人博客">
 <meta property="og:description" content="scrapy框架的一些小知识点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-09T13:17:52.126Z">
+<meta property="og:updated_time" content="2019-05-09T13:40:42.022Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="scrapy框架的一些小知识点">
 <meta name="twitter:description" content="scrapy框架的一些小知识点">
@@ -460,7 +460,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  290
+                  300
                 </span>
               
 
@@ -503,26 +503,26 @@
 <p> 最近开始学习scrapy框架,摘抄一些知识点</p>
 </blockquote>
 <ul>
-<li><p>创建项目：<figure class="highlight plain"><figcaption><span>startproject testproject```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 进入项目：```cd testproject</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p>生成spider: <figure class="highlight plain"><figcaption><span>genspider baidu www.baidu.com```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 了解各类模板:```scrapy genspider -l</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p>指定模板:<figure class="highlight plain"><figcaption><span>genspider -t crawl zhihu www.zhihu.com```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* crawl :运行spider的方法，可以指定运行的spider的名称 :```scrapy crawl zhihu.py</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>check:用来检查代码是否有错误:<figure class="highlight plain"><figcaption><span>check zhihu.py```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* scrapy list:返回项目中所有的名称 </span><br><span class="line">* scrapy edit :在命令行下编辑 </span><br><span class="line">* fetch:返回网页源代码，等同于response:```scrapy fetch http://www.baidu.com</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p>去掉日志：得到headers:<figure class="highlight plain"><figcaption><span>fetch --nolog --headers</span><a href="http://www.baidu.com```" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 禁止重定向：–no redicrect:```scrapy fetch --no-direct http://www.baidu.com</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p>view:将网页以文件的形式保存下来，然后去打开，可以在自动测试中应用:<figure class="highlight plain"><figcaption><span>view</span><a href="http://www.baidu.com```" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* shell：命令行模式的交互,并且返回一些可用的变量:```scrapy shell http://www.baidu.com</span><br></pre></td></tr></table></figure></p>
-</li>
+<li>创建项目：<code>scrapy startproject testproject</code></li>
+<li>进入项目：<code>cd testproject</code></li>
+<li>生成spider: <code>scrapy genspider baidu www.baidu.com</code></li>
+<li>了解各类模板:<code>scrapy genspider -l</code></li>
+<li>指定模板:<code>scrapy genspider -t crawl zhihu www.zhihu.com</code></li>
+<li>crawl :运行spider的方法，可以指定运行的spider的名称 :<code>scrapy crawl zhihu.py</code><ul>
+<li>check:用来检查代码是否有错误:<code>scrapy check zhihu.py</code></li>
+<li>scrapy list:返回项目中所有的名称 </li>
+<li>scrapy edit :在命令行下编辑 </li>
+<li>fetch:返回网页源代码，等同于response:<code>scrapy fetch http://www.baidu.com</code></li>
+<li>去掉日志：得到headers:<code>scrapy fetch --nolog --headers http://www.baidu.com</code></li>
+<li>禁止重定向：–no redicrect:<code>scrapy fetch --no-direct http://www.baidu.com</code></li>
+<li>view:将网页以文件的形式保存下来，然后去打开，可以在自动测试中应用:<code>scrapy view http://www.baidu.com</code></li>
 </ul>
 </li>
-<li><p>parse: 传入一些参数，查看返回的结果，相当于格式化输出 </p>
-</li>
-<li><p>seetings:获取当前的配置信息:<figure class="highlight plain"><figcaption><span>settings -h```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* runspider:运行spider:```scrapy runspider  baidu.py</span><br></pre></td></tr></table></figure></p>
-</li>
-<li><p>version:输出scrapy的版本:<code>scrapy version -v</code></p>
-</li>
+<li>shell：命令行模式的交互,并且返回一些可用的变量:<code>scrapy shell http://www.baidu.com</code></li>
+<li>parse: 传入一些参数，查看返回的结果，相当于格式化输出 </li>
+<li>seetings:获取当前的配置信息:<code>scrapy settings -h</code></li>
+<li>runspider:运行spider:<code>scrapy runspider  baidu.py</code></li>
+<li>version:输出scrapy的版本:<code>scrapy version -v</code></li>
 <li>bench：测试当前爬虫的速度</li>
 </ul>
 
@@ -640,6 +640,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/09/pyspider框架爆599证书问题/" rel="prev" title="pyspider框架爆599证书问题">
+                pyspider框架爆599证书问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -888,7 +892,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.4k个字</span>
+    <span title="Site words total count">6.2k个字</span>
   
 </div>
 <!--

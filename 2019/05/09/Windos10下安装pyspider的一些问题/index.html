@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="小憧憬个人博客">
 <meta property="og:description" content="最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-09T13:23:28.206Z">
+<meta property="og:updated_time" content="2019-05-09T13:41:17.959Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windos10下安装pyspider的一些问题">
 <meta name="twitter:description" content="最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候……">
@@ -460,7 +460,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  216
+                  212
                 </span>
               
 
@@ -500,11 +500,13 @@
         <p>最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候……</p>
 <a id="more"></a>
 <blockquote>
-<p>最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候<figure class="highlight plain"><figcaption><span>install pyspider```，报错了，Error为：```Please specify --curl-dir</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 解决方法：安装pycurl，之后再用pip进行安装</span><br><span class="line">***安装pycurl方法：***</span><br><span class="line">打开链接：[“python库安装下载”](https://www.lfd.uci.edu/~gohlke/pythonlibs/)，找到自己安装python的版本进行安装。例如，我的python版本是python3.7.1，64位电脑就下载：pycurl-7.43.1-cp37-cp37m-win_amd64（cp代表你的python版本）</span><br><span class="line">##### 安装方法：</span><br><span class="line">&gt; windows下：打开cmd，然后将下载pycurl的位置copy一下，```cd 位置```，将pycurl名字复制一下，```pip install 名字</span><br></pre></td></tr></table></figure></p>
+<p>最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候<code>pip install pyspider</code>，报错了，Error为：<code>Please specify --curl-dir=/path/to/built/libcurl</code></p>
 </blockquote>
-<blockquote>
-<p>linux和mac下：直接进入文件位置，然后<figure class="highlight plain"><figcaption><span>install 名字```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 接下来：</span><br><span class="line">直接```pip install pyspider</span><br></pre></td></tr></table></figure></p>
+<h4 id="解决方法：安装pycurl，之后再用pip进行安装"><a href="#解决方法：安装pycurl，之后再用pip进行安装" class="headerlink" title="解决方法：安装pycurl，之后再用pip进行安装"></a>解决方法：安装pycurl，之后再用pip进行安装</h4><p><strong><em>安装pycurl方法：</em></strong><br>打开链接：<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank" rel="noopener">“python库安装下载”</a>，找到自己安装python的版本进行安装。例如，我的python版本是python3.7.1，64位电脑就下载：pycurl-7.43.1-cp37-cp37m-win_amd64（cp代表你的python版本）</p>
+<h5 id="安装方法："><a href="#安装方法：" class="headerlink" title="安装方法："></a>安装方法：</h5><blockquote>
+<p>windows下：打开cmd，然后将下载pycurl的位置copy一下，<code>cd 位置</code>，将pycurl名字复制一下，<code>pip install 名字</code><br>linux和mac下：直接进入文件位置，然后<code>pip install 名字</code></p>
 </blockquote>
+<h4 id="接下来："><a href="#接下来：" class="headerlink" title="接下来："></a>接下来：</h4><p>直接<code>pip install pyspider</code></p>
 <p>问题解决！！！</p>
 
       
@@ -612,8 +614,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/09/解决“RecursionError”的问题/" rel="next" title="解决“RecursionError”的问题">
-                <i class="fa fa-chevron-left"></i> 解决“RecursionError”的问题
+              <a href="/2019/05/09/pyspider加密主窗口/" rel="next" title="pyspider加密主窗口">
+                <i class="fa fa-chevron-left"></i> pyspider加密主窗口
               </a>
             
           </div>
@@ -621,10 +623,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/09/python3.7不兼容pyspider/" rel="prev" title="python3.7不兼容pyspider">
-                python3.7不兼容pyspider <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -705,8 +703,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -842,6 +849,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#解决方法：安装pycurl，之后再用pip进行安装"><span class="nav-number">1.</span> <span class="nav-text">解决方法：安装pycurl，之后再用pip进行安装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#安装方法："><span class="nav-number">1.1.</span> <span class="nav-text">安装方法：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接下来："><span class="nav-number">2.</span> <span class="nav-text">接下来：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="110" src="//music.163.com/outchain/player?type=0&id=2747532685&auto=0&height=90"></iframe>
 
@@ -873,7 +896,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.4k个字</span>
+    <span title="Site words total count">6.2k个字</span>
   
 </div>
 <!--

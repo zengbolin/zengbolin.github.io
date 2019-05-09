@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="小憧憬个人博客">
 <meta property="og:description" content="真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-09T13:21:14.531Z">
+<meta property="og:updated_time" content="2019-05-09T13:39:19.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pyspider框架爆599证书问题">
 <meta name="twitter:description" content="真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了">
@@ -460,7 +460,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  276
+                  274
                 </span>
               
 
@@ -504,7 +504,7 @@
 </blockquote>
 <h5 id="报599错："><a href="#报599错：" class="headerlink" title="报599错："></a>报599错：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">HTTP <span class="number">599</span>: SSL certificate problem: unable to get local issuer certificate </span><br><span class="line">[E <span class="number">161018</span> <span class="number">21</span>:<span class="number">56</span>:<span class="number">36</span> base_handler:<span class="number">195</span>] HTTP <span class="number">599</span>: SSL certificate problem: unable to get local issuer certificate </span><br><span class="line">Traceback (most recent call last): </span><br><span class="line">File “C:\Python27\lib\site-packages\pyspider\libs\base_handler.py”, line <span class="number">188</span>, <span class="keyword">in</span> run_task </span><br><span class="line">result = self._run_task(task, response) </span><br><span class="line">File “C:\Python27\lib\site-packages\pyspider\libs\base_handler.py”, line <span class="number">167</span>, <span class="keyword">in</span> _run_task </span><br><span class="line">response.raise_for_status() </span><br><span class="line">File “C:\Python27\lib\site-packages\pyspider\libs\response.py”, line <span class="number">190</span>, <span class="keyword">in</span> raise_for_status </span><br><span class="line"><span class="keyword">raise</span> http_error </span><br><span class="line">HTTPError: HTTP <span class="number">599</span>: SSL certificate problem: unable to get local issuer certificate</span><br></pre></td></tr></table></figure>
 <h5 id="原因分析："><a href="#原因分析：" class="headerlink" title="原因分析："></a>原因分析：</h5><p>因为https协议需要对证书进行验证导致，对访问https网络需要证书</p>
-<h5 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h5><p>在两个抓取函数中加入<strong><em>不要检验证书</em></strong>:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">```python</span><br><span class="line">self.crawl(&apos;https://www.tripadvisor.cn/Attractions-g255060-Activities-c47-Sydney_New_South_Wales.html&apos;,validate_cert=False, callback=self.index_page)</span><br><span class="line">self.crawl(each.attr.href,validate_cert=False, callback=self.detail_page)</span><br></pre></td></tr></table></figure></p>
+<h5 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h5><p>在两个抓取函数中加入<strong><em>不要检验证书</em></strong>:<code>validate_cert=False</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">self.crawl(<span class="string">'https://www.tripadvisor.cn/Attractions-g255060-Activities-c47-Sydney_New_South_Wales.html'</span>,validate_cert=<span class="literal">False</span>, callback=self.index_page)</span><br><span class="line">self.crawl(each.attr.href,validate_cert=<span class="literal">False</span>, callback=self.detail_page)</span><br></pre></td></tr></table></figure></p>
 <p>问题解决！！！</p>
 
       
@@ -612,8 +612,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/09/python3.7不兼容pyspider/" rel="next" title="python3.7不兼容pyspider">
-                <i class="fa fa-chevron-left"></i> python3.7不兼容pyspider
+              <a href="/2019/05/09/scrapy框架的一些知识点/" rel="next" title="scrapy框架的一些小知识点">
+                <i class="fa fa-chevron-left"></i> scrapy框架的一些小知识点
               </a>
             
           </div>
@@ -622,8 +622,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/09/有关于ip代理池（python）编码错误的解决办法/" rel="prev" title="有关于ip代理池（python）编码错误的解决办法">
-                有关于ip代理池（python）编码错误的解决办法 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/09/pyspider加密主窗口/" rel="prev" title="pyspider加密主窗口">
+                pyspider加密主窗口 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -898,7 +898,7 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">6.4k个字</span>
+    <span title="Site words total count">6.2k个字</span>
   
 </div>
 <!--
