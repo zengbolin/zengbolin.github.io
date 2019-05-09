@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Windos10下安装pyspider的一些问题]]></title>
+    <url>%2F2019%2F05%2F09%2FWindos10%E4%B8%8B%E5%AE%89%E8%A3%85pyspider%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候…… 最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候install pyspider```，报错了，Error为：```Please specify --curl-dir123456#### 解决方法：安装pycurl，之后再用pip进行安装***安装pycurl方法：***打开链接：[“python库安装下载”](https://www.lfd.uci.edu/~gohlke/pythonlibs/)，找到自己安装python的版本进行安装。例如，我的python版本是python3.7.1，64位电脑就下载：pycurl-7.43.1-cp37-cp37m-win_amd64（cp代表你的python版本）##### 安装方法：&gt; windows下：打开cmd，然后将下载pycurl的位置copy一下，```cd 位置```，将pycurl名字复制一下，```pip install 名字 linux和mac下：直接进入文件位置，然后install 名字```123#### 接下来：直接```pip install pyspider 问题解决！！！]]></content>
+      <categories>
+        <category>错误解决合集</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[有关于ip代理池（python）编码错误的解决办法]]></title>
+    <url>%2F2019%2F05%2F09%2F%E6%9C%89%E5%85%B3%E4%BA%8Eip%E4%BB%A3%E7%90%86%E6%B1%A0%EF%BC%88python%EF%BC%89%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[上一周有开始学习python爬虫，学到构造ip代理池的时候，遇到很多问题 上一周有开始学习python爬虫，学到构造ip代理池的时候，遇到很多问题 遇到的问题如下：12 hostname, aliases, ipaddrs = gethostbyaddr(name)UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte 经过了整整一周的时间，我终于搞定了。在这一周里，我重装了无数次系统（一度认为是Windows10系统编码问题），还装ubuntu系统，但是无果。在今天终于解决了这个我弄了好久的问题 解决方法如下：1改主机名字，就是改电脑的名字 下次再踩坑再来了]]></content>
+      <categories>
+        <category>错误解决合集</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pyspider框架爆599证书问题]]></title>
+    <url>%2F2019%2F05%2F09%2Fpyspider%E6%A1%86%E6%9E%B6%E7%88%86599%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了 真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了 报599错：12345678910HTTP 599: SSL certificate problem: unable to get local issuer certificate [E 161018 21:56:36 base_handler:195] HTTP 599: SSL certificate problem: unable to get local issuer certificate Traceback (most recent call last): File “C:\Python27\lib\site-packages\pyspider\libs\base_handler.py”, line 188, in run_task result = self._run_task(task, response) File “C:\Python27\lib\site-packages\pyspider\libs\base_handler.py”, line 167, in _run_task response.raise_for_status() File “C:\Python27\lib\site-packages\pyspider\libs\response.py”, line 190, in raise_for_status raise http_error HTTPError: HTTP 599: SSL certificate problem: unable to get local issuer certificate 原因分析：因为https协议需要对证书进行验证导致，对访问https网络需要证书 解决方法：在两个抓取函数中加入不要检验证书:123```pythonself.crawl(&apos;https://www.tripadvisor.cn/Attractions-g255060-Activities-c47-Sydney_New_South_Wales.html&apos;,validate_cert=False, callback=self.index_page)self.crawl(each.attr.href,validate_cert=False, callback=self.detail_page) 问题解决！！！]]></content>
+      <categories>
+        <category>错误解决合集</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python3.7不兼容pyspider]]></title>
+    <url>%2F2019%2F05%2F09%2Fpython3.7%E4%B8%8D%E5%85%BC%E5%AE%B9pyspider%2F</url>
+    <content type="text"><![CDATA[好不容易才把上一个无法安装的问题解决。然后又继续报错，这次的报错更为严重。 好不容易才把上一个无法安装的问题解决。然后又继续报错，这次的报错更为严重。 报错信息为：12345File "c:\users\13733\appdata\local\programs\python\python37\lib\site-packages\pyspider\run.py", line 231async=True, get_object=False, no_input=False): ^SyntaxError: invalid syntax 原因分析：async和await从 python3.7 开始已经加入保留关键字中。 参考: What’s New In Python 3.7， 所以async和await不能作为函数的参数名。而pyspider在官方文档中也明确表示：Distributed architecture, Crawl Javascript pages, Python 2.{6,7}, 3.{3,4,5,6} support, etc…不兼容python3.7 解决方法： 下降自己的python版本，得到兼容 gitclone “pyspider”这个项目，下载并且实现替换 问题解决！！！]]></content>
+      <categories>
+        <category>错误解决合集</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Oneindex程序安装失败解决办法]]></title>
     <url>%2F2019%2F05%2F09%2FOneindex%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
     <content type="text"><![CDATA[安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！ 安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！ 几次尝试，发现如下方法终于成功安装。打开这个网址点击这里，里面会列出oneindex的应用，点击进去后，会看到你的应ID（client_ID）。找到【应用程序机密】，点击【生成新密码】，就会生成一个新的client_secret，然后重新安装时候填这个新client_secret就可以了注意的是，id和密钥的顺序，不要弄错。]]></content>
@@ -13,6 +61,54 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[解决“RecursionError”的问题]]></title>
+    <url>%2F2019%2F05%2F09%2F%E8%A7%A3%E5%86%B3%E2%80%9CRecursionError%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[在学习爬虫的时候，在IP代理池使用的情况下，总是爬取到一大半的时候会弹出“RecursionError”的错误。 在学习爬虫的时候，在IP代理池使用的情况下，总是爬取到一大半的时候会弹出“RecursionError”的错误。经过多番资料查找，原因为：python默认的递归深度是很有限的（默认是1000），因此当递归深度超过999的样子，就会引发这样的一个异常。 解决方法：将递归深度调高12import syssys.setrecursionlimit(100000) #你想设置的递归深度（可为任意值） 有时候爆出这个错误，不能单单只用这种方法解决，更应该注重代码的优化。]]></content>
+      <categories>
+        <category>错误解决合集</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[pyspider加密主窗口]]></title>
+    <url>%2F2019%2F05%2F09%2Fpyspider%E5%8A%A0%E5%AF%86%E4%B8%BB%E7%AA%97%E5%8F%A3%2F</url>
+    <content type="text"><![CDATA[在你使用pyspider的时候，直接登入localhost：5000端口，很容易被别人看到自己的项目，需要加密 在你使用pyspider的时候，直接登入localhost：5000端口，很容易被别人看到自己的项目，需要加密 加密方法（弹窗认证）：123456789打开终端：cat db.json修改文件： 加入自己的账号密码：&#123; "webui":&#123; "user_name":"user", "password":"password", "need-anth":true &#125;&#125; 问题解决！！]]></content>
+      <categories>
+        <category>学习合集</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[scrapy框架的一些小知识点]]></title>
+    <url>%2F2019%2F05%2F09%2Fscrapy%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%2F</url>
+    <content type="text"><![CDATA[scrapy框架的一些小知识点 最近开始学习scrapy框架,摘抄一些知识点 创建项目：startproject testproject```1* 进入项目：```cd testproject 生成spider: genspider baidu www.baidu.com```1* 了解各类模板:```scrapy genspider -l 指定模板:genspider -t crawl zhihu www.zhihu.com```1* crawl :运行spider的方法，可以指定运行的spider的名称 :```scrapy crawl zhihu.py check:用来检查代码是否有错误:check zhihu.py```123* scrapy list:返回项目中所有的名称 * scrapy edit :在命令行下编辑 * fetch:返回网页源代码，等同于response:```scrapy fetch http://www.baidu.com 去掉日志：得到headers:fetch --nolog --headerslink1* 禁止重定向：–no redicrect:```scrapy fetch --no-direct http://www.baidu.com view:将网页以文件的形式保存下来，然后去打开，可以在自动测试中应用:viewlink1* shell：命令行模式的交互,并且返回一些可用的变量:```scrapy shell http://www.baidu.com parse: 传入一些参数，查看返回的结果，相当于格式化输出 seetings:获取当前的配置信息:settings -h```1* runspider:运行spider:```scrapy runspider baidu.py version:输出scrapy的版本:scrapy version -v bench：测试当前爬虫的速度]]></content>
+      <categories>
+        <category>学习合集</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[微博图床请对我好点，谢谢]]></title>
+    <url>%2F2019%2F05%2F09%2F%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A%E8%AF%B7%E5%AF%B9%E6%88%91%E5%A5%BD%E7%82%B9%EF%BC%8C%E8%B0%A2%E8%B0%A2%2F</url>
+    <content type="text"><![CDATA[写Markdown文档或者博客，图床必须少不了！ 找一个能用的图床真难 在百度中，图床是这样解释的： 图床一般是指储存图片的服务器，有国内和国外之分。国外的图床由于有空间距离等因素决定访问速度很慢影响图片显示速度。国内也分为单线空间、多线空间和cdn加速三种。通常是指专门用来存放图片，同时允许你把图片对外连接的网上空间，不少图床都是免费的。 例如用markdown写的图片都是用链接形式的，1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950### 推荐几个国外图床#### **1.美国TripnTale无限免费旅游网络图片相册**&gt; 美国TripnTale是一个免费旅游图片存储空间，提供无限量的存储空间，但有个要求是你上传的图片必须和旅游相关的。支持上传jpeg、gif、bmp、png格式图片，单个图片最大为6M，图片可以从flickr、picasa等中直接导入，然后给上传的图片进行注释，在地图上进行标注，最后发布即可。另外，还支持视频文件上传存储，单个视频最大为100M，上传速度还可以，图片能支持外链，后台能对图片进行管理，还能写日记，很适合旅游爱好者。&gt; 网址：**```www.tripntale.com```**&gt; ps：小编没有用过，毕竟服务器在外国，可能速度不如意，而且上传的图片还有要求。不过无限空间还是很良心#### **2.瑞士overpic.net免费无限网络相册**&gt; 瑞士overpic提供免费的无限网络相册，无需注册就能上传，能支持外部链接，同时能上传10张图片，单个上传图片的大小限制为10M，支持的图片格式为：JPEG、JPG、BMP、PNG、GIF。可设置保存时间（一天、一周、一个月、三个月、六个月、永久）&gt; 网址：**```www.overpic.net```**&gt; ps：不需要注册，没有限制，没有保存时间限制。比国内某些图床良心多了##### 在这里我必须要推荐使用国内的图床，优缺点也是很明显* 国内的服务器足够稳定* 国内图片上传速度、质量等都要好* 在中国，国内图床更贴近我们的感受（最主要，我们看外国网站都要科学上网...）* 国内图床当然也有耍流氓行为，收费不合理，每天限制上传图片大小或者数量...***#### 推荐几个国内图床##### **1.七牛云存储**&gt; 七牛作为国内领先的云服务商，全网 CDN 加速，全国访问速度都不错，API 很详细，对开发者比较友好。免费用户提供 10GB 存储空间，国内和海外分别提供 10 GB 的 HTTP 免费流量，七牛的 HTTPS 流量是收费的，没有免费额度。此外，七牛还提供了针对图片的各种服务，包括图片裁剪，压缩，鉴黄等等衍生服务。如果你觉得图片尺寸太大，可以在外链后面添加参数，访问的时候七牛会自动根据你的参数对图片进行处理。图片可以备份到本地，可删可改，对站长来说这点比较好。![七牛云图床](http://upload-images.jianshu.io/upload_images/11019384-ec1bea18e06a2e32.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)&gt; 七牛免费 10GB 存储空间申请链接：[点击申请](https://portal.qiniu.com/signup/choice?code=3lia9uiard2s2)&gt; ps:如果你觉得10GB足够用的话，可以尝试一下七牛云。毕竟七牛云在国内也是数一数二的##### **2.微博图床**&gt; 由于微博本身就是面向公众提供服务，每个人发微博基本都得带上几张图片，以微博的体量，每天的新增图片数也不是个小数字。但是微博对于图片上传服务也没有接口说明文档，上传的接口还是在开发者们从微博产品里找出来的，可能微博只希望上传的图片仅仅用于微博产品本身吧。&gt; 微博图床的特点是免费，没有容量限制，全网 CDN 加速，支持 HTTPS，到哪里都很快。但是免费的服务也有不足的地方，上传的图片会被转成 jpg，图片中可能加上了肉眼难以识别的水印，另外微博的图片鉴别服务也可能会随时删除你的图片。&gt; 对于学生党的我，微博图床就很适宜了。不仅由免费的容量，还有支持HTTP，小编现在也是用着微博图床，美滋滋的。![借极简图床访问微博图床](http://upload-images.jianshu.io/upload_images/11019384-fa26e61adf9b26d7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)```其他的图床也有其特点和优点，我就不一一介绍了，这四款足够你使用了。那小编接下来着重介绍如何使用微博图床吧（我自己在使用） 介绍微博图床的使用 所用到的工具：谷歌浏览器、微博账号 步骤： 注册一个微博的小号，记住是小号！不登录的，只用来储存图片的，也不要在小号里发布什么图片之类的，避免搞乱图床。要记得去微博网页版登陆你的账号（今天就是没有先登陆账号，然后一直提示无法使用，也重启浏览器无数次，满满都是泪啊） 打开谷歌浏览器，打开极简图床网页（或者点击链接），然后可以去注册一个账号（虽然没什么用）。 选择微博图床，然后它会提醒安装谷歌插件，然后按步骤下载插件（链接）。 注：因为插件不是谷歌商店版，不能直接安装（甚至不能直接拖拽安装）。具体如何安装可以参考：12345678910111213141516* * 把下载后的`.crx`扩展名的离线Chrome插件的文件扩展名改成`.zip`或者`.rar`（如何查看Chrome插件的扩展名？`文件夹&gt;工具&gt;文件夹&gt;查看&gt;隐藏已知文件类型的扩展名`），如图所示：![改文件后缀](http://upload-images.jianshu.io/upload_images/11019384-c7b1a5dcdb1fb4ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)* * 右键点击该文件，并使用压缩软件（如winrar、好压、360压缩等）对该压缩文件进行`解压`，并保存到系统的一个任意文件夹下，如图所示：![解压文件](http://upload-images.jianshu.io/upload_images/11019384-df411fff27f0dee9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)* * 解压成功以后，该Chrome插件就会以文件夹的形式存在于操作系统的某一个目录下面，如图所示：![找到文件](http://upload-images.jianshu.io/upload_images/11019384-c8b241edb96d25a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)* * 在Chrome的地址栏中输入：`chrome://extensions/` 打开Chrome浏览器的扩展程序管理界面，并在该界面的右上方的`开发者模式`按钮上打勾，如图所示：![打勾“开发者模式”](http://upload-images.jianshu.io/upload_images/11019384-1eb48c4ab3e2da44.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)* * 在勾选`开发者模式`选项以后，在该页面就会出现加载正在开发的扩展程序等按钮，点击`“加载正在开发的扩展程序”`按钮，并选择刚刚解压的Chrome插件文件夹的位置，然后就成功了。如图所示：![选择你的插件](http://upload-images.jianshu.io/upload_images/11019384-ae6255913c87b6a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)* 这部分内容参照：`http://www.cnplugins.com/zhuanti/how-to-make-crx-install.html`5.安装完`极简图床插件`那就可以为所欲为上传图片了。![为所欲为](http://upload-images.jianshu.io/upload_images/11019384-adc5e01e7dc3517d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)----------```以后有机会再更新了，有什么问题可以来问我哦]]></content>
+      <categories>
+        <category>私人干货</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>图床</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[利用Aria2+Oneindex等脚本搭建自动上传onedrive离线下载在线播放私人网盘]]></title>
     <url>%2F2019%2F05%2F09%2F%E5%88%A9%E7%94%A8Aria2%2BOneindex%E7%AD%89%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0onedrive%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E5%9C%A8%E7%BA%BF%E6%92%AD%E6%94%BE%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98%2F</url>
     <content type="text"><![CDATA[这里介绍在阿里云服务器上搭建离线网盘等诸多功能的oneindex私人网盘。因为功能多，所以写一篇博客来记录。 准备工作 onedrive账号1枚（最好去申请教育邮箱，5T） 服务器一台（最好申请个学生服务器） 信心和耐力（时间比较久） 获取5T Onedrive容量 获取临时邮箱 地址1：http://abcda.tech/地址2：http://get365.pw/ 贴两个地址出来，若不能使用，就去Google一下吧 使用: 在网上右上角申请一个临时的邮箱，并在Office教育版申请地址输入你的临时邮箱账号，点击注册。 注册office365教育版 Office365教育版注册地址：链接地址输入之前获得的临时邮箱。获取验证码时这里可以查看 注册完登陆就可以 申请虚拟主机(服务器) 若你还是大学生，我建议你可以申请一个学生用机，每个月10块，还送域名，岂不是美滋滋的？服务器也不止用来挂Onedrive吧，还可以学习… 我比较推荐阿里云家的服务器申请购买服务器链接在此：https://promotion.aliyun.com/ntms/act/campus2018.html 申请域名链接在此：https://wanwang.aliyun.com/domain/com/?spm=5176.10695662.1158081.1.59854234UgUR6k 开始搭建Onedrive私有网盘解析域名到服务器用xsell5登录到自己的服务器，然后安装宝塔面板(傻瓜式操作) 123456#Centos系统yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install.sh &amp;&amp; sh install.sh#Ubuntu系统wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh &amp;&amp; sudo bash install.sh#Debian系统wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh &amp;&amp; bash install.sh 安好后会提示你的IP:8888地址还有账号密码，在浏览器中输入地址还有账号密码登录。登陆后会提示安装套件 这里选择nginx和php5.6就行，点一键安装，等安装结束后，选择左侧网站--&gt;添加站点，填写你的域名后选择php版本，其他的不需要勾选。 服务器安装Oneindex脚本下载Oneindex脚本后，确定后选择左侧的文件--&gt;上传，上传刚才下载的文件，上传成功后，选择该zip文件--&gt;解压。(上传位置为网站的根目录) 进入oneindex-master文件夹，将cache、config两个文件夹的权限设置为777。 回到网站继续设置。 选择网站目录，选择刚才域名下oneindex-master文件夹，保存。 选择伪静态，复制粘贴以下代码，保存。 1234567891011location / &#123;if (!-f $request_filename)&#123;set $rule_0 1$rule_0;&#125;if (!-d $request_filename)&#123;set $rule_0 2$rule_0;&#125;if ($rule_0 = "21")&#123;rewrite ^/(.*)$ /index.php?/$1 last;&#125;&#125; 之后浏览器输入域名看到以下界面就表示后台设置可以了，之后一直下一步然后登陆Onedrive账号，授权就可以了。 当然接下来的操作，你可以做也可以不做，当你完成以上的步骤就已经完成私有网盘的搭建了。如果你要获得更好的下载和上传速度，就可以继续阅读下去，搭建Aria2脚本。 aria2、ariaNG安装aria2安装使用逗比的脚本安装就很简单了 123wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh#备用地址wget -N --no-check-certificate https://www.moerats.com/usr/shell/Aria2/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh 运行之后会出现登录地址、密码等，记下来一会用。如果需要修改默认配置使用bash aria2.sh按选项走就可以。 AriaNg安装这里需要在BT面板中网站——&gt;新建网站，添加另一个域名，或者填写该主机ip或ip+端口号也可以，例如：ip:8081等自行选择。之后后台cd到新网站目录里复制以下代码 1wget https://www.moerats.com/usr/down/aria-ng-0.2.0.zip &amp;&amp; unzip aria-ng-0.2.0.zip 之后就能在浏览器中通过设置的域名或IP访问了。在AriaNg设置RPC这里输入刚才aria2的密码，刷新一下，Aria2状态显示已连接就表示安装好了。 之后下载东西直接浏览器里输入IP，和迅雷等工具一样就能下载到服务器上了。 Aria自动上传这里需要用到OneDrive for Business on Bash项目Github地址：https://github.com/0oVicero0/OneDrive 1wget --no-check-certificate -qO- "https://raw.githubusercontent.com/0oVicero0/OneDrive/master/OneDrive.sh" |bash 脚本中已内置参数，直接用大佬的教程来安装，之后onedrive -a进行账号认证。 将划横线的网站在浏览器中打开，授权之后浏览器跳转，获得一个常常的网址，如下： 将code=与&amp;session之间的字符串复制一下，再到后台粘贴，回车。 显示It seems like we have a refresh token，这句表示成功。之后运行命令onedrive -l测试一下。 能看到onedrive目录里的文件就表示成功了，之后在某一目录先新建一个文件vi /root/rcloneupload.sh贴入以下内容 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#!/bin/bashnum="$2"path="$3" downloadpath='/home' #下载目录 if [ $num -eq 0 ] then exit 0fi function getdir()&#123;IFS=$'\n';for file in `ls "$1"` do if [ -d "$1/$file" ] then getdir "$1/$file" else if [ "$&#123;1%/*&#125;" = "$downloadpath" ] &amp;&amp; [ $num -eq 1 ] then onedrive "$1" elif [ $num -eq 1 ] then onedrive "$1/$file" else onedrive -u "$downloadpath" "$1/$file" fi fi done&#125; while true; dofilepath=$path path=$&#123;path%/*&#125;; if [ "$path" = "$downloadpath" ] then getdir "$filepath" if [ -d $filepath ] then rm -r "$filepath" else rm "$filepath" fi echo 3 &gt; /proc/sys/vm/drop_caches swapoff -a &amp;&amp; swapon -a exit 0fidone 注意downloadpath=’/home’;这里的目录要和Aria的下载目录一致。然后chmod +x rcloneupload.sh授予权限，修改Aria配置文件vi /root/.aria2/aria2.conf，将on-download-complete=/root/rcloneupload.sh贴在里面。重启一下Aria就可以了。之后测试一下，使用Aria下载一个文件，下载完成后看是否上传到了onedrive里即可。 最后 以上参考知乎大佬的帖子: https://zhuanlan.zhihu.com/p/61019456 ，感谢。]]></content>
@@ -22,6 +118,30 @@
       <tags>
         <tag>网站搭建</tag>
         <tag>私有网盘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[初识Markdown，请多多指教]]></title>
+    <url>%2F2019%2F05%2F09%2F%E5%88%9D%E8%AF%86Markdown%EF%BC%8C%E8%AF%B7%E5%A4%9A%E5%A4%9A%E6%8C%87%E6%95%99%2F</url>
+    <content type="text"><![CDATA[主要介绍一下Markdown语法 我们来认识Markdown的基础语法第一是标题 Markdown语法中总共只有六级标题 在井号加空格是最标准的 下面来演示一下标题的使用 # 这个是一级标题## 这个是二级标题### 这个是三级标题#### 这个是四级标题##### 这个是五级标题###### 这个是六级标题 第二是列表 在文字前面加上1234+ 一定要在```+、-、*```等符号后面添加空格- 有序列表直接标明数字* 下面来演示一下列表用法##### 无序列表 1 2 31#####有序列表 1 2 312345678910111213### 第四是引用* 只需要再文本前加入```&gt;```就ok* 一个```&gt;```代表一级引用，两个```&gt;```代表二级引用，以此类推* 下面来演示引用的格式&gt; 这里是引用&gt;&gt; 这里是二级引用&gt;&gt;&gt; 这里是三级引用### 第五是图片与链接* 插入图片形式：```![图片文字](图片地址） 一定要在英文状态输入 图片的地址指的是图片在硬盘的位置 图片解释内容可以随意修改 插入链接： 1234567891011* * 与插入图片的方式差一个叹号**```！```*** * 链接内容文字可以随意修改* 演示添加图片或者链接##### 试添加图片![我可爱的壁纸](http://upload-images.jianshu.io/upload_images/11019384-f153e995c3dd2d84.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)##### 试添加链接（百度）[百度链接](http://www.baidu.com)### 第六是强调* 添加斜体或粗体均可以用```_```或```* 添加斜体：在文本左右添加一个12* * 例如：_php是最好的编程语言_ 或者 *php是最好的编程语言** 添加粗体：在文本左右添加两个```*```或者```_ 例如：php是最好的编程语言 或者 php是最好的编程语言 第七是分割线 用连续的三个星号1234567891011121314151617* 用连续的三个减号```-```表示分割线* 例如：***### 第八是制作代办事宜（简书显示不出来）* 表示未做的事情用**```- [ ]```*** 表示已经做的事情用**```- [x]```*** 演示一下：1. - [ ] 我还没有做的事2. - [x] 我已经做完了的事### 第九是书写数学公式* 在公式左右用```$$```圈住* 举例：$$E=mc^2$$### 第十是高亮代码* 用```三个引号加语言开头，结尾用引号 举例： 1print ("我是大笨猪") 第十一是绘制表格 用竖线表示表格的竖线 用减号表示表格的横线 添加表格之前必须空行！！！*1234567891011*```:--:```表示居中对齐*```---:```表示右对齐* 例如：| 项目 | 价格 | 数量 || ------ | :----: | ---- || 计算机 | \$1600 | 5 |### 第十二是添加底色内容* 在文本左右添加```表示底色加深内容* 例如：```我喜欢你哦 以后再去更新了，迟点（我还没开始接触很多呢）]]></content>
+      <categories>
+        <category>私人干货</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[百度网盘小神器，你值得拥有！]]></title>
+    <url>%2F2019%2F05%2F09%2F%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%B0%8F%E7%A5%9E%E5%99%A8%EF%BC%8C%E4%BD%A0%E5%80%BC%E5%BE%97%E6%8B%A5%E6%9C%89!%2F</url>
+    <content type="text"><![CDATA[我们来介绍几款不会封号的百度网盘小神器 我们来介绍几款不会封号的百度网盘小神器 可能，现在在中国吧，最好用的网盘之一就是百度网盘，但是呢，百度网盘却以它那昂贵的会员费出名，而且限速贼厉害。明明在我家里宽带可以达到10M/s，但是在百度云里面，它把你限速到100k/s，我真的是服。因此，我在这里向大家推荐几个百度网盘小神器，愿能助君一把。 PanDownload 它没有封号风险，因为你压根都可以不登录你自己的百度账号。 直接使用分享链接下载，就很方便 当然你还可以登录你自己的百度账号下载网盘的东西。 链接奉上:http://pandownload.com/ 速盘 免下载，免登陆，和第一款软件相似 自带搜索资源功能，具体功能自己实现吧 链接奉上：https://www.speedpan.com/ proxyee-Dowm 它是一个谷歌浏览器的插件，非常好用 可以在线解压文件 链接奉上：https://github.com/proxyee-down-org/proxyee-down 安装步骤 先点击安装 再点击“是”，用来安装证书 点击安装，再点击左上角的全局代理 在打开上述全局代理之后，随便打开一个百度云链接，都会多出现一个【pd下载】，直接点击直链下载即可。会满速下载的哦 本文的三款百度网盘神器，小编体验良好，可以摆脱百度网盘超级会员了。本文所用的部分图片源于公众号“资源库爱分享”，有侵权请联系我删除。]]></content>
+      <categories>
+        <category>私人干货</category>
+      </categories>
+      <tags>
+        <tag>下载</tag>
+        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
