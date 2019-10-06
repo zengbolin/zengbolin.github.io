@@ -85,7 +85,7 @@
 
 
 
-  <meta name="keywords" content="小憧憬的个人博客">
+  <meta name="keywords" content="python,深度学习,">
 
 
 
@@ -98,17 +98,21 @@
 
 
 
-<meta name="description" content="不定时分享各种编程的坑，与一些学习方法。">
-<meta name="keywords" content="Java, 编程, 学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小憧憬个人博客">
-<meta property="og:url" content="http://zengbolin.github.io/tags/博客/index.html">
+<meta name="description" content="学习高斯滤波来处理图像…">
+<meta name="keywords" content="python,深度学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="opencv学习之高斯滤波GaussianBlur()">
+<meta property="og:url" content="http://zengbolin.github.io/2019/05/19/opencv学习之高斯滤波GaussianBlur()/index.html">
 <meta property="og:site_name" content="小憧憬个人博客">
-<meta property="og:description" content="不定时分享各种编程的坑，与一些学习方法。">
+<meta property="og:description" content="学习高斯滤波来处理图像…">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2019/05/19/5ce0bd39e71b793791.png">
+<meta property="og:image" content="https://i.loli.net/2019/05/19/5ce0bd546376494256.png">
+<meta property="og:updated_time" content="2019-05-19T02:26:50.128Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小憧憬个人博客">
-<meta name="twitter:description" content="不定时分享各种编程的坑，与一些学习方法。">
+<meta name="twitter:title" content="opencv学习之高斯滤波GaussianBlur()">
+<meta name="twitter:description" content="学习高斯滤波来处理图像…">
+<meta name="twitter:image" content="https://i.loli.net/2019/05/19/5ce0bd39e71b793791.png">
 
 
 
@@ -138,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://zengbolin.github.io/tags/博客/">
+  <link rel="canonical" href="http://zengbolin.github.io/2019/05/19/opencv学习之高斯滤波GaussianBlur()/">
 
 
 
 
 
-  <title>标签: 博客 | 小憧憬个人博客</title>
+  <title>opencv学习之高斯滤波GaussianBlur() | 小憧憬个人博客</title>
   
 
 
@@ -173,7 +177,7 @@
 <script type="text/javascript" color="0,0,255" opacity="0.7" zindex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/zengbolin" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#FD6C6C; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -340,52 +344,337 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>博客<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zengbolin.github.io/2019/05/19/opencv学习之高斯滤波GaussianBlur()/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="小憧憬">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2688095354,2019872825&fm=26&gp=0.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小憧憬个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/05/09/初识Markdown，请多多指教/" itemprop="url">
-              
-                <span itemprop="name">初识Markdown，请多多指教</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">opencv学习之高斯滤波GaussianBlur()</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-09T09:30:08+08:00" content="2019-05-09">
-          05-09
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-19T10:30:08+08:00">
+                2019-05-19
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习合集/" itemprop="url" rel="index">
+                    <span itemprop="name">学习合集</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/05/19/opencv学习之高斯滤波GaussianBlur()/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/19/opencv学习之高斯滤波GaussianBlur()/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/05/19/opencv学习之高斯滤波GaussianBlur()/" class="leancloud_visitors" data-flag-title="opencv学习之高斯滤波GaussianBlur()">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>学习高斯滤波来处理图像…</p>
+<a id="more"></a>
+<p>高斯滤波是一种线性平滑滤波，对于除去高斯噪声有很好的效果。在其官方文档中形容高斯滤波为”Probably the most useful filter”，同时也指出高斯滤波并不是效率最高的滤波算法。高斯算法在官方文档给出的解释是高斯滤波是通过对输入数组的每个点与输入的高斯滤波模板执行卷积计算然后将这些结果一块组成了滤波后的输出数组，通俗的讲就是高斯滤波是对整幅图像进行加权平均的过程，每一个像素点的值都由其本身和邻域内的其他像素值经过加权平均后得到。高斯滤波的具体操作是：用一个模板（或称卷积、掩模）扫描图像中的每一个像素，用模板确定的邻域内像素的加权平均灰度值去替代模板中心像素点的值。 </p>
+<p>在图像处理中高斯滤波一半有两种实现方式：一种是用离散化窗口滑窗卷积，另一种是通过傅里叶变换。最常见的就是第一种滑窗实现，只有当离散化的窗口非常大，用滑窗计算量非常大的情况下会考虑基于傅里叶变换的方法。<br>我们在参考其他文章的时候可能会出现高斯模糊和高斯滤波两种说法，其实这两种说法是有一定区别的。我们知道滤波器分为高通、低通、带通等类型，高斯滤波和高斯模糊就是一句滤波器是低通滤波器还是高通滤波器来区分的。比如低通滤波器，像素能量低的通过，而对于像素能量高的部分将会采取加权平均的方法重新计算像素的值，将能量像素的值编程能量较低的值，我们知道对于图像而言其高频部分展现图像细节，所以经过低通滤波器之后整幅图像变成低频造成图像模糊，这就被称为高斯模糊；相反高通滤波是允许高频通过而过滤掉低频，这样将低频像素进行锐化操作，图像变的更加清晰，被称为高斯滤波。说白了很简单就是：高斯滤波是指用高斯函数作为滤波函数的滤波操作而高斯模糊是用高斯低通滤波器。 </p>
+<p>高斯滤波在图像处理中常用来对图像进行预处理操作，虽然耗时但是数字图像用于后期应用但是其噪声是最大的问题，噪声会造成很大的误差而误差在不同的处理操作中会累积传递，为了能够得到较好的图像，对图像进行预处理去除噪声也是针对数字图像处理的无奈之举。 </p>
+<p>高斯滤波器是一类根据高斯函数的形状来选择权值的线性平滑滤波器，高斯滤波器对于服从正太分布的噪声非常有效，一维高斯函数如下：</p>
+<p><img src="https://i.loli.net/2019/05/19/5ce0bd39e71b793791.png" alt></p>
+<p>二维高斯函数如下：</p>
+<p><img src="https://i.loli.net/2019/05/19/5ce0bd546376494256.png" alt></p>
+<p>opencv提供了GaussianBlur()函数对图形进行高斯滤波，其原型如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C++: <span class="function"><span class="keyword">void</span> <span class="title">GaussianBlur</span><span class="params">(InputArray src, OutputArray dst, Size ksize, <span class="keyword">double</span> sigmaX, <span class="keyword">double</span> sigmaY=<span class="number">0</span>, <span class="keyword">int</span> borderType=BORDER_DEFAULT )</span></span></span><br></pre></td></tr></table></figure>
+<p>参数解释：<br><strong>. InputArray src: 输入图像，可以是Mat类型，图像深度为CV_8U、CV_16U、CV_16S、CV_32F、CV_64F。<br>. OutputArray dst: 输出图像，与输入图像有相同的类型和尺寸。<br>. Size ksize: 高斯内核大小，这个尺寸与前面两个滤波kernel尺寸不同，ksize.width和ksize.height可以不相同但是这两个值必须为正奇数，如果这两个值为0，他们的值将由sigma计算。<br>. double sigmaX: 高斯核函数在X方向上的标准偏差<br>. double sigmaY: 高斯核函数在Y方向上的标准偏差，如果sigmaY是0，则函数会自动将sigmaY的值设置为与sigmaX相同的值，如果sigmaX和sigmaY都是0，这两个值将由ksize.width和ksize.height计算而来。具体可以参考<a href="[https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html?highlight=gaussianblur#Mat%20getGaussianKernel%28int%20ksize,%20double%20sigma,%20int%20ktype%29](https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html?highlight=gaussianblur#Mat getGaussianKernel(int ksize, double sigma, int ktype">getGaussianKernel()</a>))函数查看具体细节。建议将size、sigmaX和sigmaY都指定出来。<br>. int borderType=BORDER_DEFAULT: 推断图像外部像素的某种便捷模式，有默认值BORDER_DEFAULT，如果没有特殊需要不用更改，具体可以参考<a href="[https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html?highlight=gaussianblur#int%20borderInterpolate%28int%20p,%20int%20len,%20int%20borderType%29](https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html?highlight=gaussianblur#int borderInterpolate(int p, int len, int borderType">borderInterpolate()</a>))函数。</strong></p>
+<p>为了能更直观的观察到四个变量对滤波的影响，建立四个轨迹条分别调节，所以最后运行结果图片有点丑，示例代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/core.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/imgproc.hpp&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义全局变量</span></span><br><span class="line">Mat g_srcImage;         <span class="comment">//输入图像</span></span><br><span class="line">Mat g_dstImage;         <span class="comment">//输出图像</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义轨迹条最大值参量</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> g_nKwidthTrackBarMaxValue = <span class="number">9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> g_nKheightTrackBarMaxValue = <span class="number">9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> g_nsigmaXTrackBarMaxValue = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> g_nsigmaYTrackBarMaxvalue = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义每个轨迹条的初始值</span></span><br><span class="line"><span class="keyword">int</span> g_nKwidthTrackBarValue = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> g_nKheightTrackBarValue = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> g_nsigmaXTrackBarValue = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> g_nsigmaYTrackBarValue = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> g_kernelWidthValue;</span><br><span class="line"><span class="keyword">int</span> g_kernelHeightValue;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">on_GaussianBlurTrackbar</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">void</span>*)</span></span>;       <span class="comment">//定义回调函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    g_srcImage = imread(<span class="string">"lena.jpg"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//判断图像是否加载成功</span></span><br><span class="line">    <span class="keyword">if</span>(!g_srcImage.data)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"图像加载失败!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"图像加载成功!"</span> &lt;&lt; <span class="built_in">endl</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    namedWindow(<span class="string">"原图像"</span>, WINDOW_NORMAL);         <span class="comment">//定义窗口显示属性</span></span><br><span class="line">    imshow(<span class="string">"原图像"</span>, g_srcImage);</span><br><span class="line"></span><br><span class="line">    namedWindow(<span class="string">"高斯滤波图像"</span>, WINDOW_NORMAL);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//定义每个轨迹条名字</span></span><br><span class="line">    <span class="keyword">char</span> widthTrackBarName[<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(widthTrackBarName, <span class="string">"核函数width %d"</span>, g_nKwidthTrackBarMaxValue);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> heightTrackBarName[<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(heightTrackBarName,<span class="string">"核函数height %d"</span>, g_nKheightTrackBarMaxValue);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> sigmaXTrackBarName[<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(sigmaXTrackBarName, <span class="string">"核函数sigmaX %d"</span>, g_nsigmaXTrackBarMaxValue);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> sigmaYTrackBarName[<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(sigmaYTrackBarName, <span class="string">"核函数sigmaY %d"</span>, g_nsigmaYTrackBarMaxvalue);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建轨迹条</span></span><br><span class="line">    createTrackbar(widthTrackBarName, <span class="string">"高斯滤波图像"</span>, &amp;g_nKwidthTrackBarValue, </span><br><span class="line">                    g_nKwidthTrackBarMaxValue, on_GaussianBlurTrackbar);</span><br><span class="line">    on_GaussianBlurTrackbar(g_nKwidthTrackBarValue, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    createTrackbar(heightTrackBarName, <span class="string">"高斯滤波图像"</span>, &amp;g_nKheightTrackBarValue,</span><br><span class="line">                    g_nKheightTrackBarMaxValue, on_GaussianBlurTrackbar);</span><br><span class="line">    on_GaussianBlurTrackbar(g_nKheightTrackBarValue, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    createTrackbar(sigmaXTrackBarName, <span class="string">"高斯滤波图像"</span>, &amp;g_nsigmaXTrackBarValue,</span><br><span class="line">                    g_nsigmaXTrackBarMaxValue, on_GaussianBlurTrackbar);</span><br><span class="line">    on_GaussianBlurTrackbar(g_nsigmaXTrackBarValue, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    createTrackbar(sigmaYTrackBarName, <span class="string">"高斯滤波图像"</span>, &amp;g_nsigmaYTrackBarValue,</span><br><span class="line">                    g_nsigmaYTrackBarMaxvalue, on_GaussianBlurTrackbar);</span><br><span class="line">    on_GaussianBlurTrackbar(g_nsigmaYTrackBarValue, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    waitKey(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">on_GaussianBlurTrackbar</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">void</span>*)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//根据输入的width和height重新计算ksize.width和ksize.height</span></span><br><span class="line">    g_kernelWidthValue = g_nKwidthTrackBarValue * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">    g_kernelHeightValue = g_nKheightTrackBarValue * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//高斯滤波</span></span><br><span class="line">    GaussianBlur(g_srcImage, g_dstImage, Size(g_kernelWidthValue, g_kernelHeightValue),</span><br><span class="line">                g_nsigmaXTrackBarValue, g_nsigmaYTrackBarValue);</span><br><span class="line"></span><br><span class="line">    imshow(<span class="string">"高斯滤波图像"</span>, g_dstImage);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
+    
+    
+    
 
+    <div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/05/19/opencv学习之高斯滤波GaussianBlur()/">opencv学习之高斯滤波GaussianBlur()</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 小憧憬 的个人博客">小憧憬</a></p>
+  <p><span>发布时间:</span>2019年05月19日 - 10:05</p>
+  <p><span>最后更新:</span>2019年05月19日 - 10:05</p>
+  <p><span>原始链接:</span><a href="/2019/05/19/opencv学习之高斯滤波GaussianBlur()/" title="opencv学习之高斯滤波GaussianBlur()">http://zengbolin.github.io/2019/05/19/opencv学习之高斯滤波GaussianBlur()/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://zengbolin.github.io/2019/05/19/opencv学习之高斯滤波GaussianBlur()/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+</div>
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持踩坑挖坑跳坑，你的支持将鼓励我继续创新执着.</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="小憧憬 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="小憧憬 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          
+            <a href="/tags/深度学习/" rel="tag"><i class="fa fa-tag"></i> 深度学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/09/scrapy框架的一些知识点/" rel="next" title="scrapy框架的一些小知识点">
+                <i class="fa fa-chevron-left"></i> scrapy框架的一些小知识点
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -393,6 +682,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -703,6 +999,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
