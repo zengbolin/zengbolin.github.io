@@ -123,27 +123,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Windos10下安装pyspider的一些问题]]></title>
-    <url>%2F2019%2F05%2F09%2FWindos10%E4%B8%8B%E5%AE%89%E8%A3%85pyspider%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候…… 最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候pip install pyspider，报错了，Error为：Please specify --curl-dir=/path/to/built/libcurl 解决方法：安装pycurl，之后再用pip进行安装安装pycurl方法：打开链接：“python库安装下载”，找到自己安装python的版本进行安装。例如，我的python版本是python3.7.1，64位电脑就下载：pycurl-7.43.1-cp37-cp37m-win_amd64（cp代表你的python版本） 安装方法： windows下：打开cmd，然后将下载pycurl的位置copy一下，cd 位置，将pycurl名字复制一下，pip install 名字linux和mac下：直接进入文件位置，然后pip install 名字 接下来：直接pip install pyspider 问题解决！！！]]></content>
+    <title><![CDATA[Oneindex程序安装失败解决办法]]></title>
+    <url>%2F2019%2F05%2F09%2FOneindex%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！ 安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！ 几次尝试，发现如下方法终于成功安装。打开这个网址点击这里，里面会列出oneindex的应用，点击进去后，会看到你的应ID（client_ID）。找到【应用程序机密】，点击【生成新密码】，就会生成一个新的client_secret，然后重新安装时候填这个新client_secret就可以了注意的是，id和密钥的顺序，不要弄错。]]></content>
       <categories>
         <category>错误解决合集</category>
       </categories>
       <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[有关于ip代理池（python）编码错误的解决办法]]></title>
-    <url>%2F2019%2F05%2F09%2F%E6%9C%89%E5%85%B3%E4%BA%8Eip%E4%BB%A3%E7%90%86%E6%B1%A0%EF%BC%88python%EF%BC%89%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[上一周有开始学习python爬虫，学到构造ip代理池的时候，遇到很多问题 上一周有开始学习python爬虫，学到构造ip代理池的时候，遇到很多问题 遇到的问题如下：12 hostname, aliases, ipaddrs = gethostbyaddr(name)UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte 经过了整整一周的时间，我终于搞定了。在这一周里，我重装了无数次系统（一度认为是Windows10系统编码问题），还装ubuntu系统，但是无果。在今天终于解决了这个我弄了好久的问题 解决方法如下：1改主机名字，就是改电脑的名字 下次再踩坑再来了]]></content>
-      <categories>
-        <category>错误解决合集</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
+        <tag>网站搭建</tag>
+        <tag>私有网盘</tag>
       </tags>
   </entry>
   <entry>
@@ -183,15 +171,27 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Oneindex程序安装失败解决办法]]></title>
-    <url>%2F2019%2F05%2F09%2FOneindex%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！ 安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！ 几次尝试，发现如下方法终于成功安装。打开这个网址点击这里，里面会列出oneindex的应用，点击进去后，会看到你的应ID（client_ID）。找到【应用程序机密】，点击【生成新密码】，就会生成一个新的client_secret，然后重新安装时候填这个新client_secret就可以了注意的是，id和密钥的顺序，不要弄错。]]></content>
+    <title><![CDATA[Windos10下安装pyspider的一些问题]]></title>
+    <url>%2F2019%2F05%2F09%2FWindos10%E4%B8%8B%E5%AE%89%E8%A3%85pyspider%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候…… 最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候pip install pyspider，报错了，Error为：Please specify --curl-dir=/path/to/built/libcurl 解决方法：安装pycurl，之后再用pip进行安装安装pycurl方法：打开链接：“python库安装下载”，找到自己安装python的版本进行安装。例如，我的python版本是python3.7.1，64位电脑就下载：pycurl-7.43.1-cp37-cp37m-win_amd64（cp代表你的python版本） 安装方法： windows下：打开cmd，然后将下载pycurl的位置copy一下，cd 位置，将pycurl名字复制一下，pip install 名字linux和mac下：直接进入文件位置，然后pip install 名字 接下来：直接pip install pyspider 问题解决！！！]]></content>
       <categories>
         <category>错误解决合集</category>
       </categories>
       <tags>
-        <tag>网站搭建</tag>
-        <tag>私有网盘</tag>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[有关于ip代理池（python）编码错误的解决办法]]></title>
+    <url>%2F2019%2F05%2F09%2F%E6%9C%89%E5%85%B3%E4%BA%8Eip%E4%BB%A3%E7%90%86%E6%B1%A0%EF%BC%88python%EF%BC%89%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[上一周有开始学习python爬虫，学到构造ip代理池的时候，遇到很多问题 上一周有开始学习python爬虫，学到构造ip代理池的时候，遇到很多问题 遇到的问题如下：12 hostname, aliases, ipaddrs = gethostbyaddr(name)UnicodeDecodeError: 'utf-8' codec can't decode bytes in position 2-3: invalid continuation byte 经过了整整一周的时间，我终于搞定了。在这一周里，我重装了无数次系统（一度认为是Windows10系统编码问题），还装ubuntu系统，但是无果。在今天终于解决了这个我弄了好久的问题 解决方法如下：1改主机名字，就是改电脑的名字 下次再踩坑再来了]]></content>
+      <categories>
+        <category>错误解决合集</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
@@ -219,15 +219,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[初识Markdown，请多多指教]]></title>
-    <url>%2F2019%2F05%2F09%2F%E5%88%9D%E8%AF%86Markdown%EF%BC%8C%E8%AF%B7%E5%A4%9A%E5%A4%9A%E6%8C%87%E6%95%99%2F</url>
-    <content type="text"><![CDATA[主要介绍一下Markdown语法 我们来认识Markdown的基础语法第一是标题 Markdown语法中总共只有六级标题 在井号加空格是最标准的 下面来演示一下标题的使用 # 这个是一级标题## 这个是二级标题### 这个是三级标题#### 这个是四级标题##### 这个是五级标题###### 这个是六级标题 第二是列表 在文字前面加上1234+ 一定要在```+、-、*```等符号后面添加空格- 有序列表直接标明数字* 下面来演示一下列表用法##### 无序列表 1 2 31#####有序列表 1 2 312345678910111213### 第四是引用* 只需要再文本前加入```&gt;```就ok* 一个```&gt;```代表一级引用，两个```&gt;```代表二级引用，以此类推* 下面来演示引用的格式&gt; 这里是引用&gt;&gt; 这里是二级引用&gt;&gt;&gt; 这里是三级引用### 第五是图片与链接* 插入图片形式：```![图片文字](图片地址） 一定要在英文状态输入 图片的地址指的是图片在硬盘的位置 图片解释内容可以随意修改 插入链接： 1234567891011* * 与插入图片的方式差一个叹号**```！```*** * 链接内容文字可以随意修改* 演示添加图片或者链接##### 试添加图片![我可爱的壁纸](http://upload-images.jianshu.io/upload_images/11019384-f153e995c3dd2d84.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)##### 试添加链接（百度）[百度链接](http://www.baidu.com)### 第六是强调* 添加斜体或粗体均可以用```_```或```* 添加斜体：在文本左右添加一个12* * 例如：_php是最好的编程语言_ 或者 *php是最好的编程语言** 添加粗体：在文本左右添加两个```*```或者```_ 例如：php是最好的编程语言 或者 php是最好的编程语言 第七是分割线 用连续的三个星号1234567891011121314151617* 用连续的三个减号```-```表示分割线* 例如：***### 第八是制作代办事宜（简书显示不出来）* 表示未做的事情用**```- [ ]```*** 表示已经做的事情用**```- [x]```*** 演示一下：1. - [ ] 我还没有做的事2. - [x] 我已经做完了的事### 第九是书写数学公式* 在公式左右用```$$```圈住* 举例：$$E=mc^2$$### 第十是高亮代码* 用```三个引号加语言开头，结尾用引号 举例： 1print ("我是大笨猪") 第十一是绘制表格 用竖线表示表格的竖线 用减号表示表格的横线 添加表格之前必须空行！！！*1234567891011*```:--:```表示居中对齐*```---:```表示右对齐* 例如：| 项目 | 价格 | 数量 || ------ | :----: | ---- || 计算机 | \$1600 | 5 |### 第十二是添加底色内容* 在文本左右添加```表示底色加深内容* 例如：```我喜欢你哦 以后再去更新了，迟点（我还没开始接触很多呢）]]></content>
+    <title><![CDATA[利用Aria2+Oneindex等脚本搭建自动上传onedrive离线下载在线播放私人网盘]]></title>
+    <url>%2F2019%2F05%2F09%2F%E5%88%A9%E7%94%A8Aria2%2BOneindex%E7%AD%89%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0onedrive%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E5%9C%A8%E7%BA%BF%E6%92%AD%E6%94%BE%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98%2F</url>
+    <content type="text"><![CDATA[这里介绍在阿里云服务器上搭建离线网盘等诸多功能的oneindex私人网盘。因为功能多，所以写一篇博客来记录。 准备工作 onedrive账号1枚（最好去申请教育邮箱，5T） 服务器一台（最好申请个学生服务器） 信心和耐力（时间比较久） 获取5T Onedrive容量 获取临时邮箱 地址1：http://abcda.tech/地址2：http://get365.pw/ 贴两个地址出来，若不能使用，就去Google一下吧 使用: 在网上右上角申请一个临时的邮箱，并在Office教育版申请地址输入你的临时邮箱账号，点击注册。 注册office365教育版 Office365教育版注册地址：链接地址输入之前获得的临时邮箱。获取验证码时这里可以查看 注册完登陆就可以 申请虚拟主机(服务器) 若你还是大学生，我建议你可以申请一个学生用机，每个月10块，还送域名，岂不是美滋滋的？服务器也不止用来挂Onedrive吧，还可以学习… 我比较推荐阿里云家的服务器申请购买服务器链接在此：https://promotion.aliyun.com/ntms/act/campus2018.html 申请域名链接在此：https://wanwang.aliyun.com/domain/com/?spm=5176.10695662.1158081.1.59854234UgUR6k 开始搭建Onedrive私有网盘解析域名到服务器用xsell5登录到自己的服务器，然后安装宝塔面板(傻瓜式操作) 123456#Centos系统yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install.sh &amp;&amp; sh install.sh#Ubuntu系统wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh &amp;&amp; sudo bash install.sh#Debian系统wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh &amp;&amp; bash install.sh 安好后会提示你的IP:8888地址还有账号密码，在浏览器中输入地址还有账号密码登录。登陆后会提示安装套件 这里选择nginx和php5.6就行，点一键安装，等安装结束后，选择左侧网站--&gt;添加站点，填写你的域名后选择php版本，其他的不需要勾选。 服务器安装Oneindex脚本下载Oneindex脚本后，确定后选择左侧的文件--&gt;上传，上传刚才下载的文件，上传成功后，选择该zip文件--&gt;解压。(上传位置为网站的根目录) 进入oneindex-master文件夹，将cache、config两个文件夹的权限设置为777。 回到网站继续设置。 选择网站目录，选择刚才域名下oneindex-master文件夹，保存。 选择伪静态，复制粘贴以下代码，保存。 1234567891011location / &#123;if (!-f $request_filename)&#123;set $rule_0 1$rule_0;&#125;if (!-d $request_filename)&#123;set $rule_0 2$rule_0;&#125;if ($rule_0 = "21")&#123;rewrite ^/(.*)$ /index.php?/$1 last;&#125;&#125; 之后浏览器输入域名看到以下界面就表示后台设置可以了，之后一直下一步然后登陆Onedrive账号，授权就可以了。 当然接下来的操作，你可以做也可以不做，当你完成以上的步骤就已经完成私有网盘的搭建了。如果你要获得更好的下载和上传速度，就可以继续阅读下去，搭建Aria2脚本。 aria2、ariaNG安装aria2安装使用逗比的脚本安装就很简单了 123wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh#备用地址wget -N --no-check-certificate https://www.moerats.com/usr/shell/Aria2/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh 运行之后会出现登录地址、密码等，记下来一会用。如果需要修改默认配置使用bash aria2.sh按选项走就可以。 AriaNg安装这里需要在BT面板中网站——&gt;新建网站，添加另一个域名，或者填写该主机ip或ip+端口号也可以，例如：ip:8081等自行选择。之后后台cd到新网站目录里复制以下代码 1wget https://www.moerats.com/usr/down/aria-ng-0.2.0.zip &amp;&amp; unzip aria-ng-0.2.0.zip 之后就能在浏览器中通过设置的域名或IP访问了。在AriaNg设置RPC这里输入刚才aria2的密码，刷新一下，Aria2状态显示已连接就表示安装好了。 之后下载东西直接浏览器里输入IP，和迅雷等工具一样就能下载到服务器上了。 Aria自动上传这里需要用到OneDrive for Business on Bash项目Github地址：https://github.com/0oVicero0/OneDrive 1wget --no-check-certificate -qO- "https://raw.githubusercontent.com/0oVicero0/OneDrive/master/OneDrive.sh" |bash 脚本中已内置参数，直接用大佬的教程来安装，之后onedrive -a进行账号认证。 将划横线的网站在浏览器中打开，授权之后浏览器跳转，获得一个常常的网址，如下： 将code=与&amp;session之间的字符串复制一下，再到后台粘贴，回车。 显示It seems like we have a refresh token，这句表示成功。之后运行命令onedrive -l测试一下。 能看到onedrive目录里的文件就表示成功了，之后在某一目录先新建一个文件vi /root/rcloneupload.sh贴入以下内容 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#!/bin/bashnum="$2"path="$3" downloadpath='/home' #下载目录 if [ $num -eq 0 ] then exit 0fi function getdir()&#123;IFS=$'\n';for file in `ls "$1"` do if [ -d "$1/$file" ] then getdir "$1/$file" else if [ "$&#123;1%/*&#125;" = "$downloadpath" ] &amp;&amp; [ $num -eq 1 ] then onedrive "$1" elif [ $num -eq 1 ] then onedrive "$1/$file" else onedrive -u "$downloadpath" "$1/$file" fi fi done&#125; while true; dofilepath=$path path=$&#123;path%/*&#125;; if [ "$path" = "$downloadpath" ] then getdir "$filepath" if [ -d $filepath ] then rm -r "$filepath" else rm "$filepath" fi echo 3 &gt; /proc/sys/vm/drop_caches swapoff -a &amp;&amp; swapon -a exit 0fidone 注意downloadpath=’/home’;这里的目录要和Aria的下载目录一致。然后chmod +x rcloneupload.sh授予权限，修改Aria配置文件vi /root/.aria2/aria2.conf，将on-download-complete=/root/rcloneupload.sh贴在里面。重启一下Aria就可以了。之后测试一下，使用Aria下载一个文件，下载完成后看是否上传到了onedrive里即可。 最后 以上参考知乎大佬的帖子: https://zhuanlan.zhihu.com/p/61019456 ，感谢。]]></content>
       <categories>
         <category>私人干货</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
-        <tag>博客</tag>
+        <tag>网站搭建</tag>
+        <tag>私有网盘</tag>
       </tags>
   </entry>
   <entry>
@@ -243,15 +243,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[利用Aria2+Oneindex等脚本搭建自动上传onedrive离线下载在线播放私人网盘]]></title>
-    <url>%2F2019%2F05%2F09%2F%E5%88%A9%E7%94%A8Aria2%2BOneindex%E7%AD%89%E8%84%9A%E6%9C%AC%E6%90%AD%E5%BB%BA%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0onedrive%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E5%9C%A8%E7%BA%BF%E6%92%AD%E6%94%BE%E7%A7%81%E4%BA%BA%E7%BD%91%E7%9B%98%2F</url>
-    <content type="text"><![CDATA[这里介绍在阿里云服务器上搭建离线网盘等诸多功能的oneindex私人网盘。因为功能多，所以写一篇博客来记录。 准备工作 onedrive账号1枚（最好去申请教育邮箱，5T） 服务器一台（最好申请个学生服务器） 信心和耐力（时间比较久） 获取5T Onedrive容量 获取临时邮箱 地址1：http://abcda.tech/地址2：http://get365.pw/ 贴两个地址出来，若不能使用，就去Google一下吧 使用: 在网上右上角申请一个临时的邮箱，并在Office教育版申请地址输入你的临时邮箱账号，点击注册。 注册office365教育版 Office365教育版注册地址：链接地址输入之前获得的临时邮箱。获取验证码时这里可以查看 注册完登陆就可以 申请虚拟主机(服务器) 若你还是大学生，我建议你可以申请一个学生用机，每个月10块，还送域名，岂不是美滋滋的？服务器也不止用来挂Onedrive吧，还可以学习… 我比较推荐阿里云家的服务器申请购买服务器链接在此：https://promotion.aliyun.com/ntms/act/campus2018.html 申请域名链接在此：https://wanwang.aliyun.com/domain/com/?spm=5176.10695662.1158081.1.59854234UgUR6k 开始搭建Onedrive私有网盘解析域名到服务器用xsell5登录到自己的服务器，然后安装宝塔面板(傻瓜式操作) 123456#Centos系统yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install.sh &amp;&amp; sh install.sh#Ubuntu系统wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh &amp;&amp; sudo bash install.sh#Debian系统wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh &amp;&amp; bash install.sh 安好后会提示你的IP:8888地址还有账号密码，在浏览器中输入地址还有账号密码登录。登陆后会提示安装套件 这里选择nginx和php5.6就行，点一键安装，等安装结束后，选择左侧网站--&gt;添加站点，填写你的域名后选择php版本，其他的不需要勾选。 服务器安装Oneindex脚本下载Oneindex脚本后，确定后选择左侧的文件--&gt;上传，上传刚才下载的文件，上传成功后，选择该zip文件--&gt;解压。(上传位置为网站的根目录) 进入oneindex-master文件夹，将cache、config两个文件夹的权限设置为777。 回到网站继续设置。 选择网站目录，选择刚才域名下oneindex-master文件夹，保存。 选择伪静态，复制粘贴以下代码，保存。 1234567891011location / &#123;if (!-f $request_filename)&#123;set $rule_0 1$rule_0;&#125;if (!-d $request_filename)&#123;set $rule_0 2$rule_0;&#125;if ($rule_0 = "21")&#123;rewrite ^/(.*)$ /index.php?/$1 last;&#125;&#125; 之后浏览器输入域名看到以下界面就表示后台设置可以了，之后一直下一步然后登陆Onedrive账号，授权就可以了。 当然接下来的操作，你可以做也可以不做，当你完成以上的步骤就已经完成私有网盘的搭建了。如果你要获得更好的下载和上传速度，就可以继续阅读下去，搭建Aria2脚本。 aria2、ariaNG安装aria2安装使用逗比的脚本安装就很简单了 123wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh#备用地址wget -N --no-check-certificate https://www.moerats.com/usr/shell/Aria2/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh 运行之后会出现登录地址、密码等，记下来一会用。如果需要修改默认配置使用bash aria2.sh按选项走就可以。 AriaNg安装这里需要在BT面板中网站——&gt;新建网站，添加另一个域名，或者填写该主机ip或ip+端口号也可以，例如：ip:8081等自行选择。之后后台cd到新网站目录里复制以下代码 1wget https://www.moerats.com/usr/down/aria-ng-0.2.0.zip &amp;&amp; unzip aria-ng-0.2.0.zip 之后就能在浏览器中通过设置的域名或IP访问了。在AriaNg设置RPC这里输入刚才aria2的密码，刷新一下，Aria2状态显示已连接就表示安装好了。 之后下载东西直接浏览器里输入IP，和迅雷等工具一样就能下载到服务器上了。 Aria自动上传这里需要用到OneDrive for Business on Bash项目Github地址：https://github.com/0oVicero0/OneDrive 1wget --no-check-certificate -qO- "https://raw.githubusercontent.com/0oVicero0/OneDrive/master/OneDrive.sh" |bash 脚本中已内置参数，直接用大佬的教程来安装，之后onedrive -a进行账号认证。 将划横线的网站在浏览器中打开，授权之后浏览器跳转，获得一个常常的网址，如下： 将code=与&amp;session之间的字符串复制一下，再到后台粘贴，回车。 显示It seems like we have a refresh token，这句表示成功。之后运行命令onedrive -l测试一下。 能看到onedrive目录里的文件就表示成功了，之后在某一目录先新建一个文件vi /root/rcloneupload.sh贴入以下内容 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#!/bin/bashnum="$2"path="$3" downloadpath='/home' #下载目录 if [ $num -eq 0 ] then exit 0fi function getdir()&#123;IFS=$'\n';for file in `ls "$1"` do if [ -d "$1/$file" ] then getdir "$1/$file" else if [ "$&#123;1%/*&#125;" = "$downloadpath" ] &amp;&amp; [ $num -eq 1 ] then onedrive "$1" elif [ $num -eq 1 ] then onedrive "$1/$file" else onedrive -u "$downloadpath" "$1/$file" fi fi done&#125; while true; dofilepath=$path path=$&#123;path%/*&#125;; if [ "$path" = "$downloadpath" ] then getdir "$filepath" if [ -d $filepath ] then rm -r "$filepath" else rm "$filepath" fi echo 3 &gt; /proc/sys/vm/drop_caches swapoff -a &amp;&amp; swapon -a exit 0fidone 注意downloadpath=’/home’;这里的目录要和Aria的下载目录一致。然后chmod +x rcloneupload.sh授予权限，修改Aria配置文件vi /root/.aria2/aria2.conf，将on-download-complete=/root/rcloneupload.sh贴在里面。重启一下Aria就可以了。之后测试一下，使用Aria下载一个文件，下载完成后看是否上传到了onedrive里即可。 最后 以上参考知乎大佬的帖子: https://zhuanlan.zhihu.com/p/61019456 ，感谢。]]></content>
+    <title><![CDATA[初识Markdown，请多多指教]]></title>
+    <url>%2F2019%2F05%2F09%2F%E5%88%9D%E8%AF%86Markdown%EF%BC%8C%E8%AF%B7%E5%A4%9A%E5%A4%9A%E6%8C%87%E6%95%99%2F</url>
+    <content type="text"><![CDATA[主要介绍一下Markdown语法 我们来认识Markdown的基础语法第一是标题 Markdown语法中总共只有六级标题 在井号加空格是最标准的 下面来演示一下标题的使用 # 这个是一级标题## 这个是二级标题### 这个是三级标题#### 这个是四级标题##### 这个是五级标题###### 这个是六级标题 第二是列表 在文字前面加上1234+ 一定要在```+、-、*```等符号后面添加空格- 有序列表直接标明数字* 下面来演示一下列表用法##### 无序列表 1 2 31#####有序列表 1 2 312345678910111213### 第四是引用* 只需要再文本前加入```&gt;```就ok* 一个```&gt;```代表一级引用，两个```&gt;```代表二级引用，以此类推* 下面来演示引用的格式&gt; 这里是引用&gt;&gt; 这里是二级引用&gt;&gt;&gt; 这里是三级引用### 第五是图片与链接* 插入图片形式：```![图片文字](图片地址） 一定要在英文状态输入 图片的地址指的是图片在硬盘的位置 图片解释内容可以随意修改 插入链接： 1234567891011* * 与插入图片的方式差一个叹号**```！```*** * 链接内容文字可以随意修改* 演示添加图片或者链接##### 试添加图片![我可爱的壁纸](http://upload-images.jianshu.io/upload_images/11019384-f153e995c3dd2d84.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)##### 试添加链接（百度）[百度链接](http://www.baidu.com)### 第六是强调* 添加斜体或粗体均可以用```_```或```* 添加斜体：在文本左右添加一个12* * 例如：_php是最好的编程语言_ 或者 *php是最好的编程语言** 添加粗体：在文本左右添加两个```*```或者```_ 例如：php是最好的编程语言 或者 php是最好的编程语言 第七是分割线 用连续的三个星号1234567891011121314151617* 用连续的三个减号```-```表示分割线* 例如：***### 第八是制作代办事宜（简书显示不出来）* 表示未做的事情用**```- [ ]```*** 表示已经做的事情用**```- [x]```*** 演示一下：1. - [ ] 我还没有做的事2. - [x] 我已经做完了的事### 第九是书写数学公式* 在公式左右用```$$```圈住* 举例：$$E=mc^2$$### 第十是高亮代码* 用```三个引号加语言开头，结尾用引号 举例： 1print ("我是大笨猪") 第十一是绘制表格 用竖线表示表格的竖线 用减号表示表格的横线 添加表格之前必须空行！！！*1234567891011*```:--:```表示居中对齐*```---:```表示右对齐* 例如：| 项目 | 价格 | 数量 || ------ | :----: | ---- || 计算机 | \$1600 | 5 |### 第十二是添加底色内容* 在文本左右添加```表示底色加深内容* 例如：```我喜欢你哦 以后再去更新了，迟点（我还没开始接触很多呢）]]></content>
       <categories>
         <category>私人干货</category>
       </categories>
       <tags>
-        <tag>网站搭建</tag>
-        <tag>私有网盘</tag>
+        <tag>Markdown</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
