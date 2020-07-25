@@ -1,6 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2F%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[常见的远程调用方式有以下2种： RPC：Remote Produce Call远程过程调用，类似的还有RMI。自定义数据格式，基于原生TCP通信，速度快，效率高。早期的webservice，现在热门的dubbo，都是RPC的典型代表 Http：http其实是一种网络传输协议，基于TCP，规定了数据传输的格式。现在客户端浏览器与服务端通信基本都是采用Http协议，也可以用来进行远程服务调用。缺点是消息封装臃肿，优势是对服务的提供和调用方没有任何技术限定，自由灵活，更符合微服务理念。 现在热门的Rest风格，就可以通过http协议来实现。]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2FPV%E4%B8%8EUV%2F</url>
+    <content type="text"><![CDATA[PV：(page view)，即页面浏览量； 用户每1次对网站中的每个网页访问均被记录1次。用户对同一页面的多次访问，访问量累计 UV：(unique visitor)，独立访客 指访问某个站点或点击某条新闻的不同IP地址的人数。在同一天内，uv只记录第一次进入网站的具有独立IP的访问者，在同一天内再次访问该网站则不计数。]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2F%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[跨域：浏览器对于javascript的同源策略的限制 。 以下情况都属于跨域： 跨域原因说明 示例 域名不同 www.jd.com 与 www.taobao.com 域名相同，端口不同 www.jd.com:8080 与 www.jd.com:8081 二级域名不同 item.jd.com 与 miaosha.jd.com 如果域名和端口都相同，但是请求路径不同，不属于跨域，如： www.jd.com/item www.jd.com/goods http和https也属于跨域 目前比较常用的跨域解决方案有3种： Jsonp 最早的解决方案，利用script标签可以跨域的原理实现。 限制： 需要服务的支持 只能发起GET请求 nginx反向代理 思路是：利用nginx把跨域反向代理为不跨域，支持各种请求方式 缺点：需要在nginx进行额外配置，语义不清晰 CORS 规范化的跨域请求解决方案，安全可靠。 优势： 在服务端进行控制是否允许跨域，可自定义规则 支持各种请求方式 缺点： 会产生额外的请求]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2FSQL%E8%AF%AD%E6%B3%95where%E4%B8%8Ehaving%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[简单记录where和having关键字的区别 where在分组之前进行限定，如果不满足条件，则不参与分组。having在分组之后进行限定，如果不满足结果，则不会被查询出来。 where后不可以跟聚合函数，having可以进行聚合函数的判断。]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[数据库设计的范式 概念: 设计关系数据库时，遵从不同的规范要求，设计出合理的关系型数据库，这些不同的规范要求被称为不同的范式，各种范式呈递次规范，越高的范式数据库冗余越小。(必须先遵循前面所有范式要求) 分类: 第一范式(1NF):每一列都是不可分割的原子数据项。(只能是单列) 第二范式(2NF):在1NF的基础上，非码属性必须完全依赖于候选码（在1NF基础上消除非主属性对主码的部分函数依赖） 几个概念: 函数依赖: A–&gt;B,如果通过A属性(属性组)的值，可以确定唯一B属性的值。则称B依赖于A。 完全函数依赖：A–&gt;B,如果A是一个属性组，则B属性值的确定需要依赖A属性组中所有的属性值。 部分函数依赖：A–&gt;B,如果A是一个属性组，则B属性值的确定需要依赖A属性组中某一些值即可。 传递函数依赖：A–&gt;B,B–&gt;C。如果通过A属性(属性组)的值，可以确定唯一B属性的值，在通过B属性(属性组)的值可以确定唯一C属性的值，就为C传递函数依赖于A。 码：如果在一张表中，一个属性或属性组，被其他所有属性所完全依赖，则称这个属性(属性组)为该表的码 主属性: 码属性组中的所有属性 非主属性: 除过码属性组的属性 第三范式(3NF):在2NF基础上，任何非主属性不依赖于其它非主属性（在2NF基础上消除传递依赖）]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2F%E6%97%A0%E6%A0%87%E9%A2%98Markdown%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2F%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E7%BA%BF%E5%88%B7USB3.0%E7%9A%84%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[使用小米线刷工具线刷我自己的小米六，突然发现进度条时间一直增加，而且刷不进去。然后我就知道不行了。经过度娘，最终发现是USB3.0的问题。以下就是解决办法。 问题: 解决办法1: 换电脑，将数据线插入USB2.0接口解决办法2: 复制以下代码，新建txt文件粘贴进去，然后修改后缀名为bat。右键以管理员权限运行。123456@echo offreg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;osvc&quot; /t REG_BINARY /d &quot;0000&quot; /freg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;SkipContainerIdQuery&quot; /t REG_BINARY /d &quot;01000000&quot; /freg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;SkipBOSDescriptorQuery&quot; /t REG_BINARY /d &quot;01000000&quot; /f pause 还有还原方法: 打开注册表，删除新增的注册表。打开搜索，搜索regedit。搜索HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\，并删除以下三个文件123HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\osvcHKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\SkipContainerIdQueryHKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\SkipBOSDescriptorQuery 最后搞定问题:]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E7%9A%84%E5%9B%9B%E5%A4%A7%E7%89%B9%E5%BE%81%2F</url>
+    <content type="text"><![CDATA[事务的四大特征: 原子性: 是不可分割的最小操作单位，要么同时成功，要么同时失败。 持久性: 当事务提交或回滚后，数据库会持久化保存数据。 隔离性: 多个事务之间，相互独立。 一致性: 事务操作前后，数据总量不变]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2F%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E5%AF%86%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[当忘记了root的密码的时候，就需要修改其密码 打开cmd，使用管理员运行。输入stop mtsql```12. 使用无验证方式启动mysql服务：```mysqld --skip-grant-tables 打开新的命令行窗口,直接输入14. 开始修改管理员密码，```use mysql;```--&gt;```update user set password = password(&apos;新密码&apos;) where user = &apos;root&apos; 关闭cmd，打开任务管理器结束mysqld.exe进程，ok完成修改。]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2FJDBC%E7%9A%84%E6%9B%B4%E6%96%B0sql%E7%9A%84%E5%AF%B9%E8%B1%A1%2F</url>
+    <content type="text"><![CDATA[记下每个方法所针对的对象 int executeUpdate(String sql): 执行DML语句(insert、update、delete)、DDL(create,alter,drop)语句. ResultSet executeQuery(String sql): 执行DQL语句(select).]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2Fget%E5%92%8Cpost%E6%8F%90%E4%BA%A4%E6%96%B9%E5%BC%8F%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[get: 1. 请求参数会在地址栏中显示，会封装在请求行中 2. 请求参数长度是有限制的 3. 不太安全 post: 1. 请求参数不会在地址栏中显示，会封装在请求体中。 2. 请求参数的长度没有限制 3. 比较安全]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86--%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E4%BD%93%E7%B3%BB%2F</url>
+    <content type="text"><![CDATA[冯诺依曼体系概念: 将程序指令和数据一起存储的计算机设计概念结构(存储程序指令设计通用电路)。出现原因： 早期计算机仅含固定用途程序 改变程序得更改结构，重新设计电路体系要求： 必须有一个存储器 必须有一个控制器 必须有一个运算器 必须有输入设备 必须有输出设备功能： 能够把需要的程序和数据送到计算机中 能够长期记忆程序、数据、中间结果及最终运算结果的能力 能够具备算术、逻辑运算和数据传送等数据加工处理的能力 能够按照要求将处理结果输出给用户早期结构体系： 冯诺依曼瓶颈问题: CPU和存储器速率之间的问题无法调和。CPU经常空转等待数据传输。 现代计算机的结构 为了解决CPU与存储设备之间的性能差异问题，以存储器为核心。]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B1%82%E6%AC%A1%E5%92%8C%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%2F</url>
+    <content type="text"><![CDATA[程序翻译和程序解释 计算机执行得指令都是L0 翻译过程生成新的L0程序，解释过程不生成新的L0程序 解释过程由L0编写的解释器去解释L1程序常见语言分类: 程序翻译: C/C++、Object-C、Golang 程序解释： Python、PHP、Javascript 翻译+解释: Java、C#HZ(赫兹):每秒中的周期性变动重复次数的计量(2GHz = 2 * 1000^3 Hz = 每秒20亿次)。]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2FHTTP%E5%8D%8F%E8%AE%AE%2F</url>
+    <content type="text"><![CDATA[概念：Hyper Text Transfer Protocol 超文本传输协议 传输协议：定义了，客户端和服务器端通信时，发送数据的格式 特点： 基于TCP/IP的高级协议 默认端口号:80 基于请求/响应模型的:一次请求对应一次响应 无状态的：每次请求之间相互独立，不能交互数据 历史版本： 1.0：每一次请求响应都会建立新的连接 1.1：复用连接 请求消息数据格式 请求行 请求方式 请求url 请求协议/版本 GET /login.html HTTP/1.1 请求方式： HTTP协议有7中请求方式，常用的有2种 GET： 请求参数在请求行中，在url后。 请求的url长度有限制的 不太安全 POST： 请求参数在请求体中 请求的url长度没有限制的 相对安全 请求头：客户端浏览器告诉服务器一些信息 请求头名称: 请求头值 常见的请求头： User-Agent：浏览器告诉服务器，我访问你使用的浏览器版本信息 可以在服务器端获取该头的信息，解决浏览器的兼容性问题 Referer：http://localhost/login.html 告诉服务器，我(当前请求)从哪里来？ 作用： 防盗链： 统计工作： 请求空行 空行，就是用于分割POST请求的请求头，和请求体的。 请求体(正文)： 封装POST请求消息的请求参数的]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2F%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91%E5%92%8C%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE%2F</url>
+    <content type="text"><![CDATA[请求转发：一种在服务器内部的资源跳转方式 1. 步骤： 1. 通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path) 2. 使用RequestDispatcher对象来进行转发：forward(ServletRequest request, ServletResponse response) 2. 特点： 1. 浏览器地址栏路径不发生变化 2. 只能转发到当前服务器内部资源中。 3. 转发是一次请求 共享数据： * 域对象：一个有作用范围的对象，可以在范围内共享数据 * request域：代表一次请求的范围，一般用于请求转发的多个资源中共享数据 * 方法： 1. void setAttribute(String name,Object obj):存储数据 2. Object getAttitude(String name):通过键获取值 3. void removeAttribute(String name):通过键移除键值对]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2FHTTP%E5%93%8D%E5%BA%94%2F</url>
+    <content type="text"><![CDATA[请求消息：客户端发送给服务器端的数据 数据格式： 请求行 请求头 请求空行 请求体 响应消息：服务器端发送给客户端的数据 数据格式： 响应行 组成：协议/版本 响应状态码 状态码描述 响应状态码：服务器告诉客户端浏览器本次请求和响应的一个状态。 状态码都是3位数字 分类： 1xx：服务器就收客户端消息，但没有接受完成，等待一段时间后，发送1xx多状态码 2xx：成功。代表：200 3xx：重定向。代表：302(重定向)，304(访问缓存) 4xx：客户端错误。 代表： 404（请求路径没有对应的资源） 405：请求方式没有对应的doXxx方法 5xx：服务器端错误。代表：500(服务器内部出现异常)]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2F%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E8%BD%AC%E5%8F%91%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[重定向的特点:redirect 地址栏发生变化 重定向可以访问其他站点(服务器)的资源 重定向是两次请求。不能使用request对象来共享数据 转发的特点：forward 转发地址栏路径不变 转发只能访问当前服务器下的资源 转发是一次请求，可以使用request对象来共享数据]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2Fsession%E4%B8%8ECookie%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[session与Cookie的区别： 1. session存储数据在服务器端，Cookie在客户端 2. session没有数据大小限制，Cookie有 3. session数据安全，Cookie相对于不安全]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2Fredis%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%2F</url>
+    <content type="text"><![CDATA[redis存储的是：key,value格式的数据，其中key都是字符串，value有5种不同的数据结构 value的数据结构： 1) 字符串类型 string 2) 哈希类型 hash ： map格式 3) 列表类型 list ： linkedlist格式。支持重复元素 4) 集合类型 set ： 不允许重复元素 5) 有序集合类型 sortedset：不允许重复元素，且元素有顺序]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2Fmaven%E6%8A%A5%E9%94%99%2F</url>
+    <content type="text"><![CDATA[java web 基础，报错：java.lang.NullPointerException: inStream parameter is null 注意：maven 下的配置文件应该放到 resorces 下，也就是需要将druid.properties 放到 resources 目录下 问题：该错误的原因是，读取不到 properties 配置文件：1InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream(&quot;/druid.properties&quot;); 这是默认写法，应改为：1InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream(&quot;druid.properties&quot;);]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2FSpring%E6%A1%86%E6%9E%B6%E4%B8%ADbean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%2F</url>
+    <content type="text"><![CDATA[单例对象* 出生: 当容器创建时对象出生 * 活着: 只要容器还在，对象就一直活着 * 死亡: 容器销毁，对象消亡 * 总结: 单例对象的生命周期和容器相同 多例对象* 出生: 当我们使用对象时spring框架为我们创建 * 活着: 对象只要是在使用过程就一直活着 * 死亡: 当对象长时间不用，且没有别的对象引用时，由Java的垃圾回收机制回收]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2020%2F07%2F25%2Fjdk8%E6%96%B0%E7%89%B9%E6%80%A7%2F</url>
+    <content type="text"><![CDATA[JDK1.8的新特性1. 前言JDK1.8已经发布很久了，在很多企业中都已经在使用。并且Spring5、SpringBoot2.0都推荐使用JDK1.8以上版本。所以我们必须与时俱进，拥抱变化。 Jdk8这个版本包含语言、编译器、库、工具和JVM等方面的十多个新特性。在本文中我们将学习以下方面的新特性： Lambda表达式 函数式接口 方法引用 接口的默认方法和静态方法 Optional Streams 并行数组 2. Lambda表达式函数式编程 Lambda 表达式，也可称为闭包，它是推动 Java 8 发布的最重要新特性。Lambda 允许把函数作为一个方法的参数（函数作为参数传递进方法中）。可以使代码变的更加简洁紧凑。 2.1 基本语法：1(参数列表) -&gt; &#123;代码块&#125; 需要注意： 参数类型可省略，编译器可以自己推断 如果只有一个参数，圆括号可以省略 代码块如果只是一行代码，大括号也可以省略 如果代码块是一行，且是有结果的表达式，return可以省略 注意：事实上，把Lambda表达式可以看做是匿名内部类的一种简写方式。当然，前提是这个匿名内部类对应的必须是接口，而且接口中必须只有一个函数！Lambda表达式就是直接编写函数的：参数列表、代码体、返回值等信息，用函数来代替完整的匿名内部类！ 2.2 用法示例示例1：多个参数准备一个集合： 12// 准备一个集合List&lt;Integer&gt; list = Arrays.asList(10, 5, 25, -15, 20); 假设我们要对集合排序，我们先看JDK7的写法，需要通过匿名内部类来构造一个Comparator： 12345678// Jdk1.7写法Collections.sort(list,new Comparator&lt;Integer&gt;() &#123; @Override public int compare(Integer o1, Integer o2) &#123; return o1 - o2; &#125;&#125;);System.out.println(list);// [-15, 5, 10, 20, 25] 如果是jdk8，我们可以使用新增的集合API：sort(Comparator c)方法，接收一个比较器，我们用Lambda来代替Comparator 的匿名内部类： 1234// Jdk1.8写法，参数列表的数据类型可省略：list.sort((i1,i2) -&gt; &#123; return i1 - i2;&#125;);System.out.println(list);// [-15, 5, 10, 20, 25] 对比一下Comparator中的compare()方法，你会发现：这里编写的Lambda表达式，恰恰就是compare()方法的简写形式，JDK8会把它编译为匿名内部类。是不是简单多了！ 别着急，我们发现这里的代码块只有一行代码，符合前面的省略规则，我们可以简写为： 123// Jdk8写法// 因为代码块是一个有返回值的表达式，可以省略大括号以及returnlist.sort((i1,i2) -&gt; i1 - i2); 示例2：单个参数还以刚才的集合为例，现在我们想要遍历集合中的元素，并且打印。 先用jdk1.7的方式： 1234// JDK1.7遍历并打印集合for (Integer i : list) &#123; System.out.println(i);&#125; jdk1.8给集合添加了一个方法：foreach() ，接收一个对元素进行操作的函数： 12// JDK1.8遍历并打印集合，因为只有一个参数，所以我们可以省略小括号:list.forEach(i -&gt; System.out.println(i)); 实例3：把Lambda赋值给变量Lambda表达式的实质其实还是匿名内部类，所以我们其实可以把Lambda表达式赋值给某个变量。 123456// 将一个Lambda表达式赋值给某个接口：Runnable task = () -&gt; &#123; // 这里其实是Runnable接口的匿名内部类，我们在编写run方法。 System.out.println("hello lambda!");&#125;;new Thread(task).start(); 不过上面的用法很少见，一般都是直接把Lambda作为参数。 示例4：隐式finalLambda表达式的实质其实还是匿名内部类，而匿名内部类在访问外部局部变量时，要求变量必须声明为final！不过我们在使用Lambda表达式时无需声明final，这并不是说违反了匿名内部类的规则，因为Lambda底层会隐式的把变量设置为final，在后续的操作中，一定不能修改该变量： 正确示范： 1234567// 定义一个局部变量int num = -1;Runnable r = () -&gt; &#123; // 在Lambda表达式中使用局部变量num，num会被隐式声明为final System.out.println(num);&#125;;new Thread(r).start();// -1 错误案例： 1234567// 定义一个局部变量int num = -1;Runnable r = () -&gt; &#123; // 在Lambda表达式中使用局部变量num，num会被隐式声明为final，不能进行任何修改操作 System.out.println(num++);&#125;;new Thread(r).start();//报错 3. 函数式接口经过前面的学习，相信大家对于Lambda表达式已经有了初步的了解。总结一下： Lambda表达式是接口的匿名内部类的简写形式 接口必须满足：内部只有一个函数 其实这样的接口，我们称为函数式接口，我们学过的Runnable、Comparator都是函数式接口的典型代表。但是在实践中，函数接口是非常脆弱的，只要有人在接口里添加多一个方法，那么这个接口就不是函数接口了，就会导致编译失败。Java 8提供了一个特殊的注解@FunctionalInterface来克服上面提到的脆弱性并且显示地表明函数接口。而且jdk8版本中，对很多已经存在的接口都添加了@FunctionalInterface注解，例如Runnable接口： 另外，Jdk8默认提供了一些函数式接口供我们使用： 3.1 Function类型接口12345@FunctionalInterfacepublic interface Function&lt;T, R&gt; &#123; // 接收一个参数T，返回一个结果R R apply(T t);&#125; Function代表的是有参数，有返回值的函数。还有很多类似的Function接口： 接口名 描述 BiFunction&lt;T,U,R&gt; 接收两个T和U类型的参数，并且返回R类型结果的函数 DoubleFunction&lt;R&gt; 接收double类型参数，并且返回R类型结果的函数 IntFunction&lt;R&gt; 接收int类型参数，并且返回R类型结果的函数 LongFunction&lt;R&gt; 接收long类型参数，并且返回R类型结果的函数 ToDoubleFunction&lt;T&gt; 接收T类型参数，并且返回double类型结果 ToIntFunction&lt;T&gt; 接收T类型参数，并且返回int类型结果 ToLongFunction&lt;T&gt; 接收T类型参数，并且返回long类型结果 DoubleToIntFunction 接收double类型参数，返回int类型结果 DoubleToLongFunction 接收double类型参数，返回long类型结果 看出规律了吗？这些都是一类函数接口，在Function基础上衍生出的，要么明确了参数不确定返回结果，要么明确结果不知道参数类型，要么两者都知道。 3.2 Consumer系列12345@FunctionalInterfacepublic interface Consumer&lt;T&gt; &#123; // 接收T类型参数，不返回结果 void accept(T t);&#125; Consumer系列与Function系列一样，有各种衍生接口，这里不一一列出了。不过都具备类似的特征：那就是不返回任何结果。 3.3 Predicate系列12345@FunctionalInterfacepublic interface Predicate&lt;T&gt; &#123; // 接收T类型参数，返回boolean类型结果 boolean test(T t);&#125; Predicate系列参数不固定，但是返回的一定是boolean类型。 3.4 Supplier系列12345@FunctionalInterfacepublic interface Supplier&lt;T&gt; &#123; // 无需参数，返回一个T类型结果 T get();&#125; Supplier系列，英文翻译就是“供应者”，顾名思义：只产出，不收取。所以不接受任何参数，返回T类型结果。 4. 方法引用方法引用使得开发者可以将已经存在的方法作为变量来传递使用。方法引用可以和Lambda表达式配合使用。 4.1 语法：总共有四类方法引用： 语法 描述 类名::静态方法名 类的静态方法的引用 类名::非静态方法名 类的非静态方法的引用 实例对象::非静态方法名 类的指定实例对象的非静态方法引用 类名::new 类的构造方法引用 4.2 示例首先我们编写一个集合工具类，提供一个方法： 123456789101112131415public class CollectionUtil&#123; /** * 利用function将list集合中的每一个元素转换后形成新的集合返回 * @param list 要转换的源集合 * @param function 转换元素的方式 * @param &lt;T&gt; 源集合的元素类型 * @param &lt;R&gt; 转换后的元素类型 * @return */ public static &lt;T,R&gt; List&lt;R&gt; convert(List&lt;T&gt; list, Function&lt;T,R&gt; function)&#123; List&lt;R&gt; result = new ArrayList&lt;&gt;(); list.forEach(t -&gt; result.add(function.apply(t))); return result; &#125;&#125; 可以看到这个方法接收两个参数： List&lt;T&gt; list：需要进行转换的集合 Function&lt;T,R&gt;：函数接口，接收T类型，返回R类型。用这个函数接口对list中的元素T进行转换，变为R类型 接下来，我们看具体案例： 4.2.1 类的静态方法引用1List&lt;Integer&gt; list = Arrays.asList(1000, 2000, 3000); 我们需要把这个集合中的元素转为十六进制保存，需要调用Integer.toHexString()方法： 123public static String toHexString(int i) &#123; return toUnsignedString0(i, 4);&#125; 这个方法接收一个 i 类型，返回一个String类型，可以用来构造一个Function的函数接口： 我们先按照Lambda原始写法，传入的Lambda表达式会被编译为Function接口，接口中通过Integer.toHexString(i)对原来集合的元素进行转换： 123// 通过Lambda表达式实现List&lt;String&gt; hexList = CollectionUtil.convert(list, i -&gt; Integer.toHexString(i));System.out.println(hexList);// [3e8, 7d0, bb8] 上面的Lambda表达式代码块中，只有对Integer.toHexString()方法的引用，没有其它代码，因此我们可以直接把方法作为参数传递，由编译器帮我们处理，这就是静态方法引用： 123// 类的静态方法引用List&lt;String&gt; hexList = CollectionUtil.convert(list, Integer::toHexString;System.out.println(hexList);// [3e8, 7d0, bb8] 4.2.2 类的非静态方法引用接下来，我们把刚刚生成的String集合hexList中的元素都变成大写，需要借助于String类的toUpperCase()方法： 123public String toUpperCase() &#123; return toUpperCase(Locale.getDefault());&#125; 这次是非静态方法，不能用类名调用，需要用实例对象，因此与刚刚的实现有一些差别，我们接收集合中的每一个字符串s。但与上面不同然后s不是toUpperCase()的参数，而是调用者： 123// 通过Lambda表达式，接收String数据，调用toUpperCase()List&lt;String&gt; upperList = CollectionUtil.convert(hexList, s -&gt; s.toUpperCase());System.out.println(upperList);// [3E8, 7D0, BB8] 因为代码体只有对toUpperCase()的调用，所以可以把方法作为参数引用传递，依然可以简写： 123// 类的成员方法List&lt;String&gt; upperList = CollectionUtil.convert(hexList, String::toUpperCase);System.out.println(upperList);// [3E8, 7D0, BB8] 4.2.3 指定实例的非静态方法引用下面一个需求是这样的，我们先定义一个数字Integer num = 2000，然后用这个数字和集合中的每个数字进行比较，比较的结果放入一个新的集合。比较对象，我们可以用Integer的compareTo方法: 123public int compareTo(Integer anotherInteger) &#123; return compare(this.value, anotherInteger.value);&#125; 先用Lambda实现， 123456List&lt;Integer&gt; list = Arrays.asList(1000, 2000, 3000);// 某个对象的成员方法Integer num = 2000;List&lt;Integer&gt; compareList = CollectionUtil.convert(list, i -&gt; num.compareTo(i));System.out.println(compareList);// [1, 0, -1] 与前面类似，这里Lambda的代码块中，依然只有对num.compareTo(i)的调用，所以可以简写。但是，需要注意的是，这次方法的调用者不是集合的元素，而是一个外部的局部变量num，因此不能使用 Integer::compareTo，因为这样是无法确定方法的调用者。要指定调用者，需要用 对象::方法名的方式： 1234// 某个对象的成员方法Integer num = 2000;List&lt;Integer&gt; compareList = CollectionUtil.convert(list, num::compareTo);System.out.println(compareList);// [1, 0, -1] 4.2.4 构造函数引用最后一个场景：把集合中的数字作为毫秒值，构建出Date对象并放入集合，这里我们就需要用到Date的构造函数： 1234567/** * @param date the milliseconds since January 1, 1970, 00:00:00 GMT. * @see java.lang.System#currentTimeMillis() */public Date(long date) &#123; fastTime = date;&#125; 我们可以接收集合中的每个元素，然后把元素作为Date的构造函数参数： 1234// 将数值类型集合，转为Date类型List&lt;Date&gt; dateList = CollectionUtil.convert(list, i -&gt; new Date(i));// 这里遍历元素后需要打印，因此直接把println作为方法引用传递了dateList.forEach(System.out::println); 上面的Lambda表达式实现方式，代码体只有new Date()一行代码，因此也可以采用方法引用进行简写。但问题是，构造函数没有名称，我们只能用new关键字来代替： 123// 构造方法List&lt;Date&gt; dateList = CollectionUtil.convert(list, Date::new);dateList.forEach(System.out::println); 注意两点： 上面代码中的System.out::println 其实是 指定对象System.out的非静态方法println的引用 如果构造函数有多个，可能无法区分导致传递失败 5. 接口的默认方法和静态方法Java 8使用两个新概念扩展了接口的含义：默认方法和静态方法。 5.1 默认方法默认方法使得开发者可以在 不破坏二进制兼容性的前提下，往现存接口中添加新的方法，即不强制那些实现了该接口的类也同时实现这个新加的方法。 默认方法和抽象方法之间的区别在于抽象方法需要实现，而默认方法不需要。接口提供的默认方法会被接口的实现类继承或者覆写，例子代码如下： 1234567891011121314151617private interface Defaulable &#123; // Interfaces now allow default methods, the implementer may or // may not implement (override) them. default String notRequired() &#123; return "Default implementation"; &#125; &#125;private static class DefaultableImpl implements Defaulable &#123;&#125;private static class OverridableImpl implements Defaulable &#123; @Override public String notRequired() &#123; return "Overridden implementation"; &#125;&#125; Defaulable接口使用关键字default定义了一个默认方法notRequired()。DefaultableImpl类实现了这个接口，同时默认继承了这个接口中的默认方法；OverridableImpl类也实现了这个接口，但覆写了该接口的默认方法，并提供了一个不同的实现。 5.2 静态方法Java 8带来的另一个有趣的特性是在接口中可以定义静态方法，我们可以直接用接口调用这些静态方法。例子代码如下： 123456private interface DefaulableFactory &#123; // Interfaces now allow static methods static Defaulable create( Supplier&lt; Defaulable &gt; supplier ) &#123; return supplier.get(); &#125;&#125; 下面的代码片段整合了默认方法和静态方法的使用场景： 12345678public static void main( String[] args ) &#123; // 调用接口的静态方法，并且传递DefaultableImpl的构造函数引用来构建对象 Defaulable defaulable = DefaulableFactory.create( DefaultableImpl::new ); System.out.println( defaulable.notRequired() ); // 调用接口的静态方法，并且传递OverridableImpl的构造函数引用来构建对象 defaulable = DefaulableFactory.create( OverridableImpl::new ); System.out.println( defaulable.notRequired() );&#125; 这段代码的输出结果如下： 12Default implementationOverridden implementation 由于JVM上的默认方法的实现在字节码层面提供了支持，因此效率非常高。默认方法允许在不打破现有继承体系的基础上改进接口。该特性在官方库中的应用是：给java.util.Collection接口添加新方法，如stream()、parallelStream()、forEach()和removeIf()等等。 尽管默认方法有这么多好处，但在实际开发中应该谨慎使用：在复杂的继承体系中，默认方法可能引起歧义和编译错误。如果你想了解更多细节，可以参考官方文档。 6. OptionalJava应用中最常见的bug就是空值异常。 Optional仅仅是一个容器，可以存放T类型的值或者null。它提供了一些有用的接口来避免显式的null检查，可以参考Java 8官方文档了解更多细节。 接下来看一点使用Optional的例子：可能为空的值或者某个类型的值： 1234Optional&lt; String &gt; fullName = Optional.ofNullable( null );System.out.println( "Full Name is set? " + fullName.isPresent() ); System.out.println( "Full Name: " + fullName.orElseGet( () -&gt; "[none]" ) ); System.out.println( fullName.map( s -&gt; "Hey " + s + "!" ).orElse( "Hey Stranger!" ) ); 如果Optional实例持有一个非空值，则isPresent()方法返回true，否则返回false；如果Optional实例持有null，orElseGet()方法可以接受一个lambda表达式生成的默认值；map()方法可以将现有的Optional实例的值转换成新的值；orElse()方法与orElseGet()方法类似，但是在持有null的时候返回传入的默认值，而不是通过Lambda来生成。 上述代码的输出结果如下： 123Full Name is set? falseFull Name: [none]Hey Stranger! 再看下另一个简单的例子： 12345Optional&lt; String &gt; firstName = Optional.of( "Tom" );System.out.println( "First Name is set? " + firstName.isPresent() ); System.out.println( "First Name: " + firstName.orElseGet( () -&gt; "[none]" ) ); System.out.println( firstName.map( s -&gt; "Hey " + s + "!" ).orElse( "Hey Stranger!" ) );System.out.println(); 这个例子的输出是： 123First Name is set? trueFirst Name: TomHey Tom! 如果想了解更多的细节，请参考官方文档。 7. Streams新增的Stream API（java.util.stream）将生成环境的函数式编程引入了Java库中。这是目前为止最大的一次对Java库的完善，以便开发者能够写出更加有效、更加简洁和紧凑的代码。 Steam API极大得简化了集合操作（后面我们会看到不止是集合），首先看下这个叫Task的类： 12345678910111213141516171819202122232425262728public class Streams &#123; private enum Status &#123; OPEN, CLOSED &#125;; private static final class Task &#123; private final Status status; private final Integer points; Task( final Status status, final Integer points ) &#123; this.status = status; this.points = points; &#125; public Integer getPoints() &#123; return points; &#125; public Status getStatus() &#123; return status; &#125; @Override public String toString() &#123; return String.format( "[%s, %d]", status, points ); &#125; &#125;&#125; Task类有一个points属性，另外还有两种状态：OPEN或者CLOSED。现在假设有一个task集合： 12345final Collection&lt; Task &gt; tasks = Arrays.asList( new Task( Status.OPEN, 5 ), new Task( Status.OPEN, 13 ), new Task( Status.CLOSED, 8 ) ); 首先看一个问题：在这个task集合中一共有多少个OPEN状态的？计算出它们的points属性和。在Java 8之前，要解决这个问题，则需要使用foreach循环遍历task集合；但是在Java 8中可以利用steams解决：包括一系列元素的列表，并且支持顺序和并行处理。 12345678// Calculate total points of all active tasks using sum()final long totalPointsOfOpenTasks = tasks .stream() .filter( task -&gt; task.getStatus() == Status.OPEN ) .mapToInt( Task::getPoints ) .sum();System.out.println( "Total points: " + totalPointsOfOpenTasks ); 运行这个方法的控制台输出是： 1Total points: 18 这里有很多知识点值得说。首先，tasks集合被转换成steam表示；其次，在steam上的filter操作会过滤掉所有CLOSED的task；第三，mapToInt操作基于tasks集合中的每个task实例的Task::getPoints方法将task流转换成Integer集合；最后，通过sum方法计算总和，得出最后的结果。 在学习下一个例子之前，还需要记住一些steams（点此更多细节）的知识点。Steam之上的操作可分为中间操作和晚期操作。 中间操作会返回一个新的steam——执行一个中间操作（例如filter）并不会执行实际的过滤操作，而是创建一个新的steam，并将原steam中符合条件的元素放入新创建的steam。 晚期操作（例如forEach或者sum），会遍历steam并得出结果或者附带结果；在执行晚期操作之后，steam处理线已经处理完毕，就不能使用了。在几乎所有情况下，晚期操作都是立刻对steam进行遍历。 steam的另一个价值是创造性地支持并行处理（parallel processing）。对于上述的tasks集合，我们可以用下面的代码计算所有task的points之和： 12345678// Calculate total points of all tasksfinal double totalPoints = tasks .stream() .parallel() .map( task -&gt; task.getPoints() ) // or map( Task::getPoints ) .reduce( 0, Integer::sum );System.out.println( "Total points (all tasks): " + totalPoints ); 这里我们使用parallel方法并行处理所有的task，并使用reduce方法计算最终的结果。控制台输出如下： 1Total points（all tasks）: 26.0 对于一个集合，经常需要根据某些条件对其中的元素分组。利用steam提供的API可以很快完成这类任务，代码如下： 12345// Group tasks by their statusfinal Map&lt; Status, List&lt; Task &gt; &gt; map = tasks .stream() .collect( Collectors.groupingBy( Task::getStatus ) );System.out.println( map ); 控制台的输出如下： 1&#123;CLOSED=[[CLOSED, 8]], OPEN=[[OPEN, 5], [OPEN, 13]]&#125; 最后一个关于tasks集合的例子问题是：如何计算集合中每个任务的点数在集合中所占的比重，具体处理的代码如下： 123456789101112// Calculate the weight of each tasks (as percent of total points) final Collection&lt; String &gt; result = tasks .stream() // Stream&lt; String &gt; .mapToInt( Task::getPoints ) // IntStream .asLongStream() // LongStream .mapToDouble( points -&gt; points / totalPoints ) // DoubleStream .boxed() // Stream&lt; Double &gt; .mapToLong( weigth -&gt; ( long )( weigth * 100 ) ) // LongStream .mapToObj( percentage -&gt; percentage + "%" ) // Stream&lt; String&gt; .collect( Collectors.toList() ); // List&lt; String &gt; System.out.println( result ); 控制台输出结果如下： 1[19%, 50%, 30%] 最后，正如之前所说，Steam API不仅可以作用于Java集合，传统的IO操作（从文件或者网络一行一行得读取数据）可以受益于steam处理，这里有一个小例子： 1234final Path path = new File( filename ).toPath();try( Stream&lt; String &gt; lines = Files.lines( path, StandardCharsets.UTF_8 ) ) &#123; lines.onClose( () -&gt; System.out.println("Done!") ).forEach( System.out::println );&#125; Stream的方法onClose() 返回一个等价的有额外句柄的Stream，当Stream的close()方法被调用的时候这个句柄会被执行。Stream API、Lambda表达式还有接口默认方法和静态方法支持的方法引用，是Java 8对软件开发的现代范式的响应。 8. 并行数组Java8版本新增了很多新的方法，用于支持并行数组处理。最重要的方法是parallelSort()，可以显著加快多核机器上的数组排序。下面的例子论证了parallexXxx系列的方法： 123456789101112131415161718192021package com.javacodegeeks.java8.parallel.arrays;import java.util.Arrays;import java.util.concurrent.ThreadLocalRandom;public class ParallelArrays &#123; public static void main( String[] args ) &#123; long[] arrayOfLong = new long [ 20000 ]; Arrays.parallelSetAll( arrayOfLong, index -&gt; ThreadLocalRandom.current().nextInt( 1000000 ) ); Arrays.stream( arrayOfLong ).limit( 10 ).forEach( i -&gt; System.out.print( i + " " ) ); System.out.println(); Arrays.parallelSort( arrayOfLong ); Arrays.stream( arrayOfLong ).limit( 10 ).forEach( i -&gt; System.out.print( i + " " ) ); System.out.println(); &#125;&#125; 上述这些代码使用parallelSetAll()方法生成20000个随机数，然后使用parallelSort()方法进行排序。这个程序会输出乱序数组和排序数组的前10个元素。上述例子的代码输出的结果是： 12Unsorted: 591217 891976 443951 424479 766825 351964 242997 642839 119108 552378 Sorted: 39 220 263 268 325 607 655 678 723 793]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[第三届蓝桥杯-省赛_10]]></title>
     <url>%2F2019%2F10%2F07%2F%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%9C%81%E8%B5%9B-10%2F</url>
     <content type="text"><![CDATA[这次介绍的是第三届蓝桥杯省赛题目的最后一题…. 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051 泊松是法国数学家、物理学家和力学家。他一生致力科学事业，成果颇多。有许多著名的公式定理以他的名字命名，比如概率论中著名的泊松分布。 有一次闲暇时，他提出过一个有趣的问题，后称为：“泊松分酒”。在我国古代也提出过类似问题，遗憾的是没有进行彻底探索，其中流传较多是：“韩信走马分油”问题。 有3个容器，容量分别为12升，8升，5升。其中12升中装满油，另外两个空着。要求你只用3个容器操作，最后使得某个容器中正好有6升油。 下面的列表是可能的操作状态记录：12,0,04,8,04,3,59,3,09,0,31,8,31,6,5 每行3个数据，分别表示12，8，6升容器中的油量 第一行表示初始状态，第二行表示把12升倒入8升容器后的状态，第三行是8升倒入5升，... 当然，同一个题目可能有多种不同的正确操作步骤。 本题目的要求是，请你编写程序，由用户输入：各个容器的容量，开始的状态，和要求的目标油量，程序则通过计算输出一种实现的步骤（不需要找到所有可能的方法）。如果没有可能实现，则输出：“不可能”。 例如，用户输入：12,8,5,12,0,0,6 用户输入的前三个数是容器容量（由大到小），接下来三个数是三个容器开始时的油量配置，最后一个数是要求得到的油量（放在哪个容器里得到都可以） 则程序可以输出（答案不唯一，只验证操作可行性）：12,0,04,8,04,3,59,3,09,0,31,8,31,6,5 每一行表示一个操作过程中的油量状态。 注意： 请仔细调试！您的程序只有能运行出正确结果的时候才有机会得分！ 请把所有类写在同一个文件中，调试好后，存入与【考生文件夹】下对应题号的“解答.txt”中即可。 相关的工程文件不要拷入。 请不要使用package语句。 源程序中只能出现JDK1.5中允许的语法或调用。不能使用1.6或更高版本。 题目求解: 首先录入用户的输入，以逗号为分隔符，分别取值。下一步观察这个分酒的过程，以b为起点，若c不为空，分两种情况倒酒:b为0，b有剩。下一步，将c倒进a中，若c为满的状态，分两种情况:c为0，c有剩。下一步，将a倒入b中，若b为空的状态，分两种情况:a为0，a有剩。再下一步，b倒入c，这是一个循环。那么明显用递归解决了，那递归出口就是三个瓶的任意一个瓶子达到设置的目标值。 java代码实现:123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657package Problem_2;import java.util.Scanner;public class Question_10 &#123; // 用户输入：12,8,5,12,0,0,6 // 用户输入的前三个数是容器容量（由大到小），接下来三个数是三个容器开始时的油量配置，最后一个数是要求得到的油量（放在哪个容器里得到都可以） static int a, b, c;//三个瓶子的大小 static int aid;//目标酒量 static int sa, sb, sc;//三个瓶子中的酒量 public static void main(String[] args) &#123; // 用户输入的数字 Scanner s = new Scanner(System.in); String [] strings = s.nextLine().split(","); a = Integer.parseInt(strings[0]); b = Integer.parseInt(strings[1]); c = Integer.parseInt(strings[2]); sa = Integer.parseInt(strings[3]); sb = Integer.parseInt(strings[4]); sc = Integer.parseInt(strings[5]); aid = Integer.parseInt(strings[6]); // 函数入口 f(sa, sb, sc); &#125; private static void f(int sa, int sb, int sc) &#123; System.out.println(sa + "," + sb + "," + sc); if (sa == aid || sb == aid || sc == aid) &#123; System.exit(0); &#125; /* * 1.c中瓶子没满，b中倒入c中 * 2.c满，倒入a中 * 3.b空，a倒入b中 */ if (sb != 0 &amp;&amp; sc &lt; c) &#123; //b中有酒，c没满 if (sb &lt;= c - sc) &#123; f(sa, 0, sc + sb); &#125; else &#123; f(sa, sb - (c - sc), c); &#125; &#125; else if (sc == c) &#123; //c满，给a倒 if (a - sa &lt;= sc) &#123; f(a, sb, sc - a + sa); &#125; else &#123; f(sa + sc, sb, 0); &#125; &#125; else if (sb == 0) &#123; //b空，a给b倒 if (sa &gt;= b) &#123; f(sa - b, b, sc); &#125; else &#123; f(0, sa, sc); &#125; &#125; &#125;&#125;]]></content>
@@ -123,15 +233,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Oneindex程序安装失败解决办法]]></title>
-    <url>%2F2019%2F05%2F09%2FOneindex%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！ 安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！ 几次尝试，发现如下方法终于成功安装。打开这个网址点击这里，里面会列出oneindex的应用，点击进去后，会看到你的应ID（client_ID）。找到【应用程序机密】，点击【生成新密码】，就会生成一个新的client_secret，然后重新安装时候填这个新client_secret就可以了注意的是，id和密钥的顺序，不要弄错。]]></content>
+    <title><![CDATA[Windos10下安装pyspider的一些问题]]></title>
+    <url>%2F2019%2F05%2F09%2FWindos10%E4%B8%8B%E5%AE%89%E8%A3%85pyspider%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候…… 最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候pip install pyspider，报错了，Error为：Please specify --curl-dir=/path/to/built/libcurl 解决方法：安装pycurl，之后再用pip进行安装安装pycurl方法：打开链接：“python库安装下载”，找到自己安装python的版本进行安装。例如，我的python版本是python3.7.1，64位电脑就下载：pycurl-7.43.1-cp37-cp37m-win_amd64（cp代表你的python版本） 安装方法： windows下：打开cmd，然后将下载pycurl的位置copy一下，cd 位置，将pycurl名字复制一下，pip install 名字linux和mac下：直接进入文件位置，然后pip install 名字 接下来：直接pip install pyspider 问题解决！！！]]></content>
       <categories>
         <category>错误解决合集</category>
       </categories>
       <tags>
-        <tag>网站搭建</tag>
-        <tag>私有网盘</tag>
+        <tag>python</tag>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>
@@ -171,30 +281,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[pyspider框架爆599证书问题]]></title>
-    <url>%2F2019%2F05%2F09%2Fpyspider%E6%A1%86%E6%9E%B6%E7%88%86599%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了 真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了 报599错：12345678910HTTP 599: SSL certificate problem: unable to get local issuer certificate [E 161018 21:56:36 base_handler:195] HTTP 599: SSL certificate problem: unable to get local issuer certificate Traceback (most recent call last): File “C:\Python27\lib\site-packages\pyspider\libs\base_handler.py”, line 188, in run_task result = self._run_task(task, response) File “C:\Python27\lib\site-packages\pyspider\libs\base_handler.py”, line 167, in _run_task response.raise_for_status() File “C:\Python27\lib\site-packages\pyspider\libs\response.py”, line 190, in raise_for_status raise http_error HTTPError: HTTP 599: SSL certificate problem: unable to get local issuer certificate 原因分析：因为https协议需要对证书进行验证导致，对访问https网络需要证书 解决方法：在两个抓取函数中加入不要检验证书:validate_cert=False12self.crawl('https://www.tripadvisor.cn/Attractions-g255060-Activities-c47-Sydney_New_South_Wales.html',validate_cert=False, callback=self.index_page)self.crawl(each.attr.href,validate_cert=False, callback=self.detail_page) 问题解决！！！]]></content>
-      <categories>
-        <category>错误解决合集</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Windos10下安装pyspider的一些问题]]></title>
-    <url>%2F2019%2F05%2F09%2FWindos10%E4%B8%8B%E5%AE%89%E8%A3%85pyspider%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候…… 最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候pip install pyspider，报错了，Error为：Please specify --curl-dir=/path/to/built/libcurl 解决方法：安装pycurl，之后再用pip进行安装安装pycurl方法：打开链接：“python库安装下载”，找到自己安装python的版本进行安装。例如，我的python版本是python3.7.1，64位电脑就下载：pycurl-7.43.1-cp37-cp37m-win_amd64（cp代表你的python版本） 安装方法： windows下：打开cmd，然后将下载pycurl的位置copy一下，cd 位置，将pycurl名字复制一下，pip install 名字linux和mac下：直接进入文件位置，然后pip install 名字 接下来：直接pip install pyspider 问题解决！！！]]></content>
-      <categories>
-        <category>错误解决合集</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>爬虫</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[scrapy框架的一些小知识点]]></title>
     <url>%2F2019%2F05%2F09%2Fscrapy%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9%2F</url>
     <content type="text"><![CDATA[scrapy框架的一些小知识点 最近开始学习scrapy框架,摘抄一些知识点 创建项目：scrapy startproject testproject 进入项目：cd testproject 生成spider: scrapy genspider baidu www.baidu.com 了解各类模板:scrapy genspider -l 指定模板:scrapy genspider -t crawl zhihu www.zhihu.com crawl :运行spider的方法，可以指定运行的spider的名称 :scrapy crawl zhihu.py check:用来检查代码是否有错误:scrapy check zhihu.py scrapy list:返回项目中所有的名称 scrapy edit :在命令行下编辑 fetch:返回网页源代码，等同于response:scrapy fetch http://www.baidu.com 去掉日志：得到headers:scrapy fetch --nolog --headers http://www.baidu.com 禁止重定向：–no redicrect:scrapy fetch --no-direct http://www.baidu.com view:将网页以文件的形式保存下来，然后去打开，可以在自动测试中应用:scrapy view http://www.baidu.com shell：命令行模式的交互,并且返回一些可用的变量:scrapy shell http://www.baidu.com parse: 传入一些参数，查看返回的结果，相当于格式化输出 seetings:获取当前的配置信息:scrapy settings -h runspider:运行spider:scrapy runspider baidu.py version:输出scrapy的版本:scrapy version -v bench：测试当前爬虫的速度]]></content>
@@ -219,15 +305,39 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[初识Markdown，请多多指教]]></title>
-    <url>%2F2019%2F05%2F09%2F%E5%88%9D%E8%AF%86Markdown%EF%BC%8C%E8%AF%B7%E5%A4%9A%E5%A4%9A%E6%8C%87%E6%95%99%2F</url>
-    <content type="text"><![CDATA[主要介绍一下Markdown语法 我们来认识Markdown的基础语法第一是标题 Markdown语法中总共只有六级标题 在井号加空格是最标准的 下面来演示一下标题的使用 # 这个是一级标题## 这个是二级标题### 这个是三级标题#### 这个是四级标题##### 这个是五级标题###### 这个是六级标题 第二是列表 在文字前面加上1234+ 一定要在```+、-、*```等符号后面添加空格- 有序列表直接标明数字* 下面来演示一下列表用法##### 无序列表 1 2 31#####有序列表 1 2 312345678910111213### 第四是引用* 只需要再文本前加入```&gt;```就ok* 一个```&gt;```代表一级引用，两个```&gt;```代表二级引用，以此类推* 下面来演示引用的格式&gt; 这里是引用&gt;&gt; 这里是二级引用&gt;&gt;&gt; 这里是三级引用### 第五是图片与链接* 插入图片形式：```![图片文字](图片地址） 一定要在英文状态输入 图片的地址指的是图片在硬盘的位置 图片解释内容可以随意修改 插入链接： 1234567891011* * 与插入图片的方式差一个叹号**```！```*** * 链接内容文字可以随意修改* 演示添加图片或者链接##### 试添加图片![我可爱的壁纸](http://upload-images.jianshu.io/upload_images/11019384-f153e995c3dd2d84.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)##### 试添加链接（百度）[百度链接](http://www.baidu.com)### 第六是强调* 添加斜体或粗体均可以用```_```或```* 添加斜体：在文本左右添加一个12* * 例如：_php是最好的编程语言_ 或者 *php是最好的编程语言** 添加粗体：在文本左右添加两个```*```或者```_ 例如：php是最好的编程语言 或者 php是最好的编程语言 第七是分割线 用连续的三个星号1234567891011121314151617* 用连续的三个减号```-```表示分割线* 例如：***### 第八是制作代办事宜（简书显示不出来）* 表示未做的事情用**```- [ ]```*** 表示已经做的事情用**```- [x]```*** 演示一下：1. - [ ] 我还没有做的事2. - [x] 我已经做完了的事### 第九是书写数学公式* 在公式左右用```$$```圈住* 举例：$$E=mc^2$$### 第十是高亮代码* 用```三个引号加语言开头，结尾用引号 举例： 1print ("我是大笨猪") 第十一是绘制表格 用竖线表示表格的竖线 用减号表示表格的横线 添加表格之前必须空行！！！*1234567891011*```:--:```表示居中对齐*```---:```表示右对齐* 例如：| 项目 | 价格 | 数量 || ------ | :----: | ---- || 计算机 | \$1600 | 5 |### 第十二是添加底色内容* 在文本左右添加```表示底色加深内容* 例如：```我喜欢你哦 以后再去更新了，迟点（我还没开始接触很多呢）]]></content>
+    <title><![CDATA[pyspider框架爆599证书问题]]></title>
+    <url>%2F2019%2F05%2F09%2Fpyspider%E6%A1%86%E6%9E%B6%E7%88%86599%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了 真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了 报599错：12345678910HTTP 599: SSL certificate problem: unable to get local issuer certificate [E 161018 21:56:36 base_handler:195] HTTP 599: SSL certificate problem: unable to get local issuer certificate Traceback (most recent call last): File “C:\Python27\lib\site-packages\pyspider\libs\base_handler.py”, line 188, in run_task result = self._run_task(task, response) File “C:\Python27\lib\site-packages\pyspider\libs\base_handler.py”, line 167, in _run_task response.raise_for_status() File “C:\Python27\lib\site-packages\pyspider\libs\response.py”, line 190, in raise_for_status raise http_error HTTPError: HTTP 599: SSL certificate problem: unable to get local issuer certificate 原因分析：因为https协议需要对证书进行验证导致，对访问https网络需要证书 解决方法：在两个抓取函数中加入不要检验证书:validate_cert=False12self.crawl('https://www.tripadvisor.cn/Attractions-g255060-Activities-c47-Sydney_New_South_Wales.html',validate_cert=False, callback=self.index_page)self.crawl(each.attr.href,validate_cert=False, callback=self.detail_page) 问题解决！！！]]></content>
+      <categories>
+        <category>错误解决合集</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Oneindex程序安装失败解决办法]]></title>
+    <url>%2F2019%2F05%2F09%2FOneindex%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！ 安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！ 几次尝试，发现如下方法终于成功安装。打开这个网址点击这里，里面会列出oneindex的应用，点击进去后，会看到你的应ID（client_ID）。找到【应用程序机密】，点击【生成新密码】，就会生成一个新的client_secret，然后重新安装时候填这个新client_secret就可以了注意的是，id和密钥的顺序，不要弄错。]]></content>
+      <categories>
+        <category>错误解决合集</category>
+      </categories>
+      <tags>
+        <tag>网站搭建</tag>
+        <tag>私有网盘</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[百度网盘小神器，你值得拥有！]]></title>
+    <url>%2F2019%2F05%2F09%2F%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%B0%8F%E7%A5%9E%E5%99%A8%EF%BC%8C%E4%BD%A0%E5%80%BC%E5%BE%97%E6%8B%A5%E6%9C%89!%2F</url>
+    <content type="text"><![CDATA[我们来介绍几款不会封号的百度网盘小神器 我们来介绍几款不会封号的百度网盘小神器 可能，现在在中国吧，最好用的网盘之一就是百度网盘，但是呢，百度网盘却以它那昂贵的会员费出名，而且限速贼厉害。明明在我家里宽带可以达到10M/s，但是在百度云里面，它把你限速到100k/s，我真的是服。因此，我在这里向大家推荐几个百度网盘小神器，愿能助君一把。 PanDownload 它没有封号风险，因为你压根都可以不登录你自己的百度账号。 直接使用分享链接下载，就很方便 当然你还可以登录你自己的百度账号下载网盘的东西。 链接奉上:http://pandownload.com/ 速盘 免下载，免登陆，和第一款软件相似 自带搜索资源功能，具体功能自己实现吧 链接奉上：https://www.speedpan.com/ proxyee-Dowm 它是一个谷歌浏览器的插件，非常好用 可以在线解压文件 链接奉上：https://github.com/proxyee-down-org/proxyee-down 安装步骤 先点击安装 再点击“是”，用来安装证书 点击安装，再点击左上角的全局代理 在打开上述全局代理之后，随便打开一个百度云链接，都会多出现一个【pd下载】，直接点击直链下载即可。会满速下载的哦 本文的三款百度网盘神器，小编体验良好，可以摆脱百度网盘超级会员了。本文所用的部分图片源于公众号“资源库爱分享”，有侵权请联系我删除。]]></content>
       <categories>
         <category>私人干货</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
-        <tag>博客</tag>
+        <tag>下载</tag>
+        <tag>软件</tag>
       </tags>
   </entry>
   <entry>
@@ -255,15 +365,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[百度网盘小神器，你值得拥有！]]></title>
-    <url>%2F2019%2F05%2F09%2F%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%B0%8F%E7%A5%9E%E5%99%A8%EF%BC%8C%E4%BD%A0%E5%80%BC%E5%BE%97%E6%8B%A5%E6%9C%89!%2F</url>
-    <content type="text"><![CDATA[我们来介绍几款不会封号的百度网盘小神器 我们来介绍几款不会封号的百度网盘小神器 可能，现在在中国吧，最好用的网盘之一就是百度网盘，但是呢，百度网盘却以它那昂贵的会员费出名，而且限速贼厉害。明明在我家里宽带可以达到10M/s，但是在百度云里面，它把你限速到100k/s，我真的是服。因此，我在这里向大家推荐几个百度网盘小神器，愿能助君一把。 PanDownload 它没有封号风险，因为你压根都可以不登录你自己的百度账号。 直接使用分享链接下载，就很方便 当然你还可以登录你自己的百度账号下载网盘的东西。 链接奉上:http://pandownload.com/ 速盘 免下载，免登陆，和第一款软件相似 自带搜索资源功能，具体功能自己实现吧 链接奉上：https://www.speedpan.com/ proxyee-Dowm 它是一个谷歌浏览器的插件，非常好用 可以在线解压文件 链接奉上：https://github.com/proxyee-down-org/proxyee-down 安装步骤 先点击安装 再点击“是”，用来安装证书 点击安装，再点击左上角的全局代理 在打开上述全局代理之后，随便打开一个百度云链接，都会多出现一个【pd下载】，直接点击直链下载即可。会满速下载的哦 本文的三款百度网盘神器，小编体验良好，可以摆脱百度网盘超级会员了。本文所用的部分图片源于公众号“资源库爱分享”，有侵权请联系我删除。]]></content>
+    <title><![CDATA[初识Markdown，请多多指教]]></title>
+    <url>%2F2019%2F05%2F09%2F%E5%88%9D%E8%AF%86Markdown%EF%BC%8C%E8%AF%B7%E5%A4%9A%E5%A4%9A%E6%8C%87%E6%95%99%2F</url>
+    <content type="text"><![CDATA[主要介绍一下Markdown语法 我们来认识Markdown的基础语法第一是标题 Markdown语法中总共只有六级标题 在井号加空格是最标准的 下面来演示一下标题的使用 # 这个是一级标题## 这个是二级标题### 这个是三级标题#### 这个是四级标题##### 这个是五级标题###### 这个是六级标题 第二是列表 在文字前面加上1234+ 一定要在```+、-、*```等符号后面添加空格- 有序列表直接标明数字* 下面来演示一下列表用法##### 无序列表 1 2 31#####有序列表 1 2 312345678910111213### 第四是引用* 只需要再文本前加入```&gt;```就ok* 一个```&gt;```代表一级引用，两个```&gt;```代表二级引用，以此类推* 下面来演示引用的格式&gt; 这里是引用&gt;&gt; 这里是二级引用&gt;&gt;&gt; 这里是三级引用### 第五是图片与链接* 插入图片形式：```![图片文字](图片地址） 一定要在英文状态输入 图片的地址指的是图片在硬盘的位置 图片解释内容可以随意修改 插入链接： 1234567891011* * 与插入图片的方式差一个叹号**```！```*** * 链接内容文字可以随意修改* 演示添加图片或者链接##### 试添加图片![我可爱的壁纸](http://upload-images.jianshu.io/upload_images/11019384-f153e995c3dd2d84.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)##### 试添加链接（百度）[百度链接](http://www.baidu.com)### 第六是强调* 添加斜体或粗体均可以用```_```或```* 添加斜体：在文本左右添加一个12* * 例如：_php是最好的编程语言_ 或者 *php是最好的编程语言** 添加粗体：在文本左右添加两个```*```或者```_ 例如：php是最好的编程语言 或者 php是最好的编程语言 第七是分割线 用连续的三个星号1234567891011121314151617* 用连续的三个减号```-```表示分割线* 例如：***### 第八是制作代办事宜（简书显示不出来）* 表示未做的事情用**```- [ ]```*** 表示已经做的事情用**```- [x]```*** 演示一下：1. - [ ] 我还没有做的事2. - [x] 我已经做完了的事### 第九是书写数学公式* 在公式左右用```$$```圈住* 举例：$$E=mc^2$$### 第十是高亮代码* 用```三个引号加语言开头，结尾用引号 举例： 1print ("我是大笨猪") 第十一是绘制表格 用竖线表示表格的竖线 用减号表示表格的横线 添加表格之前必须空行！！！*1234567891011*```:--:```表示居中对齐*```---:```表示右对齐* 例如：| 项目 | 价格 | 数量 || ------ | :----: | ---- || 计算机 | \$1600 | 5 |### 第十二是添加底色内容* 在文本左右添加```表示底色加深内容* 例如：```我喜欢你哦 以后再去更新了，迟点（我还没开始接触很多呢）]]></content>
       <categories>
         <category>私人干货</category>
       </categories>
       <tags>
-        <tag>下载</tag>
-        <tag>软件</tag>
+        <tag>Markdown</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>

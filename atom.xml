@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zengbolin.github.io/"/>
-  <updated>2019-10-07T14:57:58.103Z</updated>
+  <updated>2020-07-20T03:44:03.646Z</updated>
   <id>http://zengbolin.github.io/</id>
   
   <author>
@@ -17,462 +17,497 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>第三届蓝桥杯-省赛_10</title>
-    <link href="http://zengbolin.github.io/2019/10/07/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%9C%81%E8%B5%9B-10/"/>
-    <id>http://zengbolin.github.io/2019/10/07/第三届蓝桥杯-省赛-10/</id>
-    <published>2019-10-07T14:31:12.000Z</published>
-    <updated>2019-10-07T14:57:58.103Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F/"/>
+    <id>http://zengbolin.github.io/2020/07/25/远程调用方式/</id>
+    <published>2020-07-25T04:51:19.104Z</published>
+    <updated>2020-07-20T03:44:03.646Z</updated>
     
-    <content type="html"><![CDATA[<p>这次介绍的是第三届蓝桥杯省赛题目的最后一题….</p><a id="more"></a><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    泊松是法国数学家、物理学家和力学家。他一生致力科学事业，成果颇多。有许多著名的公式定理以他的名字命名，比如概率论中著名的泊松分布。</span><br><span class="line"></span><br><span class="line">    有一次闲暇时，他提出过一个有趣的问题，后称为：“泊松分酒”。在我国古代也提出过类似问题，遗憾的是没有进行彻底探索，其中流传较多是：“韩信走马分油”问题。</span><br><span class="line"></span><br><span class="line">    有3个容器，容量分别为12升，8升，5升。其中12升中装满油，另外两个空着。要求你只用3个容器操作，最后使得某个容器中正好有6升油。</span><br><span class="line"></span><br><span class="line">    下面的列表是可能的操作状态记录：</span><br><span class="line">12,0,0</span><br><span class="line">4,8,0</span><br><span class="line">4,3,5</span><br><span class="line">9,3,0</span><br><span class="line">9,0,3</span><br><span class="line">1,8,3</span><br><span class="line">1,6,5</span><br><span class="line"></span><br><span class="line">    每行3个数据，分别表示12，8，6升容器中的油量</span><br><span class="line"></span><br><span class="line">    第一行表示初始状态，第二行表示把12升倒入8升容器后的状态，第三行是8升倒入5升，...</span><br><span class="line"></span><br><span class="line">    当然，同一个题目可能有多种不同的正确操作步骤。</span><br><span class="line"></span><br><span class="line">    本题目的要求是，请你编写程序，由用户输入：各个容器的容量，开始的状态，和要求的目标油量，程序则通过计算输出一种实现的步骤（不需要找到所有可能的方法）。如果没有可能实现，则输出：“不可能”。</span><br><span class="line"></span><br><span class="line">    例如，用户输入：</span><br><span class="line">12,8,5,12,0,0,6</span><br><span class="line"></span><br><span class="line">    用户输入的前三个数是容器容量（由大到小），接下来三个数是三个容器开始时的油量配置，最后一个数是要求得到的油量（放在哪个容器里得到都可以）</span><br><span class="line"></span><br><span class="line">    则程序可以输出（答案不唯一，只验证操作可行性）：</span><br><span class="line">12,0,0</span><br><span class="line">4,8,0</span><br><span class="line">4,3,5</span><br><span class="line">9,3,0</span><br><span class="line">9,0,3</span><br><span class="line">1,8,3</span><br><span class="line">1,6,5</span><br><span class="line"></span><br><span class="line">    每一行表示一个操作过程中的油量状态。</span><br><span class="line"></span><br><span class="line">   注意：</span><br><span class="line"></span><br><span class="line">    请仔细调试！您的程序只有能运行出正确结果的时候才有机会得分！</span><br><span class="line">    </span><br><span class="line">    请把所有类写在同一个文件中，调试好后，存入与【考生文件夹】下对应题号的“解答.txt”中即可。</span><br><span class="line">    </span><br><span class="line">    相关的工程文件不要拷入。</span><br><span class="line">    </span><br><span class="line">    请不要使用package语句。</span><br><span class="line">    </span><br><span class="line">    源程序中只能出现JDK1.5中允许的语法或调用。不能使用1.6或更高版本。</span><br></pre></td></tr></table></figure><blockquote><p>题目求解: 首先录入用户的输入，以逗号为分隔符，分别取值。下一步观察这个分酒的过程，以b为起点，若c不为空，分两种情况倒酒:b为0，b有剩。下一步，将c倒进a中，若c为满的状态，分两种情况:c为0，c有剩。下一步，将a倒入b中，若b为空的状态，分两种情况:a为0，a有剩。再下一步，b倒入c，这是一个循环。那么明显用递归解决了，那递归出口就是三个瓶的任意一个瓶子达到设置的目标值。</p></blockquote><p><img src="https://i.loli.net/2019/10/07/2VxcFeuMgXrzJh3.jpg" alt="图解"></p><h5 id="java代码实现"><a href="#java代码实现" class="headerlink" title="java代码实现:"></a>java代码实现:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Problem_2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Question_10</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 用户输入：12,8,5,12,0,0,6</span></span><br><span class="line">    <span class="comment">// 用户输入的前三个数是容器容量（由大到小），接下来三个数是三个容器开始时的油量配置，最后一个数是要求得到的油量（放在哪个容器里得到都可以）</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> a, b, c;<span class="comment">//三个瓶子的大小</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> aid;<span class="comment">//目标酒量</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> sa, sb, sc;<span class="comment">//三个瓶子中的酒量</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 用户输入的数字</span></span><br><span class="line">        Scanner s = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String [] strings = s.nextLine().split(<span class="string">","</span>);</span><br><span class="line">        a = Integer.parseInt(strings[<span class="number">0</span>]);</span><br><span class="line">        b = Integer.parseInt(strings[<span class="number">1</span>]);</span><br><span class="line">        c = Integer.parseInt(strings[<span class="number">2</span>]);</span><br><span class="line">        sa = Integer.parseInt(strings[<span class="number">3</span>]);</span><br><span class="line">        sb = Integer.parseInt(strings[<span class="number">4</span>]);</span><br><span class="line">        sc = Integer.parseInt(strings[<span class="number">5</span>]);</span><br><span class="line">        aid = Integer.parseInt(strings[<span class="number">6</span>]);</span><br><span class="line">        <span class="comment">// 函数入口</span></span><br><span class="line">        f(sa, sb, sc);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> sa, <span class="keyword">int</span> sb, <span class="keyword">int</span> sc)</span> </span>&#123;</span><br><span class="line">        System.out.println(sa + <span class="string">","</span> + sb + <span class="string">","</span> + sc);</span><br><span class="line">        <span class="keyword">if</span> (sa == aid || sb == aid || sc == aid) &#123;</span><br><span class="line">            System.exit(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">         * 1.c中瓶子没满，b中倒入c中</span></span><br><span class="line"><span class="comment">         * 2.c满，倒入a中</span></span><br><span class="line"><span class="comment">         * 3.b空，a倒入b中</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="keyword">if</span> (sb != <span class="number">0</span> &amp;&amp; sc &lt; c) &#123;               <span class="comment">//b中有酒，c没满</span></span><br><span class="line">            <span class="keyword">if</span> (sb &lt;= c - sc) &#123;</span><br><span class="line">                f(sa, <span class="number">0</span>, sc + sb);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                f(sa, sb - (c - sc), c);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sc == c) &#123;                 <span class="comment">//c满，给a倒</span></span><br><span class="line">            <span class="keyword">if</span> (a - sa &lt;= sc) &#123;</span><br><span class="line">                f(a, sb, sc - a + sa);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                f(sa + sc, sb, <span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sb == <span class="number">0</span>) &#123;                <span class="comment">//b空，a给b倒</span></span><br><span class="line">            <span class="keyword">if</span> (sa &gt;= b) &#123;</span><br><span class="line">                f(sa - b, b, sc);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                f(<span class="number">0</span>, sa, sc);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>常见的远程调用方式有以下2种：</p><ul><li><p>RPC：Remote Produce Call远程过程调用，类似的还有RMI。自定义数据格式，基于原生TCP通信，速度快，效率高。早期的webservice，现在热门的dubbo，都是RPC的典型代表</p></li><li><p>Http：http其实是一种网络传输协议，基于TCP，规定了数据传输的格式。现在客户端浏览器与服务端通信基本都是采用Http协议，也可以用来进行远程服务调用。缺点是消息封装臃肿，优势是对服务的提供和调用方没有任何技术限定，自由灵活，更符合微服务理念。</p><p>  现在热门的Rest风格，就可以通过http协议来实现。</p></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;这次介绍的是第三届蓝桥杯省赛题目的最后一题….&lt;/p&gt;
+      
+      
+        &lt;p&gt;常见的远程调用方式有以下2种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;RPC：Remote Produce Call远程过程调用，类似的还有RMI。自定义数据格式，基于原生TCP通信，速度快，效率高。早期的webservice，现在热门的dubbo，都是RPC的典型代表&lt;/p&gt;
+
+      
     
     </summary>
     
-      <category term="备战蓝桥杯试题刷题" scheme="http://zengbolin.github.io/categories/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%E5%88%B7%E9%A2%98/"/>
-    
-    
-      <category term="第三届蓝桥杯，刷题" scheme="http://zengbolin.github.io/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%8C%E5%88%B7%E9%A2%98/"/>
     
   </entry>
   
   <entry>
-    <title>第三届蓝桥杯-省赛_9</title>
-    <link href="http://zengbolin.github.io/2019/10/07/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%9C%81%E8%B5%9B-9/"/>
-    <id>http://zengbolin.github.io/2019/10/07/第三届蓝桥杯-省赛-9/</id>
-    <published>2019-10-07T14:15:24.000Z</published>
-    <updated>2019-10-07T14:30:59.687Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/PV%E4%B8%8EUV/"/>
+    <id>http://zengbolin.github.io/2020/07/25/PV与UV/</id>
+    <published>2020-07-25T04:51:19.095Z</published>
+    <updated>2020-07-22T01:46:26.712Z</updated>
     
-    <content type="html"><![CDATA[<p>这次介绍的是第三届蓝桥杯省赛题目的第九题….</p><a id="more"></a><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">    匪警请拨110,即使手机欠费也可拨通！</span><br><span class="line"></span><br><span class="line">    为了保障社会秩序，保护人民群众生命财产安全，警察叔叔需要与罪犯斗智斗勇，因而需要经常性地进行体力训练和智力训练！</span><br><span class="line"></span><br><span class="line">    某批警察叔叔正在进行智力训练：</span><br><span class="line"></span><br><span class="line">    1 2 3 4 5 6 7 8 9 = 110;</span><br><span class="line"></span><br><span class="line">    请看上边的算式，为了使等式成立，需要在数字间填入加号或者减号（可以不填，但不能填入其它符号）。之间没有填入符号的数字组合成一个数，例如：12+34+56+7-8+9 就是一种合格的填法；123+4+5+67-89 是另一个可能的答案。</span><br><span class="line"></span><br><span class="line">    请你利用计算机的优势，帮助警察叔叔快速找到所有答案。</span><br><span class="line"></span><br><span class="line">    每个答案占一行。形如：</span><br><span class="line"></span><br><span class="line">12+34+56+7-8+9</span><br><span class="line">123+4+5+67-89</span><br><span class="line">......</span><br><span class="line"></span><br><span class="line">    已知的两个答案可以输出，但不计分。</span><br><span class="line">    </span><br><span class="line">    各个答案的前后顺序不重要。</span><br><span class="line"></span><br><span class="line">   注意：</span><br><span class="line"></span><br><span class="line">    请仔细调试！您的程序只有能运行出正确结果的时候才有机会得分！</span><br><span class="line">    </span><br><span class="line">    请把所有类写在同一个文件中，调试好后，存入与【考生文件夹】下对应题号的“解答.txt”中即可。</span><br><span class="line">    </span><br><span class="line">    相关的工程文件不要拷入。</span><br><span class="line">    </span><br><span class="line">    请不要使用package语句。</span><br><span class="line">    </span><br><span class="line">    源程序中只能出现JDK1.5中允许的语法或调用。不能使用1.6或更高版本。</span><br></pre></td></tr></table></figure><blockquote><p>题目求解:  首先将1~9作为一个字符串，然后要在其中添加+/-号还有拼接。首先插入就可以使用递归来插入，分三种情况，添加+号、添加-号、不添加直接拼接。递归出口就是达到最后一个字符9，检测总和是否为110，是就打印，否就跳过。判断这里，要将整个字符串用+/-来分隔，在分开+号的字符串中再分隔-号的字符，相加相减，判断110，跳出。</p></blockquote><h5 id="java代码实现如下"><a href="#java代码实现如下" class="headerlink" title="java代码实现如下:"></a>java代码实现如下:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Problem_2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Question_9_1</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 1 2 3 4 5 6 7 8 9 = 110 填入加减号使等式成立。</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str = <span class="string">"123456789"</span>;</span><br><span class="line">        func(str, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">func</span><span class="params">(String str, <span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">9</span>) &#123;</span><br><span class="line">            check(str);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            func(str.replace(i + <span class="string">""</span>, i + <span class="string">"+"</span>), i + <span class="number">1</span>);</span><br><span class="line">            func(str.replace(i + <span class="string">""</span>, i + <span class="string">"-"</span>), i + <span class="number">1</span>);</span><br><span class="line">            func(str, i + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">check</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        String[] s = str.split(<span class="string">"[\\+]"</span>);</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (String s1 : s) &#123;</span><br><span class="line">            String[] sub = s1.split(<span class="string">"[\\-]"</span>);</span><br><span class="line">            <span class="keyword">int</span> num = Integer.parseInt(sub[<span class="number">0</span>]);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; sub.length; i++) &#123;</span><br><span class="line">                num -= Integer.parseInt(sub[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            sum += num;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (sum == <span class="number">110</span>) &#123;</span><br><span class="line">            System.out.println(str);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<ul><li><p>PV：(page view)，即页面浏览量；</p><p>  用户每1次对网站中的每个网页访问均被记录1次。用户对同一页面的多次访问，访问量累计</p></li><li><p>UV：(unique visitor)，独立访客</p><p>  指访问某个站点或点击某条新闻的不同IP地址的人数。在同一天内，uv只记录第一次进入网站的具有独立IP的访问者，在同一天内再次访问该网站则不计数。</p></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;这次介绍的是第三届蓝桥杯省赛题目的第九题….&lt;/p&gt;
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;PV：(page view)，即页面浏览量；&lt;/p&gt;
+&lt;p&gt;  用户每1次对网站中的每个网页访问均被记录1次。用户对同一页面的多次访问，访问量累计&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UV：(unique visitor)，独立访客&lt;/p&gt;
+&lt;p&gt;  指访问
+      
     
     </summary>
     
-      <category term="备战蓝桥杯试题刷题" scheme="http://zengbolin.github.io/categories/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%E5%88%B7%E9%A2%98/"/>
-    
-    
-      <category term="第三届蓝桥杯，刷题" scheme="http://zengbolin.github.io/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%8C%E5%88%B7%E9%A2%98/"/>
     
   </entry>
   
   <entry>
-    <title>第三届蓝桥杯-省赛_8</title>
-    <link href="http://zengbolin.github.io/2019/10/07/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%9C%81%E8%B5%9B-8/"/>
-    <id>http://zengbolin.github.io/2019/10/07/第三届蓝桥杯-省赛-8/</id>
-    <published>2019-10-06T23:50:24.000Z</published>
-    <updated>2019-10-07T00:05:50.538Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
+    <id>http://zengbolin.github.io/2020/07/25/跨域问题/</id>
+    <published>2020-07-25T04:51:19.086Z</published>
+    <updated>2020-07-24T01:46:42.908Z</updated>
     
-    <content type="html"><![CDATA[<p>这次介绍的是第三届蓝桥杯省赛题目的第八题….</p><a id="more"></a><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 题目介绍</span></span><br><span class="line"></span><br><span class="line">    在编写图形界面软件的时候，经常会遇到处理两个矩形的关系。</span><br><span class="line"></span><br><span class="line">    如图【1.jpg】所示，矩形的交集指的是：两个矩形重叠区的矩形，当然也可能不存在（参看【2.jpg】）。两个矩形的并集指的是：能包含这两个矩形的最小矩形，它一定是存在的。</span><br><span class="line"></span><br><span class="line">    本题目的要求就是：由用户输入两个矩形的坐标，程序输出它们的交集和并集矩形。</span><br><span class="line"></span><br><span class="line">    矩形坐标的输入格式是输入两个对角点坐标，注意，不保证是哪个对角，也不保证顺序（你可以体会一下，在桌面上拖动鼠标拉矩形，4个方向都可以的）。</span><br><span class="line"></span><br><span class="line">    输入数据格式：</span><br><span class="line">x1,y1,x2,y2</span><br><span class="line">x1,y1,x2,y2</span><br><span class="line">    </span><br><span class="line">    数据共两行，每行表示一个矩形。每行是两个点的坐标。x坐标在左，y坐标在右。坐标系统是：屏幕左上角为(0,0)，x坐标水平向右增大；y坐标垂直向下增大。</span><br><span class="line"></span><br><span class="line">    要求程序输出格式：</span><br><span class="line">x1,y1,长度,高度</span><br><span class="line">x1,y1,长度,高度</span><br><span class="line"></span><br><span class="line">    也是两行数据，分别表示交集和并集。如果交集不存在，则输出“不存在”</span><br><span class="line"></span><br><span class="line">    前边两项是左上角的坐标。后边是矩形的长度和高度。</span><br><span class="line"></span><br><span class="line">    例如，用户输入：</span><br><span class="line">100,220,300,100</span><br><span class="line">150,150,300,300</span><br><span class="line"></span><br><span class="line">    则程序输出：</span><br><span class="line">150,150,150,70</span><br><span class="line">100,100,200,200</span><br><span class="line"></span><br><span class="line">    例如，用户输入：</span><br><span class="line">10,10,20,20</span><br><span class="line">30,30,40,40</span><br><span class="line"></span><br><span class="line">    则程序输出：</span><br><span class="line">不存在</span><br><span class="line">10,10,30,30</span><br><span class="line"></span><br><span class="line">    注意：</span><br><span class="line"></span><br><span class="line">    请仔细调试！您的程序只有能运行出正确结果的时候才有机会得分！</span><br><span class="line">    </span><br><span class="line">    在评卷时使用的输入数据与试卷中给出的实例数据可能是不同的。</span><br><span class="line"></span><br><span class="line">    请把所有类写在同一个文件中，调试好后，存入与【考生文件夹】下对应题号的“解答.txt”中即可。</span><br><span class="line">    </span><br><span class="line">    相关的工程文件不要拷入。</span><br><span class="line">    </span><br><span class="line">    请不要使用package语句。</span><br><span class="line">    </span><br><span class="line">    源程序中只能出现JDK1.5中允许的语法或调用。不能使用1.6或更高版本。</span><br></pre></td></tr></table></figure><h6 id="图片示意图"><a href="#图片示意图" class="headerlink" title="图片示意图:"></a>图片示意图:</h6><p><img src="https://i.loli.net/2019/10/07/5xRsLEZJMODvGtX.jpg" alt="矩形运算"></p><p><img src="https://i.loli.net/2019/10/07/Uvsjhy8MVxY45aw.jpg" alt="矩形的位置"></p><blockquote><p>题目求解: 直接暴力破解法。首先看用户的输入数据，x1,y1,x2,y2 / x1,y1,x2,y2为两行四列的数据，并且以逗号分隔，那先使用以逗号分隔的scanner来录入用户的每个数据，然后第一步先判断不存在的位置，那就是x2&gt;x1,y2&gt;y1，那就是没有交集，第二步整理x和y的值,那就是将(x2,y2)和(x1,y1)交换。求交集，那就是(x1,y1,x2-x1,y2-y1),并集是(x0,y0,x3-x0,y3-y0)</p></blockquote><p><img src="https://i.loli.net/2019/10/07/CsfVjnFEcZUJMzI.png" alt="看图"></p><h5 id="java代码实现如下"><a href="#java代码实现如下" class="headerlink" title="java代码实现如下:"></a>java代码实现如下:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Problem_2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Question_8</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        String line1 = scanner.nextLine();</span><br><span class="line">        String line2 = scanner.nextLine();</span><br><span class="line"></span><br><span class="line">        Integer[] x = <span class="keyword">new</span> Integer[<span class="number">4</span>];</span><br><span class="line">        Integer[] y = <span class="keyword">new</span> Integer[<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line">        Scanner scanner1 = <span class="keyword">new</span> Scanner(line1).useDelimiter(<span class="string">","</span>);</span><br><span class="line">        x[<span class="number">0</span>] = scanner1.nextInt();</span><br><span class="line">        y[<span class="number">0</span>] = scanner1.nextInt();</span><br><span class="line">        x[<span class="number">1</span>] = scanner1.nextInt();</span><br><span class="line">        y[<span class="number">1</span>] = scanner1.nextInt();</span><br><span class="line"></span><br><span class="line">        Scanner scanner2 = <span class="keyword">new</span> Scanner(line2).useDelimiter(<span class="string">","</span>);</span><br><span class="line">        x[<span class="number">2</span>] = scanner2.nextInt();</span><br><span class="line">        y[<span class="number">2</span>] = scanner2.nextInt();</span><br><span class="line">        x[<span class="number">3</span>] = scanner2.nextInt();</span><br><span class="line">        y[<span class="number">3</span>] = scanner2.nextInt();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 判断阈值</span></span><br><span class="line">        <span class="keyword">boolean</span> a = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (x[<span class="number">2</span>] &gt; x[<span class="number">1</span>] &amp;&amp; y[<span class="number">2</span>] &gt; y[<span class="number">1</span>]) &#123;</span><br><span class="line">            a = <span class="keyword">false</span>;</span><br><span class="line">            System.out.println(<span class="string">"不存在"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 整理x,y</span></span><br><span class="line">        Arrays.sort(x);</span><br><span class="line">        Arrays.sort(y);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 输出</span></span><br><span class="line">        <span class="keyword">if</span> (a) &#123;</span><br><span class="line">            System.out.println(x[<span class="number">1</span>] + <span class="string">","</span> + y[<span class="number">1</span>] + <span class="string">","</span> + (x[<span class="number">2</span>] - x[<span class="number">1</span>]) + <span class="string">","</span> + (y[<span class="number">2</span>] - y[<span class="number">1</span>]));</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(x[<span class="number">0</span>] + <span class="string">","</span> + y[<span class="number">0</span>] + <span class="string">","</span> + (x[<span class="number">3</span>] - x[<span class="number">0</span>]) + <span class="string">","</span> + (y[<span class="number">3</span>] - y[<span class="number">0</span>]));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>跨域：浏览器对于javascript的同源策略的限制 。</p><p>以下情况都属于跨域：</p><table><thead><tr><th>跨域原因说明</th><th>示例</th></tr></thead><tbody><tr><td>域名不同</td><td><code>www.jd.com</code> 与 <code>www.taobao.com</code></td></tr><tr><td>域名相同，端口不同</td><td><code>www.jd.com:8080</code> 与 <code>www.jd.com:8081</code></td></tr><tr><td>二级域名不同</td><td><code>item.jd.com</code> 与 <code>miaosha.jd.com</code></td></tr></tbody></table><p>如果<strong>域名和端口都相同，但是请求路径不同</strong>，不属于跨域，如：</p><p><code>www.jd.com/item</code> </p><p><code>www.jd.com/goods</code></p><p>http和https也属于跨域</p><p><strong>目前比较常用的跨域解决方案有3种：</strong></p><ul><li><p>Jsonp</p><p>  最早的解决方案，利用script标签可以跨域的原理实现。</p><p>  限制：</p><ul><li>需要服务的支持</li><li>只能发起GET请求</li></ul></li><li><p>nginx反向代理</p><p>  思路是：利用nginx把跨域反向代理为不跨域，支持各种请求方式</p><p>  缺点：需要在nginx进行额外配置，语义不清晰 </p></li><li><p>CORS</p><p>  规范化的跨域请求解决方案，安全可靠。</p><p>  优势：</p><ul><li>在服务端进行控制是否允许跨域，可自定义规则</li><li><p>支持各种请求方式</p><p>缺点：</p></li><li><p>会产生额外的请求</p></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;这次介绍的是第三届蓝桥杯省赛题目的第八题….&lt;/p&gt;
+      
+      
+        &lt;p&gt;跨域：浏览器对于javascript的同源策略的限制 。&lt;/p&gt;
+&lt;p&gt;以下情况都属于跨域：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;跨域原因说明&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;域名不同&lt;
+      
     
     </summary>
     
-      <category term="备战蓝桥杯试题刷题" scheme="http://zengbolin.github.io/categories/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%E5%88%B7%E9%A2%98/"/>
-    
-    
-      <category term="第三届蓝桥杯，刷题" scheme="http://zengbolin.github.io/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%8C%E5%88%B7%E9%A2%98/"/>
     
   </entry>
   
   <entry>
-    <title>第三届蓝桥杯-省赛_7</title>
-    <link href="http://zengbolin.github.io/2019/10/07/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%9C%81%E8%B5%9B-7/"/>
-    <id>http://zengbolin.github.io/2019/10/07/第三届蓝桥杯-省赛-7/</id>
-    <published>2019-10-06T23:40:00.000Z</published>
-    <updated>2019-10-06T23:49:55.728Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/SQL%E8%AF%AD%E6%B3%95where%E4%B8%8Ehaving%E5%8C%BA%E5%88%AB/"/>
+    <id>http://zengbolin.github.io/2020/07/25/SQL语法where与having区别/</id>
+    <published>2020-07-25T04:51:19.077Z</published>
+    <updated>2020-04-12T01:34:35.378Z</updated>
     
-    <content type="html"><![CDATA[<p>这次介绍的是第三届蓝桥杯省赛题目的第七题….</p><a id="more"></a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">% 题目介绍</span><br><span class="line"></span><br><span class="line">    [<span class="number">12</span>,<span class="number">127</span>,<span class="number">85</span>,<span class="number">66</span>,<span class="number">27</span>,<span class="number">34</span>,<span class="number">15</span>,<span class="number">344</span>,<span class="number">156</span>,<span class="number">344</span>,<span class="number">29</span>,<span class="number">47</span>,....]  </span><br><span class="line"></span><br><span class="line">    这是某设备测量到的工程数据。</span><br><span class="line"></span><br><span class="line">    因工程要求，需要找出最大的<span class="number">5</span>个值。</span><br><span class="line"></span><br><span class="line">    一般的想法是对它排序，输出前<span class="number">5</span>个。但当数据较多时，这样做很浪费时间。因为对输出数据以外的数据进行排序并非工程要求，即便是要输出的<span class="number">5</span>个数字，也并不要求按大小顺序，只要找到<span class="number">5</span>个就可以。</span><br><span class="line"></span><br><span class="line">    以下的代码采用了另外的思路。考虑如果手里已经抓着<span class="number">5</span>个最大数，再来一个数据怎么办呢？让它和手里的数据比，如果比哪个大，就抢占它的座位，让那个被挤出来的再自己找位子,....</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">B23</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Integer&gt; <span class="title">max5</span><span class="params">(List&lt;Integer&gt; lst)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(lst.size()&lt;=<span class="number">5</span>) <span class="keyword">return</span> lst;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a = _______________________;  <span class="comment">// 填空</span></span><br><span class="line">List&lt;Integer&gt; b = max5(lst);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;b.size(); i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">int</span> t = b.get(i);</span><br><span class="line"><span class="keyword">if</span>(a&gt;t)</span><br><span class="line">&#123;</span><br><span class="line">__________________;  <span class="comment">// 填空</span></span><br><span class="line">a = t;  </span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">List&lt;Integer&gt; lst = <span class="keyword">new</span> Vector&lt;Integer&gt;();</span><br><span class="line">lst.addAll(Arrays.asList(<span class="number">12</span>,<span class="number">127</span>,<span class="number">85</span>,<span class="number">66</span>,<span class="number">27</span>,<span class="number">34</span>,<span class="number">15</span>,<span class="number">344</span>,<span class="number">156</span>,<span class="number">344</span>,<span class="number">29</span>,<span class="number">47</span>));</span><br><span class="line">System.out.println(max5(lst));</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    请分析代码逻辑，并推测划线处的代码。</span><br><span class="line"></span><br><span class="line">    答案写在 “解答.txt” 文件中</span><br><span class="line"></span><br><span class="line">    注意：只写划线处应该填的内容，划线前后的内容不要抄写。</span><br></pre></td></tr></table></figure><blockquote><p>题目解答: 首先明确题目的要求，是求这几个数中的最大的五个数，而且题目说明不是暴力破解法，那肯定是递归最方便。看第一个空，问你a的值，这段语句出现在递归调用的前面，那肯定和递归的条件有关系，即lst.size &lt;= 5.从大于5变为小于等于5，即a为去掉lst中的数，显然填<code>lst.remove(lst.size()-1)</code>。看第二个空，判断a的值和b的第i个值的大小，若a&gt;b[i]，那肯定要做的就是将大数塞进lst中，显然填<code>lst.set(i,a)</code></p></blockquote><h5 id="java填空答案为"><a href="#java填空答案为" class="headerlink" title="java填空答案为:"></a>java填空答案为:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lst.remove(lst.size()-<span class="number">1</span>)</span><br><span class="line">lst.set(i,a)</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>简单记录where和having关键字的区别</p></blockquote><ol><li>where在分组之前进行限定，如果不满足条件，则不参与分组。having在分组之后进行限定，如果不满足结果，则不会被查询出来。</li><li>where后不可以跟聚合函数，having可以进行聚合函数的判断。</li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;这次介绍的是第三届蓝桥杯省赛题目的第七题….&lt;/p&gt;
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;简单记录where和having关键字的区别&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;where在分组之前进行限定，如果不满足条件，则不参与分组。having在分组之后进行限定，如果不满足结果，则不会被查询出来。&lt;/li&gt;
+&lt;li&gt;w
+      
     
     </summary>
     
-      <category term="备战蓝桥杯试题刷题" scheme="http://zengbolin.github.io/categories/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%E5%88%B7%E9%A2%98/"/>
-    
-    
-      <category term="第三届蓝桥杯，刷题" scheme="http://zengbolin.github.io/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%8C%E5%88%B7%E9%A2%98/"/>
     
   </entry>
   
   <entry>
-    <title>第三届蓝桥杯-省赛_6</title>
-    <link href="http://zengbolin.github.io/2019/10/07/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%9C%81%E8%B5%9B-6/"/>
-    <id>http://zengbolin.github.io/2019/10/07/第三届蓝桥杯-省赛-6/</id>
-    <published>2019-10-06T23:29:45.000Z</published>
-    <updated>2019-10-06T23:39:49.854Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F/"/>
+    <id>http://zengbolin.github.io/2020/07/25/数据库设计范式/</id>
+    <published>2020-07-25T04:51:19.045Z</published>
+    <updated>2020-04-12T14:43:09.011Z</updated>
     
-    <content type="html"><![CDATA[<p>这次介绍的是第三届蓝桥杯省赛题目的第六题….</p><a id="more"></a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">% 题目介绍</span><br><span class="line"></span><br><span class="line">    南北朝时，我国数学家祖冲之首先把圆周率值计算到小数点后六位，比欧洲早了<span class="number">1100</span>年！他采用的是称为“割圆法”的算法，实际上已经蕴含着现代微积分的思想。</span><br><span class="line"></span><br><span class="line">    如图【<span class="number">1</span>.jpg】所示，圆的内接正六边形周长与圆的周长近似。多边形的边越多，接近的越好！我们从正六边形开始割圆吧。</span><br><span class="line"></span><br><span class="line">    如图【<span class="number">2</span>.jpg】所示，从圆心做弦的垂线，可把<span class="number">6</span>边形分割为<span class="number">12</span>边形。该<span class="number">12</span>边形的边长a<span class="string">'的计算方法很容易利用勾股定理给出。之后，再分割为正24边形，....如此循环会越来越接近圆周。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    之所以从正六边开始，是因为此时边长与半径相等，便于计算。取半径值为1，开始割圆吧！</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    以下代码描述了割圆过程。</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    程序先输出了标准圆周率值，紧接着输出了不断分割过程中多边形边数和所对应的圆周率逼近值。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">public class B21</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">public static void main(String[] args)</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">System.out.println("标准 " + Math.PI);</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">double a = 1; </span></span><br><span class="line"><span class="string">int n = 6;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">for(int i=0; i&lt;10; i++)</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">double b = Math.sqrt(1-(a/2)*(a/2));</span></span><br><span class="line"><span class="string">a = Math.sqrt((1-b)*(1-b) + (a/2)*(a/2));</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">n = ______________; //填空</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">System.out.println(n + "  " + _______________);  // 填空</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">请分析代码逻辑，并推测划线处的代码。</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">答案写在 “解答.txt” 文件中</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">注意：只写划线处应该填的内容，划线前后的内容不要抄写。</span></span><br></pre></td></tr></table></figure><h6 id="图片示意图"><a href="#图片示意图" class="headerlink" title="图片示意图:"></a>图片示意图:</h6><p><img src="https://i.loli.net/2019/10/07/8rim6VoCuWzg7ht.jpg" alt="1.jpg"></p><p><img src="https://i.loli.net/2019/10/07/NxEnuYJze7T3kBG.jpg" alt="2.jpg"></p><blockquote><p>题目解答: 首先你要明确，这是一道填空题，n=6对应为六边形，那下面肯定要切割为12，24边形等，所以第一个空填n<em>2;第二个空要对应题目中的圆周率的求解，看题目，是用多正边形的周长来近似圆的周长，即2 · pi · r = 2 · a` · n,但是看程序，n是先变2倍，所以第二个空填(a\</em>n)/2</p></blockquote><h5 id="java填空答案如下"><a href="#java填空答案如下" class="headerlink" title="java填空答案如下:"></a>java填空答案如下:</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">n*<span class="number">2</span></span><br><span class="line">a*n/<span class="number">2</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h4 id="数据库设计的范式"><a href="#数据库设计的范式" class="headerlink" title="数据库设计的范式"></a>数据库设计的范式</h4><ul><li><p>概念: 设计关系数据库时，遵从不同的规范要求，设计出合理的关系型数据库，这些不同的规范要求被称为不同的范式，各种范式呈递次规范，越高的范式数据库冗余越小。(必须先遵循前面所有范式要求)</p></li><li><p>分类:</p><ol><li>第一范式(1NF):<strong>每一列都是不可分割的原子数据项。(只能是单列)</strong></li><li>第二范式(2NF):<strong>在1NF的基础上，非码属性必须完全依赖于候选码（在1NF基础上消除非主属性对主码的部分函数依赖）</strong></li></ol><ul><li>几个概念:<ol><li>函数依赖: A–&gt;B,如果通过A属性(属性组)的值，可以确定唯一B属性的值。则称B依赖于A。</li><li>完全函数依赖：A–&gt;B,如果A是一个属性组，则B属性值的确定需要依赖A属性组中所有的属性值。</li><li>部分函数依赖：A–&gt;B,如果A是一个属性组，则B属性值的确定需要依赖A属性组中某一些值即可。</li><li>传递函数依赖：A–&gt;B,B–&gt;C。如果通过A属性(属性组)的值，可以确定唯一B属性的值，在通过B属性(属性组)的值可以确定唯一C属性的值，就为C传递函数依赖于A。</li><li>码：如果在一张表中，一个属性或属性组，被其他所有属性所完全依赖，则称这个属性(属性组)为该表的码<ul><li>主属性: 码属性组中的所有属性</li><li>非主属性: 除过码属性组的属性</li></ul></li></ol></li></ul><ol start="3"><li><strong>第三范式(3NF):在2NF基础上，任何非主属性不依赖于其它非主属性（在2NF基础上消除传递依赖）</strong></li></ol></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;这次介绍的是第三届蓝桥杯省赛题目的第六题….&lt;/p&gt;
+      
+      
+        &lt;h4 id=&quot;数据库设计的范式&quot;&gt;&lt;a href=&quot;#数据库设计的范式&quot; class=&quot;headerlink&quot; title=&quot;数据库设计的范式&quot;&gt;&lt;/a&gt;数据库设计的范式&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;概念: 设计关系数据库时，遵从不同的规范要求，设计出合理的关系型数据库，这
+      
     
     </summary>
     
-      <category term="备战蓝桥杯试题刷题" scheme="http://zengbolin.github.io/categories/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%E5%88%B7%E9%A2%98/"/>
-    
-    
-      <category term="第三届蓝桥杯，刷题" scheme="http://zengbolin.github.io/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%8C%E5%88%B7%E9%A2%98/"/>
     
   </entry>
   
   <entry>
-    <title>第三届蓝桥杯-省赛_5</title>
-    <link href="http://zengbolin.github.io/2019/10/06/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%9C%81%E8%B5%9B-5/"/>
-    <id>http://zengbolin.github.io/2019/10/06/第三届蓝桥杯-省赛-5/</id>
-    <published>2019-10-06T14:51:17.000Z</published>
-    <updated>2019-10-06T23:28:22.458Z</updated>
-    
-    <content type="html"><![CDATA[<p>这次介绍的是第三届蓝桥杯省赛题目的第五题….</p><a id="more"></a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">% 题目介绍</span><br><span class="line"></span><br><span class="line">以下的静态方法实现了：把串s中第一个出现的数字的值返回。</span><br><span class="line">如果找不到数字，返回-<span class="number">1</span></span><br><span class="line"></span><br><span class="line">例如：</span><br><span class="line">s = <span class="string">"abc24us43"</span>  则返回<span class="number">2</span></span><br><span class="line">s = <span class="string">"82445adb5"</span>  则返回<span class="number">8</span></span><br><span class="line">s = <span class="string">"ab"</span>   则返回-<span class="number">1</span>   </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getFirstNum</span><span class="params">(String s)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span>(s==<span class="keyword">null</span> || s.length()==<span class="number">0</span>) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> c = s.charAt(<span class="number">0</span>);</span><br><span class="line"><span class="keyword">if</span>(c&gt;=<span class="string">'0'</span> &amp;&amp; c&lt;=<span class="string">'9'</span>) <span class="keyword">return</span> _____________;  <span class="comment">//填空</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> ___________________;  <span class="comment">//填空</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">请分析代码逻辑，并推测划线处的代码。</span><br><span class="line"></span><br><span class="line">答案写在 “解答.txt” 文件中</span><br><span class="line"></span><br><span class="line">注意：只写划线处应该填的内容，划线前后的内容不要抄写。</span><br></pre></td></tr></table></figure><blockquote><p>题目求解：首先题目文档命名已经了解了是求第一个数字的程序，看代码实现，要填入return的内容。观察第一个return值，若判断第一个字符为数字，就返回，那就直接调用方法将字符转换数字。观察第二个return值，再次看例子中的“ab”返回-1，就懂了，明白了程序是要一直往下寻找，找到数字返回数字，不然就返回-1.显然是递归的表现了。</p></blockquote><h4 id="java代码填空答案："><a href="#java代码填空答案：" class="headerlink" title="java代码填空答案："></a>java代码填空答案：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c - <span class="string">'0'</span></span><br><span class="line">getFirstNum(s.substring(<span class="number">1</span>))</span><br></pre></td></tr></table></figure>]]></content>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/%E6%97%A0%E6%A0%87%E9%A2%98Markdown/"/>
+    <id>http://zengbolin.github.io/2020/07/25/无标题Markdown/</id>
+    <published>2020-07-25T04:51:19.037Z</published>
+    <updated>2020-04-13T13:49:57.118Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;这次介绍的是第三届蓝桥杯省赛题目的第五题….&lt;/p&gt;
-    
     </summary>
     
-      <category term="备战蓝桥杯试题刷题" scheme="http://zengbolin.github.io/categories/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%E5%88%B7%E9%A2%98/"/>
-    
-    
-      <category term="第三届蓝桥杯，刷题" scheme="http://zengbolin.github.io/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%8C%E5%88%B7%E9%A2%98/"/>
     
   </entry>
   
   <entry>
-    <title>第三届蓝桥杯-省赛_4</title>
-    <link href="http://zengbolin.github.io/2019/10/06/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%9C%81%E8%B5%9B-4/"/>
-    <id>http://zengbolin.github.io/2019/10/06/第三届蓝桥杯-省赛-4/</id>
-    <published>2019-10-06T14:41:28.000Z</published>
-    <updated>2019-10-06T23:27:51.098Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E7%BA%BF%E5%88%B7USB3.0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://zengbolin.github.io/2020/07/25/小米手机线刷USB3.0的问题/</id>
+    <published>2020-07-25T04:51:19.003Z</published>
+    <updated>2020-04-13T15:34:25.373Z</updated>
     
-    <content type="html"><![CDATA[<p>这次介绍的是第三届蓝桥杯省赛题目的第四题….</p><a id="more"></a><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">某电视台举办了低碳生活大奖赛。题目的计分规则相当奇怪：</span><br><span class="line"></span><br><span class="line">   每位选手需要回答10个问题（其编号为1到10），越后面越有难度。答对的，当前分数翻倍；答错了则扣掉与题号相同的分数（选手必须回答问题，不回答按错误处理）。</span><br><span class="line"></span><br><span class="line">   每位选手都有一个起步的分数为10分。</span><br><span class="line"></span><br><span class="line">   某获胜选手最终得分刚好是100分，如果不让你看比赛过程，你能推断出他（她）哪个题目答对了，哪个题目答错了吗？</span><br><span class="line"></span><br><span class="line">   如果把答对的记为1，答错的记为0，则10个题目的回答情况可以用仅含有1和0的串来表示。例如：0010110011 就是可能的情况。</span><br><span class="line"></span><br><span class="line">   你的任务是算出所有可能情况。每个答案占一行。</span><br><span class="line"></span><br><span class="line">   答案写在“解答.txt”中，不要写在这里！</span><br></pre></td></tr></table></figure><blockquote><p>题目求解: 首先分析题目，终止条件为10个问题恰恰好100分。答错扣掉题目的分数，答对分数翻倍，可以构建递归条件了。递归的出口就是终止条件，递归部分就是答对和答对的部分。</p></blockquote><h4 id="java代码实现如下"><a href="#java代码实现如下" class="headerlink" title="java代码实现如下:"></a>java代码实现如下:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Problem_2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Question_4</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        match(<span class="number">10</span>, <span class="number">1</span>, <span class="string">""</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">match</span><span class="params">(<span class="keyword">int</span> i, <span class="keyword">int</span> m, String s)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 递归求解</span></span><br><span class="line">        <span class="comment">// 递归的出口</span></span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">100</span> &amp;&amp; m == <span class="number">11</span>) &#123;</span><br><span class="line">            System.out.println(s);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (m &gt; <span class="number">10</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 递归添加s</span></span><br><span class="line">        match(i * <span class="number">2</span>, m + <span class="number">1</span>, s + <span class="string">"1"</span>);</span><br><span class="line">        match(i - m, m + <span class="number">1</span>, s + <span class="string">"0"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="答案如下："><a href="#答案如下：" class="headerlink" title="答案如下："></a>答案如下：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1011010000</span></span><br><span class="line"><span class="number">0111010000</span></span><br><span class="line"><span class="number">0010110011</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>使用小米线刷工具线刷我自己的小米六，突然发现进度条时间一直增加，而且刷不进去。然后我就知道不行了。经过度娘，最终发现是USB3.0的问题。以下就是解决办法。</p></blockquote><p>问题:<br><img src="https://tvax2.sinaimg.cn/large/8a973ec5gy1gdsey0e5o3j21110evmxl.jpg" alt="线刷问题"></p><p>解决办法1: 换电脑，将数据线插入USB2.0接口<br>解决办法2: 复制以下代码，新建txt文件粘贴进去，然后修改后缀名为bat。右键以管理员权限运行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;osvc&quot; /t REG_BINARY /d &quot;0000&quot; /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;SkipContainerIdQuery&quot; /t REG_BINARY /d &quot;01000000&quot; /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;SkipBOSDescriptorQuery&quot; /t REG_BINARY /d &quot;01000000&quot; /f</span><br><span class="line"> </span><br><span class="line">pause</span><br></pre></td></tr></table></figure></p><p>还有还原方法: 打开注册表，删除新增的注册表。打开搜索，搜索regedit。搜索HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\，并删除以下三个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\osvc</span><br><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\SkipContainerIdQuery</span><br><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\SkipBOSDescriptorQuery</span><br></pre></td></tr></table></figure></p><p>最后搞定问题:<br><img src="https://tvax2.sinaimg.cn/large/8a973ec5gy1gdsf2dyyx7j21110evt91.jpg" alt="搞定问题"></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;这次介绍的是第三届蓝桥杯省赛题目的第四题….&lt;/p&gt;
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;使用小米线刷工具线刷我自己的小米六，突然发现进度条时间一直增加，而且刷不进去。然后我就知道不行了。经过度娘，最终发现是USB3.0的问题。以下就是解决办法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;问题:&lt;br&gt;&lt;img src=&quot;https:/
+      
     
     </summary>
     
-      <category term="备战蓝桥杯试题刷题" scheme="http://zengbolin.github.io/categories/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%E5%88%B7%E9%A2%98/"/>
-    
-    
-      <category term="第三届蓝桥杯，刷题" scheme="http://zengbolin.github.io/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%8C%E5%88%B7%E9%A2%98/"/>
     
   </entry>
   
   <entry>
-    <title>第三届蓝桥杯-省赛_3</title>
-    <link href="http://zengbolin.github.io/2019/10/06/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%9C%81%E8%B5%9B-3/"/>
-    <id>http://zengbolin.github.io/2019/10/06/第三届蓝桥杯-省赛-3/</id>
-    <published>2019-10-06T14:33:28.000Z</published>
-    <updated>2019-10-06T23:27:45.122Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E7%9A%84%E5%9B%9B%E5%A4%A7%E7%89%B9%E5%BE%81/"/>
+    <id>http://zengbolin.github.io/2020/07/25/数据库事务的四大特征/</id>
+    <published>2020-07-25T04:51:18.994Z</published>
+    <updated>2020-04-14T02:04:55.298Z</updated>
     
-    <content type="html"><![CDATA[<p>这次介绍的是第三届蓝桥杯省赛题目的第三题….</p><a id="more"></a><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 题目介绍</span></span><br><span class="line"></span><br><span class="line">    汉诺塔（又称河内塔）问题是源于印度一个古老传说的益智玩具。</span><br><span class="line">    大梵天创造世界的时候做了三根金刚石柱子，在一根柱子上从下往上按照大小顺序摞着64片黄金圆盘。大梵天命令婆罗门把圆盘从下面开始按大小顺序重新摆放在另一根柱子上(可以借助第三根柱子做缓冲)。并且规定，在小圆盘上不能放大圆盘，在三根柱子之间一次只能移动一个圆盘。</span><br><span class="line"></span><br><span class="line">    如图【1.jpg】是现代“山寨”版的该玩具。64个圆盘太多了，所以减为7个，金刚石和黄金都以木头代替了......但道理是相同的。</span><br><span class="line"></span><br><span class="line">    据说完成大梵天的命令需要太多的移动次数，以至被认为完成之时就是世界末日！</span><br><span class="line"></span><br><span class="line">    你的任务是精确计算出到底需要移动多少次。</span><br><span class="line"></span><br><span class="line">    很明显，如果只有2个圆盘，需要移动3次。</span><br><span class="line"></span><br><span class="line">    圆盘数为3，则需要移动7次。</span><br><span class="line"></span><br><span class="line">    那么64个呢？</span><br><span class="line">    </span><br><span class="line">    答案写在“解答.txt”中，不要写在这里！</span><br></pre></td></tr></table></figure><h6 id="汉诺塔图片原型"><a href="#汉诺塔图片原型" class="headerlink" title="汉诺塔图片原型"></a>汉诺塔图片原型</h6><p><img src="https://i.loli.net/2019/10/06/NSi94WdCUaGQYTP.jpg" alt="汉诺塔图片原型"></p><blockquote><p>题目求解: 首先题目不是问你移动的步骤，当然问步骤的话也可以通过递归来解决。题目问的是移动次数，所以直接略过移动的步骤，你也不可能加1加1的算，我们早就知道汉诺塔问题的次数公式: 2^n-1,所以题目叫我们求的是2^64 - 1的精确值。这个数是属于溢出数据，直接使用大数解决方式</p></blockquote><h4 id="java代码实现如下"><a href="#java代码实现如下" class="headerlink" title="java代码实现如下:"></a>java代码实现如下:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Problem_2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.math.BigDecimal;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Question_3</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 计算64个圆盘移动汉诺塔的次数问题</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        BigDecimal a = <span class="keyword">new</span> BigDecimal(<span class="number">2</span>);</span><br><span class="line">        BigDecimal b = <span class="keyword">new</span> BigDecimal(<span class="number">1</span>);</span><br><span class="line">        BigDecimal pow = a.pow(<span class="number">64</span>);</span><br><span class="line">        System.out.println(pow.divide(b));</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><h4 id="答案如下："><a href="#答案如下：" class="headerlink" title="答案如下："></a>答案如下：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">18446744073709551615</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><strong>事务的四大特征:</strong></p><ol><li>原子性: 是不可分割的最小操作单位，要么同时成功，要么同时失败。</li><li>持久性: 当事务提交或回滚后，数据库会持久化保存数据。</li><li>隔离性: 多个事务之间，相互独立。</li><li>一致性: 事务操作前后，数据总量不变</li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;这次介绍的是第三届蓝桥杯省赛题目的第三题….&lt;/p&gt;
+      
+      
+        &lt;p&gt;&lt;strong&gt;事务的四大特征:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;原子性: 是不可分割的最小操作单位，要么同时成功，要么同时失败。&lt;/li&gt;
+&lt;li&gt;持久性: 当事务提交或回滚后，数据库会持久化保存数据。&lt;/li&gt;
+&lt;li&gt;隔离性: 多个事务之间，相互独立。&lt;/
+      
     
     </summary>
     
-      <category term="备战蓝桥杯试题刷题" scheme="http://zengbolin.github.io/categories/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%E5%88%B7%E9%A2%98/"/>
-    
-    
-      <category term="第三届蓝桥杯，刷题" scheme="http://zengbolin.github.io/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%8C%E5%88%B7%E9%A2%98/"/>
     
   </entry>
   
   <entry>
-    <title>第三届蓝桥杯-省赛_2</title>
-    <link href="http://zengbolin.github.io/2019/10/06/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%9C%81%E8%B5%9B-2/"/>
-    <id>http://zengbolin.github.io/2019/10/06/第三届蓝桥杯-省赛-2/</id>
-    <published>2019-10-06T14:26:37.000Z</published>
-    <updated>2019-10-06T23:27:39.471Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E5%AF%86%E7%A0%81/"/>
+    <id>http://zengbolin.github.io/2020/07/25/修改数据库管理员密码/</id>
+    <published>2020-07-25T04:51:18.984Z</published>
+    <updated>2020-04-14T05:45:15.358Z</updated>
     
-    <content type="html"><![CDATA[<p>这次介绍的是第三届蓝桥杯省赛题目的第二题….</p><a id="more"></a><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 题目介绍</span></span><br><span class="line"></span><br><span class="line">    有一群海盗（不多于20人），在船上比拼酒量。过程如下：打开一瓶酒，所有在场的人平分喝下，有几个人倒下了。</span><br><span class="line">   </span><br><span class="line">    再打开一瓶酒平分，又有倒下的，再次重复...... 直到开了第4瓶酒，坐着的已经所剩无几，海盗船长也在其中。当第4瓶酒平分喝下后，大家都倒下了。</span><br><span class="line"></span><br><span class="line">    等船长醒来，发现海盗船搁浅了。他在航海日志中写到：“......昨天，我正好喝了一瓶.......奉劝大家，开船不喝酒，喝酒别开船......”</span><br><span class="line"></span><br><span class="line">    请你根据这些信息，推断开始有多少人，每一轮喝下来还剩多少人。</span><br><span class="line"></span><br><span class="line">    如果有多个可能的答案，请列出所有答案，每个答案占一行。</span><br><span class="line"></span><br><span class="line">    格式是：人数,人数,...</span><br><span class="line"></span><br><span class="line">    例如,有一种可能是：20,5,4,2,0</span><br><span class="line"></span><br><span class="line">    答案写在“解答.txt”中，不要写在这里！</span><br></pre></td></tr></table></figure><blockquote><p>题目思路: 暴力破解法是最快想到的方法。首先一共喝了4瓶酒，就代表有四轮的循环，做四轮循环，那什么时候打印人数呢？请注意题目中船长说的那句话，昨天，我正好喝了一瓶。所以终止条件就是，每轮的酒加起来为1.0</p></blockquote><h4 id="java代码实现如下"><a href="#java代码实现如下" class="headerlink" title="java代码实现如下:"></a>java代码实现如下:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Problem_2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Question_2</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> a = <span class="number">20</span>; a &gt;= <span class="number">1</span>; a--) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> b = a - <span class="number">1</span>; b &gt;= <span class="number">1</span>; b--) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> c = b - <span class="number">1</span>; c &gt;= <span class="number">1</span>; c--) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (<span class="keyword">int</span> d = c - <span class="number">1</span>; d &gt;= <span class="number">1</span>; d--) &#123;</span><br><span class="line">                        <span class="keyword">if</span> (<span class="number">1.0</span> / a + <span class="number">1.0</span> / b + <span class="number">1.0</span> / c + <span class="number">1.0</span> / d == <span class="number">1.0</span>) &#123;</span><br><span class="line">                            System.out.println(a + <span class="string">","</span> + b + <span class="string">","</span> + c + <span class="string">","</span> + d + <span class="string">",0"</span>);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="答案如下"><a href="#答案如下" class="headerlink" title="答案如下:"></a>答案如下:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">20</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">0</span></span><br><span class="line"><span class="number">18</span>,<span class="number">9</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">0</span></span><br><span class="line"><span class="number">15</span>,<span class="number">10</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">0</span></span><br><span class="line"><span class="number">12</span>,<span class="number">6</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">0</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>当忘记了root的密码的时候，就需要修改其密码</p></blockquote><ol><li><p>打开cmd，使用管理员运行。输入<figure class="highlight plain"><figcaption><span>stop mtsql```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 使用无验证方式启动mysql服务：```mysqld --skip-grant-tables</span><br></pre></td></tr></table></figure></p></li><li><p>打开新的命令行窗口,直接输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4. 开始修改管理员密码，```use mysql;```--&gt;```update user set password = password(&apos;新密码&apos;) where user = &apos;root&apos;</span><br></pre></td></tr></table></figure></p></li><li><p>关闭cmd，打开任务管理器结束mysqld.exe进程，ok完成修改。</p></li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;这次介绍的是第三届蓝桥杯省赛题目的第二题….&lt;/p&gt;
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;当忘记了root的密码的时候，就需要修改其密码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;打开cmd，使用管理员运行。输入&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;stop
+      
     
     </summary>
     
-      <category term="备战蓝桥杯试题刷题" scheme="http://zengbolin.github.io/categories/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%E5%88%B7%E9%A2%98/"/>
-    
-    
-      <category term="第三届蓝桥杯，刷题" scheme="http://zengbolin.github.io/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%8C%E5%88%B7%E9%A2%98/"/>
     
   </entry>
   
   <entry>
-    <title>第三届蓝桥杯-省赛_1</title>
-    <link href="http://zengbolin.github.io/2019/10/06/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF-%E7%9C%81%E8%B5%9B-1/"/>
-    <id>http://zengbolin.github.io/2019/10/06/第三届蓝桥杯-省赛-1/</id>
-    <published>2019-10-06T14:16:43.000Z</published>
-    <updated>2019-10-06T23:27:33.900Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/JDBC%E7%9A%84%E6%9B%B4%E6%96%B0sql%E7%9A%84%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://zengbolin.github.io/2020/07/25/JDBC的更新sql的对象/</id>
+    <published>2020-07-25T04:51:18.974Z</published>
+    <updated>2020-04-14T09:54:48.715Z</updated>
     
-    <content type="html"><![CDATA[<p>这次介绍的是第三届蓝桥杯省赛题目的第一题….</p><a id="more"></a><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 题目介绍</span></span><br><span class="line"></span><br><span class="line">    黄金分割数0.618与美学有重要的关系。舞台上报幕员所站的位置大约就是舞台宽度的0.618处，墙上的画像一般也挂在房间高度的0.618处，甚至股票的波动据说也能找到0.618的影子....</span><br><span class="line"></span><br><span class="line">    黄金分割数是个无理数，也就是无法表示为两个整数的比值。0.618只是它的近似值，其真值可以通过对5开方减去1再除以2来获得，我们取它的一个较精确的近似值：0.618034</span><br><span class="line"></span><br><span class="line">    有趣的是，一些简单的数列中也会包含这个无理数，这很令数学家震惊！</span><br><span class="line"></span><br><span class="line">    1 3 4 7 11 18 29 47 .... 称为“鲁卡斯队列”。它后面的每一个项都是前边两项的和。</span><br><span class="line"></span><br><span class="line">    如果观察前后两项的比值，即：1/3,3/4,4/7,7/11,11/18 ... 会发现它越来越接近于黄金分割数！</span><br><span class="line"></span><br><span class="line">    你的任务就是计算出从哪一项开始，这个比值四舍五入后已经达到了与0.618034一致的精度。</span><br><span class="line"></span><br><span class="line">    请写出该比值。格式是：分子/分母。比如：29/47</span><br><span class="line"></span><br><span class="line">    答案写在“解答.txt”中，不要写在这里！</span><br></pre></td></tr></table></figure><blockquote><p>解题思路: 将鲁卡斯队列看作斐波那契数列的一部分，只是少了第一项，去掉第一项，作递归求解每次的数，并作除法，找到最接近黄金分割数。(打印所有结果，用肉眼观察，写在解答.txt中)</p></blockquote><h4 id="java实现代码如下："><a href="#java实现代码如下：" class="headerlink" title="java实现代码如下："></a>java实现代码如下：</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Problem_2;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Question_1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">            System.out.println(fib(i - <span class="number">1</span>) + <span class="string">"/"</span> + fib(i) + <span class="string">" = "</span> + fib(i - <span class="number">1</span>) / fib(i));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">float</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">3</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (i == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> fib(i - <span class="number">1</span>) + fib(i - <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="答案为"><a href="#答案为" class="headerlink" title="答案为:"></a>答案为:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1364</span>/<span class="number">2207</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>记下每个方法所针对的对象</p></blockquote><ol><li><code>int executeUpdate(String sql)</code>: 执行DML语句(insert、update、delete)、DDL(create,alter,drop)语句.</li><li><code>ResultSet executeQuery(String sql)</code>: 执行DQL语句(select).</li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;这次介绍的是第三届蓝桥杯省赛题目的第一题….&lt;/p&gt;
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;记下每个方法所针对的对象&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;int executeUpdate(String sql)&lt;/code&gt;: 执行DML语句(insert、update、delete)、DDL(create
+      
     
     </summary>
     
-      <category term="备战蓝桥杯试题刷题" scheme="http://zengbolin.github.io/categories/%E5%A4%87%E6%88%98%E8%93%9D%E6%A1%A5%E6%9D%AF%E8%AF%95%E9%A2%98%E5%88%B7%E9%A2%98/"/>
-    
-    
-      <category term="第三届蓝桥杯，刷题" scheme="http://zengbolin.github.io/tags/%E7%AC%AC%E4%B8%89%E5%B1%8A%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%8C%E5%88%B7%E9%A2%98/"/>
     
   </entry>
   
   <entry>
-    <title>opencv学习之高斯滤波GaussianBlur()</title>
-    <link href="http://zengbolin.github.io/2019/05/19/opencv%E5%AD%A6%E4%B9%A0%E4%B9%8B%E9%AB%98%E6%96%AF%E6%BB%A4%E6%B3%A2GaussianBlur()/"/>
-    <id>http://zengbolin.github.io/2019/05/19/opencv学习之高斯滤波GaussianBlur()/</id>
-    <published>2019-05-19T02:30:08.000Z</published>
-    <updated>2019-05-19T02:26:50.128Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/get%E5%92%8Cpost%E6%8F%90%E4%BA%A4%E6%96%B9%E5%BC%8F%E5%8C%BA%E5%88%AB/"/>
+    <id>http://zengbolin.github.io/2020/07/25/get和post提交方式区别/</id>
+    <published>2020-07-25T04:51:18.964Z</published>
+    <updated>2020-04-18T03:21:22.867Z</updated>
     
-    <content type="html"><![CDATA[<p>学习高斯滤波来处理图像…</p><a id="more"></a><p>高斯滤波是一种线性平滑滤波，对于除去高斯噪声有很好的效果。在其官方文档中形容高斯滤波为”Probably the most useful filter”，同时也指出高斯滤波并不是效率最高的滤波算法。高斯算法在官方文档给出的解释是高斯滤波是通过对输入数组的每个点与输入的高斯滤波模板执行卷积计算然后将这些结果一块组成了滤波后的输出数组，通俗的讲就是高斯滤波是对整幅图像进行加权平均的过程，每一个像素点的值都由其本身和邻域内的其他像素值经过加权平均后得到。高斯滤波的具体操作是：用一个模板（或称卷积、掩模）扫描图像中的每一个像素，用模板确定的邻域内像素的加权平均灰度值去替代模板中心像素点的值。 </p><p>在图像处理中高斯滤波一半有两种实现方式：一种是用离散化窗口滑窗卷积，另一种是通过傅里叶变换。最常见的就是第一种滑窗实现，只有当离散化的窗口非常大，用滑窗计算量非常大的情况下会考虑基于傅里叶变换的方法。<br>我们在参考其他文章的时候可能会出现高斯模糊和高斯滤波两种说法，其实这两种说法是有一定区别的。我们知道滤波器分为高通、低通、带通等类型，高斯滤波和高斯模糊就是一句滤波器是低通滤波器还是高通滤波器来区分的。比如低通滤波器，像素能量低的通过，而对于像素能量高的部分将会采取加权平均的方法重新计算像素的值，将能量像素的值编程能量较低的值，我们知道对于图像而言其高频部分展现图像细节，所以经过低通滤波器之后整幅图像变成低频造成图像模糊，这就被称为高斯模糊；相反高通滤波是允许高频通过而过滤掉低频，这样将低频像素进行锐化操作，图像变的更加清晰，被称为高斯滤波。说白了很简单就是：高斯滤波是指用高斯函数作为滤波函数的滤波操作而高斯模糊是用高斯低通滤波器。 </p><p>高斯滤波在图像处理中常用来对图像进行预处理操作，虽然耗时但是数字图像用于后期应用但是其噪声是最大的问题，噪声会造成很大的误差而误差在不同的处理操作中会累积传递，为了能够得到较好的图像，对图像进行预处理去除噪声也是针对数字图像处理的无奈之举。 </p><p>高斯滤波器是一类根据高斯函数的形状来选择权值的线性平滑滤波器，高斯滤波器对于服从正太分布的噪声非常有效，一维高斯函数如下：</p><p><img src="https://i.loli.net/2019/05/19/5ce0bd39e71b793791.png" alt></p><p>二维高斯函数如下：</p><p><img src="https://i.loli.net/2019/05/19/5ce0bd546376494256.png" alt></p><p>opencv提供了GaussianBlur()函数对图形进行高斯滤波，其原型如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C++: <span class="function"><span class="keyword">void</span> <span class="title">GaussianBlur</span><span class="params">(InputArray src, OutputArray dst, Size ksize, <span class="keyword">double</span> sigmaX, <span class="keyword">double</span> sigmaY=<span class="number">0</span>, <span class="keyword">int</span> borderType=BORDER_DEFAULT )</span></span></span><br></pre></td></tr></table></figure><p>参数解释：<br><strong>. InputArray src: 输入图像，可以是Mat类型，图像深度为CV_8U、CV_16U、CV_16S、CV_32F、CV_64F。<br>. OutputArray dst: 输出图像，与输入图像有相同的类型和尺寸。<br>. Size ksize: 高斯内核大小，这个尺寸与前面两个滤波kernel尺寸不同，ksize.width和ksize.height可以不相同但是这两个值必须为正奇数，如果这两个值为0，他们的值将由sigma计算。<br>. double sigmaX: 高斯核函数在X方向上的标准偏差<br>. double sigmaY: 高斯核函数在Y方向上的标准偏差，如果sigmaY是0，则函数会自动将sigmaY的值设置为与sigmaX相同的值，如果sigmaX和sigmaY都是0，这两个值将由ksize.width和ksize.height计算而来。具体可以参考<a href="[https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html?highlight=gaussianblur#Mat%20getGaussianKernel%28int%20ksize,%20double%20sigma,%20int%20ktype%29](https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html?highlight=gaussianblur#Mat getGaussianKernel(int ksize, double sigma, int ktype">getGaussianKernel()</a>))函数查看具体细节。建议将size、sigmaX和sigmaY都指定出来。<br>. int borderType=BORDER_DEFAULT: 推断图像外部像素的某种便捷模式，有默认值BORDER_DEFAULT，如果没有特殊需要不用更改，具体可以参考<a href="[https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html?highlight=gaussianblur#int%20borderInterpolate%28int%20p,%20int%20len,%20int%20borderType%29](https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html?highlight=gaussianblur#int borderInterpolate(int p, int len, int borderType">borderInterpolate()</a>))函数。</strong></p><p>为了能更直观的观察到四个变量对滤波的影响，建立四个轨迹条分别调节，所以最后运行结果图片有点丑，示例代码如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/core.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/imgproc.hpp&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义全局变量</span></span><br><span class="line">Mat g_srcImage;         <span class="comment">//输入图像</span></span><br><span class="line">Mat g_dstImage;         <span class="comment">//输出图像</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//定义轨迹条最大值参量</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> g_nKwidthTrackBarMaxValue = <span class="number">9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> g_nKheightTrackBarMaxValue = <span class="number">9</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> g_nsigmaXTrackBarMaxValue = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> g_nsigmaYTrackBarMaxvalue = <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义每个轨迹条的初始值</span></span><br><span class="line"><span class="keyword">int</span> g_nKwidthTrackBarValue = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> g_nKheightTrackBarValue = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> g_nsigmaXTrackBarValue = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">int</span> g_nsigmaYTrackBarValue = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> g_kernelWidthValue;</span><br><span class="line"><span class="keyword">int</span> g_kernelHeightValue;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">on_GaussianBlurTrackbar</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">void</span>*)</span></span>;       <span class="comment">//定义回调函数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    g_srcImage = imread(<span class="string">"lena.jpg"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//判断图像是否加载成功</span></span><br><span class="line">    <span class="keyword">if</span>(!g_srcImage.data)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"图像加载失败!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"图像加载成功!"</span> &lt;&lt; <span class="built_in">endl</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    namedWindow(<span class="string">"原图像"</span>, WINDOW_NORMAL);         <span class="comment">//定义窗口显示属性</span></span><br><span class="line">    imshow(<span class="string">"原图像"</span>, g_srcImage);</span><br><span class="line"></span><br><span class="line">    namedWindow(<span class="string">"高斯滤波图像"</span>, WINDOW_NORMAL);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//定义每个轨迹条名字</span></span><br><span class="line">    <span class="keyword">char</span> widthTrackBarName[<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(widthTrackBarName, <span class="string">"核函数width %d"</span>, g_nKwidthTrackBarMaxValue);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> heightTrackBarName[<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(heightTrackBarName,<span class="string">"核函数height %d"</span>, g_nKheightTrackBarMaxValue);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> sigmaXTrackBarName[<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(sigmaXTrackBarName, <span class="string">"核函数sigmaX %d"</span>, g_nsigmaXTrackBarMaxValue);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> sigmaYTrackBarName[<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">sprintf</span>(sigmaYTrackBarName, <span class="string">"核函数sigmaY %d"</span>, g_nsigmaYTrackBarMaxvalue);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//创建轨迹条</span></span><br><span class="line">    createTrackbar(widthTrackBarName, <span class="string">"高斯滤波图像"</span>, &amp;g_nKwidthTrackBarValue, </span><br><span class="line">                    g_nKwidthTrackBarMaxValue, on_GaussianBlurTrackbar);</span><br><span class="line">    on_GaussianBlurTrackbar(g_nKwidthTrackBarValue, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    createTrackbar(heightTrackBarName, <span class="string">"高斯滤波图像"</span>, &amp;g_nKheightTrackBarValue,</span><br><span class="line">                    g_nKheightTrackBarMaxValue, on_GaussianBlurTrackbar);</span><br><span class="line">    on_GaussianBlurTrackbar(g_nKheightTrackBarValue, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    createTrackbar(sigmaXTrackBarName, <span class="string">"高斯滤波图像"</span>, &amp;g_nsigmaXTrackBarValue,</span><br><span class="line">                    g_nsigmaXTrackBarMaxValue, on_GaussianBlurTrackbar);</span><br><span class="line">    on_GaussianBlurTrackbar(g_nsigmaXTrackBarValue, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    createTrackbar(sigmaYTrackBarName, <span class="string">"高斯滤波图像"</span>, &amp;g_nsigmaYTrackBarValue,</span><br><span class="line">                    g_nsigmaYTrackBarMaxvalue, on_GaussianBlurTrackbar);</span><br><span class="line">    on_GaussianBlurTrackbar(g_nsigmaYTrackBarValue, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    waitKey(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">on_GaussianBlurTrackbar</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">void</span>*)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//根据输入的width和height重新计算ksize.width和ksize.height</span></span><br><span class="line">    g_kernelWidthValue = g_nKwidthTrackBarValue * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line">    g_kernelHeightValue = g_nKheightTrackBarValue * <span class="number">2</span> + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//高斯滤波</span></span><br><span class="line">    GaussianBlur(g_srcImage, g_dstImage, Size(g_kernelWidthValue, g_kernelHeightValue),</span><br><span class="line">                g_nsigmaXTrackBarValue, g_nsigmaYTrackBarValue);</span><br><span class="line"></span><br><span class="line">    imshow(<span class="string">"高斯滤波图像"</span>, g_dstImage);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>get:</p><pre><code>1. 请求参数会在地址栏中显示，会封装在请求行中2. 请求参数长度是有限制的3. 不太安全</code></pre><p>post:</p><pre><code>1. 请求参数不会在地址栏中显示，会封装在请求体中。2. 请求参数的长度没有限制3. 比较安全</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;学习高斯滤波来处理图像…&lt;/p&gt;
+      
+      
+        &lt;p&gt;get:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 请求参数会在地址栏中显示，会封装在请求行中
+2. 请求参数长度是有限制的
+3. 不太安全
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;post:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 请求参数不会在地址栏中显示，会封装在请求体中。
+2. 请求
+      
     
     </summary>
     
-      <category term="学习合集" scheme="http://zengbolin.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%90%88%E9%9B%86/"/>
-    
-    
-      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
-    
-      <category term="深度学习" scheme="http://zengbolin.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
-    <title>解决“RecursionError”的问题</title>
-    <link href="http://zengbolin.github.io/2019/05/09/%E8%A7%A3%E5%86%B3%E2%80%9CRecursionError%E2%80%9D%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://zengbolin.github.io/2019/05/09/解决“RecursionError”的问题/</id>
-    <published>2019-05-09T12:30:08.000Z</published>
-    <updated>2019-05-09T13:41:48.895Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86--%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E4%BD%93%E7%B3%BB/"/>
+    <id>http://zengbolin.github.io/2020/07/25/计算机组成原理--冯诺依曼体系/</id>
+    <published>2020-07-25T04:51:18.930Z</published>
+    <updated>2020-05-04T01:23:56.456Z</updated>
     
-    <content type="html"><![CDATA[<p>在学习爬虫的时候，在IP代理池使用的情况下，总是爬取到一大半的时候会弹出“RecursionError”的错误。<br><a id="more"></a></p><blockquote><p>在学习爬虫的时候，在IP代理池使用的情况下，总是爬取到一大半的时候会弹出“RecursionError”的错误。经过多番资料查找，原因为：<strong><em>python默认的递归深度是很有限的（默认是1000），因此当递归深度超过999的样子，就会引发这样的一个异常。</em></strong></p></blockquote><h4 id="解决方法：将递归深度调高"><a href="#解决方法：将递归深度调高" class="headerlink" title="解决方法：将递归深度调高"></a>解决方法：将递归深度调高</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">sys.setrecursionlimit(<span class="number">100000</span>) <span class="comment">#你想设置的递归深度（可为任意值）</span></span><br></pre></td></tr></table></figure><p>有时候爆出这个错误，不能单单只用这种方法解决，更应该注重代码的优化。</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="冯诺依曼体系"><a href="#冯诺依曼体系" class="headerlink" title="冯诺依曼体系"></a>冯诺依曼体系</h4><h5 id="概念-将程序指令和数据一起存储的计算机设计概念结构-存储程序指令设计通用电路-。"><a href="#概念-将程序指令和数据一起存储的计算机设计概念结构-存储程序指令设计通用电路-。" class="headerlink" title="概念: 将程序指令和数据一起存储的计算机设计概念结构(存储程序指令设计通用电路)。"></a>概念: 将程序指令和数据一起存储的计算机设计概念结构(存储程序指令设计通用电路)。</h5><h5 id="出现原因："><a href="#出现原因：" class="headerlink" title="出现原因："></a>出现原因：</h5><ul><li>早期计算机仅含固定用途程序</li><li>改变程序得更改结构，重新设计电路<h5 id="体系要求："><a href="#体系要求：" class="headerlink" title="体系要求："></a>体系要求：</h5></li><li>必须有一个存储器</li><li>必须有一个控制器</li><li>必须有一个运算器</li><li>必须有输入设备</li><li>必须有输出设备<h5 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h5></li><li>能够把需要的程序和数据送到计算机中</li><li>能够长期记忆程序、数据、中间结果及最终运算结果的能力</li><li>能够具备算术、逻辑运算和数据传送等数据加工处理的能力</li><li>能够按照要求将处理结果输出给用户<h5 id="早期结构体系："><a href="#早期结构体系：" class="headerlink" title="早期结构体系："></a>早期结构体系：</h5><img src="https://i.loli.net/2020/05/04/YKyqowpWCQiTIPl.png" alt="结构"><blockquote><p>冯诺依曼瓶颈问题: CPU和存储器速率之间的问题无法调和。CPU经常空转等待数据传输。</p></blockquote><h5 id="现代计算机的结构"><a href="#现代计算机的结构" class="headerlink" title="现代计算机的结构"></a>现代计算机的结构</h5><img src="https://i.loli.net/2020/05/04/U6zE7XKGRunOcDp.png" alt="image.png"><blockquote><p>为了解决CPU与存储设备之间的性能差异问题，以存储器为核心。</p></blockquote></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;在学习爬虫的时候，在IP代理池使用的情况下，总是爬取到一大半的时候会弹出“RecursionError”的错误。&lt;br&gt;
+      
+      
+        &lt;h4 id=&quot;冯诺依曼体系&quot;&gt;&lt;a href=&quot;#冯诺依曼体系&quot; class=&quot;headerlink&quot; title=&quot;冯诺依曼体系&quot;&gt;&lt;/a&gt;冯诺依曼体系&lt;/h4&gt;&lt;h5 id=&quot;概念-将程序指令和数据一起存储的计算机设计概念结构-存储程序指令设计通用电路-。&quot;&gt;&lt;a href
+      
     
     </summary>
     
-      <category term="错误解决合集" scheme="http://zengbolin.github.io/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%90%88%E9%9B%86/"/>
-    
-    
-      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
-    
-      <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
-    <title>Oneindex程序安装失败解决办法</title>
-    <link href="http://zengbolin.github.io/2019/05/09/Oneindex%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
-    <id>http://zengbolin.github.io/2019/05/09/Oneindex程序安装失败解决办法/</id>
-    <published>2019-05-09T12:30:08.000Z</published>
-    <updated>2019-05-09T14:03:16.586Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B1%82%E6%AC%A1%E5%92%8C%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <id>http://zengbolin.github.io/2020/07/25/计算机层次和编程语言/</id>
+    <published>2020-07-25T04:51:18.919Z</published>
+    <updated>2020-05-04T01:57:49.973Z</updated>
     
-    <content type="html"><![CDATA[<p>安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！</p><a id="more"></a><blockquote><p>安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！</p></blockquote><p><img src="https://i.loli.net/2019/05/09/5cd4331ada517.png" alt="Oneindex程序安装错误"></p><p>几次尝试，发现如下方法终于成功安装。打开这个网址<a href="https://apps.dev.microsoft.com/#/appList" target="_blank" rel="noopener">点击这里</a>，里面会列出oneindex的应用，点击进去后，会看到你的应<code>ID（client_ID）</code>。找到【应用程序机密】，点击【生成新密码】，就会生成一个新的<code>client_secret</code>，然后重新安装时候填这个新client_secret就可以了注意的是，id和密钥的顺序，不要弄错。</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="程序翻译和程序解释"><a href="#程序翻译和程序解释" class="headerlink" title="程序翻译和程序解释"></a>程序翻译和程序解释</h4><ul><li>计算机执行得指令都是L0</li><li>翻译过程生成新的L0程序，解释过程不生成新的L0程序</li><li>解释过程由L0编写的解释器去解释L1程序<h5 id="常见语言分类"><a href="#常见语言分类" class="headerlink" title="常见语言分类:"></a>常见语言分类:</h5></li><li>程序翻译: C/C++、Object-C、Golang</li><li>程序解释： Python、PHP、Javascript</li><li>翻译+解释: Java、C#<h5 id="HZ-赫兹-每秒中的周期性变动重复次数的计量-2GHz-2-1000-3-Hz-每秒20亿次-。"><a href="#HZ-赫兹-每秒中的周期性变动重复次数的计量-2GHz-2-1000-3-Hz-每秒20亿次-。" class="headerlink" title="HZ(赫兹):每秒中的周期性变动重复次数的计量(2GHz = 2 * 1000^3 Hz = 每秒20亿次)。"></a>HZ(赫兹):每秒中的周期性变动重复次数的计量(2GHz = 2 * 1000^3 Hz = 每秒20亿次)。</h5></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;安装Onedrive私有网盘，相信许多小伙伴会出现程序安装错误的问题，别慌，我来教你如何解决！&lt;/p&gt;
+      
+      
+        &lt;h4 id=&quot;程序翻译和程序解释&quot;&gt;&lt;a href=&quot;#程序翻译和程序解释&quot; class=&quot;headerlink&quot; title=&quot;程序翻译和程序解释&quot;&gt;&lt;/a&gt;程序翻译和程序解释&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;计算机执行得指令都是L0&lt;/li&gt;
+&lt;li&gt;翻译过程生成新的L0程序，解
+      
     
     </summary>
     
-      <category term="错误解决合集" scheme="http://zengbolin.github.io/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%90%88%E9%9B%86/"/>
-    
-    
-      <category term="网站搭建" scheme="http://zengbolin.github.io/tags/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
-    
-      <category term="私有网盘" scheme="http://zengbolin.github.io/tags/%E7%A7%81%E6%9C%89%E7%BD%91%E7%9B%98/"/>
     
   </entry>
   
   <entry>
-    <title>scrapy框架的一些小知识点</title>
-    <link href="http://zengbolin.github.io/2019/05/09/scrapy%E6%A1%86%E6%9E%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    <id>http://zengbolin.github.io/2019/05/09/scrapy框架的一些知识点/</id>
-    <published>2019-05-09T12:30:08.000Z</published>
-    <updated>2019-05-09T13:40:42.022Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/HTTP%E5%8D%8F%E8%AE%AE/"/>
+    <id>http://zengbolin.github.io/2020/07/25/HTTP协议/</id>
+    <published>2020-07-25T04:51:18.899Z</published>
+    <updated>2020-05-13T07:49:51.802Z</updated>
     
-    <content type="html"><![CDATA[<p>scrapy框架的一些小知识点</p><a id="more"></a><blockquote><p> 最近开始学习scrapy框架,摘抄一些知识点</p></blockquote><ul><li>创建项目：<code>scrapy startproject testproject</code></li><li>进入项目：<code>cd testproject</code></li><li>生成spider: <code>scrapy genspider baidu www.baidu.com</code></li><li>了解各类模板:<code>scrapy genspider -l</code></li><li>指定模板:<code>scrapy genspider -t crawl zhihu www.zhihu.com</code></li><li>crawl :运行spider的方法，可以指定运行的spider的名称 :<code>scrapy crawl zhihu.py</code><ul><li>check:用来检查代码是否有错误:<code>scrapy check zhihu.py</code></li><li>scrapy list:返回项目中所有的名称 </li><li>scrapy edit :在命令行下编辑 </li><li>fetch:返回网页源代码，等同于response:<code>scrapy fetch http://www.baidu.com</code></li><li>去掉日志：得到headers:<code>scrapy fetch --nolog --headers http://www.baidu.com</code></li><li>禁止重定向：–no redicrect:<code>scrapy fetch --no-direct http://www.baidu.com</code></li><li>view:将网页以文件的形式保存下来，然后去打开，可以在自动测试中应用:<code>scrapy view http://www.baidu.com</code></li></ul></li><li>shell：命令行模式的交互,并且返回一些可用的变量:<code>scrapy shell http://www.baidu.com</code></li><li>parse: 传入一些参数，查看返回的结果，相当于格式化输出 </li><li>seetings:获取当前的配置信息:<code>scrapy settings -h</code></li><li>runspider:运行spider:<code>scrapy runspider  baidu.py</code></li><li>version:输出scrapy的版本:<code>scrapy version -v</code></li><li>bench：测试当前爬虫的速度</li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li><p>概念：Hyper Text Transfer Protocol 超文本传输协议</p><ul><li>传输协议：定义了，客户端和服务器端通信时，发送数据的格式</li><li><p>特点：</p><ol><li>基于TCP/IP的高级协议</li><li>默认端口号:80</li><li>基于请求/响应模型的:一次请求对应一次响应</li><li>无状态的：每次请求之间相互独立，不能交互数据</li></ol></li><li><p>历史版本：</p><ul><li>1.0：每一次请求响应都会建立新的连接</li><li>1.1：复用连接</li></ul></li></ul></li><li><p>请求消息数据格式</p><ol><li><p>请求行<br> 请求方式 请求url 请求协议/版本<br> GET /login.html    HTTP/1.1</p><ul><li>请求方式：<ul><li>HTTP协议有7中请求方式，常用的有2种<ul><li>GET：<ol><li>请求参数在请求行中，在url后。</li><li>请求的url长度有限制的</li><li>不太安全</li></ol></li><li>POST：<ol><li>请求参数在请求体中</li><li>请求的url长度没有限制的</li><li>相对安全</li></ol></li></ul></li></ul></li></ul></li><li><p>请求头：客户端浏览器告诉服务器一些信息<br> 请求头名称: 请求头值</p><ul><li><p>常见的请求头：</p><ol><li><p>User-Agent：浏览器告诉服务器，我访问你使用的浏览器版本信息</p><ul><li>可以在服务器端获取该头的信息，解决浏览器的兼容性问题</li></ul></li><li><p>Referer：<a href="http://localhost/login.html" target="_blank" rel="noopener">http://localhost/login.html</a></p><ul><li>告诉服务器，我(当前请求)从哪里来？<ul><li>作用：<ol><li>防盗链：</li><li>统计工作：</li></ol></li></ul></li></ul></li></ol></li></ul></li><li>请求空行<br> 空行，就是用于分割POST请求的请求头，和请求体的。</li><li>请求体(正文)：<ul><li>封装POST请求消息的请求参数的</li></ul></li></ol></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;scrapy框架的一些小知识点&lt;/p&gt;
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;概念：Hyper Text Transfer Protocol 超文本传输协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;传输协议：定义了，客户端和服务器端通信时，发送数据的格式&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基于TCP/IP的高级协议&lt;/li
+      
     
     </summary>
     
-      <category term="学习合集" scheme="http://zengbolin.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%90%88%E9%9B%86/"/>
-    
-    
-      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
-    
-      <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
-    <title>python3.7不兼容pyspider</title>
-    <link href="http://zengbolin.github.io/2019/05/09/python3.7%E4%B8%8D%E5%85%BC%E5%AE%B9pyspider/"/>
-    <id>http://zengbolin.github.io/2019/05/09/python3.7不兼容pyspider/</id>
-    <published>2019-05-09T12:30:08.000Z</published>
-    <updated>2019-05-09T13:22:25.835Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91%E5%92%8C%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE/"/>
+    <id>http://zengbolin.github.io/2020/07/25/请求转发和共享数据/</id>
+    <published>2020-07-25T04:51:18.887Z</published>
+    <updated>2020-05-15T01:50:07.701Z</updated>
     
-    <content type="html"><![CDATA[<p>好不容易才把上一个无法安装的问题解决。然后又继续报错，这次的报错更为严重。</p><a id="more"></a><blockquote><p>好不容易才把上一个无法安装的问题解决。然后又继续报错，这次的报错更为严重。</p></blockquote><h5 id="报错信息为："><a href="#报错信息为：" class="headerlink" title="报错信息为："></a>报错信息为：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">File <span class="string">"c:\users\13733\appdata\local\programs\python\python37\lib\site-packages\pyspider\run.py"</span>, line <span class="number">231</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span>=<span class="literal">True</span>, get_object=<span class="literal">False</span>, no_input=<span class="literal">False</span>):</span><br><span class="line">    ^</span><br><span class="line">SyntaxError: invalid syntax</span><br></pre></td></tr></table></figure><h4 id="原因分析："><a href="#原因分析：" class="headerlink" title="原因分析："></a>原因分析：</h4><p><code>async</code>和<code>await</code>从 python3.7 开始已经加入保留关键字中。 参考: <a href="https://docs.python.org/3.7/whatsnew/3.7.html" target="_blank" rel="noopener">What’s New In Python 3.7</a>， 所以<code>async</code>和<code>await</code>不能作为函数的参数名。而pyspider在官方文档中也明确表示：<strong><em>Distributed architecture, Crawl Javascript pages, Python 2.{6,7}, 3.{3,4,5,6} support, etc…</em></strong>不兼容python3.7</p><h5 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h5><ol><li>下降自己的python版本，得到兼容</li><li>gitclone “pyspider”这个项目，下载并且实现替换</li></ol><p>问题解决！！！</p>]]></content>
+    <content type="html"><![CDATA[<pre><code> 请求转发：一种在服务器内部的资源跳转方式    1. 步骤：        1. 通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path)        2. 使用RequestDispatcher对象来进行转发：forward(ServletRequest request, ServletResponse response)     2. 特点：        1. 浏览器地址栏路径不发生变化        2. 只能转发到当前服务器内部资源中。        3. 转发是一次请求共享数据：        * 域对象：一个有作用范围的对象，可以在范围内共享数据        * request域：代表一次请求的范围，一般用于请求转发的多个资源中共享数据        * 方法：            1. void setAttribute(String name,Object obj):存储数据            2. Object getAttitude(String name):通过键获取值            3. void removeAttribute(String name):通过键移除键值对</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;好不容易才把上一个无法安装的问题解决。然后又继续报错，这次的报错更为严重。&lt;/p&gt;
+      
+      
+        &lt;pre&gt;&lt;code&gt; 请求转发：一种在服务器内部的资源跳转方式
+    1. 步骤：
+        1. 通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path)
+        2. 使
+      
     
     </summary>
     
-      <category term="错误解决合集" scheme="http://zengbolin.github.io/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%90%88%E9%9B%86/"/>
-    
-    
-      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
-    
-      <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
-    <title>Windos10下安装pyspider的一些问题</title>
-    <link href="http://zengbolin.github.io/2019/05/09/Windos10%E4%B8%8B%E5%AE%89%E8%A3%85pyspider%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/"/>
-    <id>http://zengbolin.github.io/2019/05/09/Windos10下安装pyspider的一些问题/</id>
-    <published>2019-05-09T12:30:08.000Z</published>
-    <updated>2019-05-09T13:41:17.959Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/HTTP%E5%93%8D%E5%BA%94/"/>
+    <id>http://zengbolin.github.io/2020/07/25/HTTP响应/</id>
+    <published>2020-07-25T04:51:18.858Z</published>
+    <updated>2020-05-15T07:53:07.557Z</updated>
     
-    <content type="html"><![CDATA[<p>最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候……</p><a id="more"></a><blockquote><p>最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候<code>pip install pyspider</code>，报错了，Error为：<code>Please specify --curl-dir=/path/to/built/libcurl</code></p></blockquote><h4 id="解决方法：安装pycurl，之后再用pip进行安装"><a href="#解决方法：安装pycurl，之后再用pip进行安装" class="headerlink" title="解决方法：安装pycurl，之后再用pip进行安装"></a>解决方法：安装pycurl，之后再用pip进行安装</h4><p><strong><em>安装pycurl方法：</em></strong><br>打开链接：<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank" rel="noopener">“python库安装下载”</a>，找到自己安装python的版本进行安装。例如，我的python版本是python3.7.1，64位电脑就下载：pycurl-7.43.1-cp37-cp37m-win_amd64（cp代表你的python版本）</p><h5 id="安装方法："><a href="#安装方法：" class="headerlink" title="安装方法："></a>安装方法：</h5><blockquote><p>windows下：打开cmd，然后将下载pycurl的位置copy一下，<code>cd 位置</code>，将pycurl名字复制一下，<code>pip install 名字</code><br>linux和mac下：直接进入文件位置，然后<code>pip install 名字</code></p></blockquote><h4 id="接下来："><a href="#接下来：" class="headerlink" title="接下来："></a>接下来：</h4><p>直接<code>pip install pyspider</code></p><p>问题解决！！！</p>]]></content>
+    <content type="html"><![CDATA[<ol><li>请求消息：客户端发送给服务器端的数据<ul><li>数据格式：<ol><li>请求行</li><li>请求头</li><li>请求空行</li><li>请求体</li></ol></li></ul></li><li>响应消息：服务器端发送给客户端的数据<ul><li>数据格式：<ol><li>响应行<ol><li>组成：协议/版本 响应状态码 状态码描述</li><li>响应状态码：服务器告诉客户端浏览器本次请求和响应的一个状态。<ol><li>状态码都是3位数字 </li><li>分类：<ol><li>1xx：服务器就收客户端消息，但没有接受完成，等待一段时间后，发送1xx多状态码</li><li>2xx：成功。代表：200</li><li>3xx：重定向。代表：302(重定向)，304(访问缓存)</li><li>4xx：客户端错误。<ul><li>代表：<ul><li>404（请求路径没有对应的资源） </li><li>405：请求方式没有对应的doXxx方法</li></ul></li></ul></li><li>5xx：服务器端错误。代表：500(服务器内部出现异常)</li></ol></li></ol></li></ol></li></ol></li></ul></li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;最近想学习pyspider框架来进一步学习爬虫，没想到当我使用pip安装的时候……&lt;/p&gt;
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;请求消息：客户端发送给服务器端的数据&lt;ul&gt;
+&lt;li&gt;数据格式：&lt;ol&gt;
+&lt;li&gt;请求行&lt;/li&gt;
+&lt;li&gt;请求头&lt;/li&gt;
+&lt;li&gt;请求空行&lt;/li&gt;
+&lt;li&gt;请求体&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;响应消息：服务器端发送给客
+      
     
     </summary>
     
-      <category term="错误解决合集" scheme="http://zengbolin.github.io/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%90%88%E9%9B%86/"/>
-    
-    
-      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
-    
-      <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
-    <title>有关于ip代理池（python）编码错误的解决办法</title>
-    <link href="http://zengbolin.github.io/2019/05/09/%E6%9C%89%E5%85%B3%E4%BA%8Eip%E4%BB%A3%E7%90%86%E6%B1%A0%EF%BC%88python%EF%BC%89%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
-    <id>http://zengbolin.github.io/2019/05/09/有关于ip代理池（python）编码错误的解决办法/</id>
-    <published>2019-05-09T12:30:08.000Z</published>
-    <updated>2019-05-09T13:25:53.040Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/%E9%87%8D%E5%AE%9A%E5%90%91%E5%92%8C%E8%BD%AC%E5%8F%91%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://zengbolin.github.io/2020/07/25/重定向和转发的区别/</id>
+    <published>2020-07-25T04:51:18.850Z</published>
+    <updated>2020-05-16T01:42:25.766Z</updated>
     
-    <content type="html"><![CDATA[<p>上一周有开始学习python爬虫，学到构造ip代理池的时候，遇到很多问题</p><a id="more"></a><blockquote><p>上一周有开始学习python爬虫，学到构造ip代理池的时候，遇到很多问题</p></blockquote><h4 id="遇到的问题如下："><a href="#遇到的问题如下：" class="headerlink" title="遇到的问题如下："></a>遇到的问题如下：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> hostname, aliases, ipaddrs = gethostbyaddr(name)</span><br><span class="line">UnicodeDecodeError: <span class="string">'utf-8'</span> codec can<span class="string">'t decode bytes in position 2-3: invalid continuation byte</span></span><br></pre></td></tr></table></figure><p>经过了整整一周的时间，我终于搞定了。在这一周里，我重装了无数次系统（一度认为是Windows10系统编码问题），还装ubuntu系统，但是无果。在今天终于解决了这个我弄了好久的问题</p><h4 id="解决方法如下："><a href="#解决方法如下：" class="headerlink" title="解决方法如下："></a>解决方法如下：</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">改主机名字，就是改电脑的名字</span><br></pre></td></tr></table></figure><p><img src="http://upload-images.jianshu.io/upload_images/11019384-ae41c72159febb37.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="改主机的名字"><br>下次再踩坑再来了</p>]]></content>
+    <content type="html"><![CDATA[<ul><li>重定向的特点:redirect<ol><li>地址栏发生变化</li><li>重定向可以访问其他站点(服务器)的资源</li><li>重定向是两次请求。不能使用request对象来共享数据</li></ol></li><li>转发的特点：forward<ol><li>转发地址栏路径不变</li><li>转发只能访问当前服务器下的资源</li><li>转发是一次请求，可以使用request对象来共享数据</li></ol></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;上一周有开始学习python爬虫，学到构造ip代理池的时候，遇到很多问题&lt;/p&gt;
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;重定向的特点:redirect&lt;ol&gt;
+&lt;li&gt;地址栏发生变化&lt;/li&gt;
+&lt;li&gt;重定向可以访问其他站点(服务器)的资源&lt;/li&gt;
+&lt;li&gt;重定向是两次请求。不能使用request对象来共享数据&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;转发的特点：forwar
+      
     
     </summary>
     
-      <category term="错误解决合集" scheme="http://zengbolin.github.io/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%90%88%E9%9B%86/"/>
-    
-    
-      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
-    
-      <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
-    <title>pyspider加密主窗口</title>
-    <link href="http://zengbolin.github.io/2019/05/09/pyspider%E5%8A%A0%E5%AF%86%E4%B8%BB%E7%AA%97%E5%8F%A3/"/>
-    <id>http://zengbolin.github.io/2019/05/09/pyspider加密主窗口/</id>
-    <published>2019-05-09T12:30:08.000Z</published>
-    <updated>2019-05-09T13:19:33.879Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/session%E4%B8%8ECookie%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://zengbolin.github.io/2020/07/25/session与Cookie的区别/</id>
+    <published>2020-07-25T04:51:18.840Z</published>
+    <updated>2020-05-19T13:20:00.604Z</updated>
     
-    <content type="html"><![CDATA[<p>在你使用pyspider的时候，直接登入localhost：5000端口，很容易被别人看到自己的项目，需要加密</p><a id="more"></a><blockquote><p>在你使用pyspider的时候，直接登入localhost：5000端口，很容易被别人看到自己的项目，需要加密</p></blockquote><h5 id="加密方法（弹窗认证）："><a href="#加密方法（弹窗认证）：" class="headerlink" title="加密方法（弹窗认证）："></a>加密方法（弹窗认证）：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">打开终端：cat db.json</span><br><span class="line">修改文件： 加入自己的账号密码：</span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">"webui"</span>:&#123;</span><br><span class="line">           <span class="string">"user_name"</span>:<span class="string">"user"</span>,</span><br><span class="line">           <span class="string">"password"</span>:<span class="string">"password"</span>,</span><br><span class="line">           <span class="string">"need-anth"</span>:true</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>问题解决！！</p>]]></content>
+    <content type="html"><![CDATA[<pre><code>session与Cookie的区别：    1. session存储数据在服务器端，Cookie在客户端    2. session没有数据大小限制，Cookie有    3. session数据安全，Cookie相对于不安全</code></pre>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;在你使用pyspider的时候，直接登入localhost：5000端口，很容易被别人看到自己的项目，需要加密&lt;/p&gt;
+      
+      
+        &lt;pre&gt;&lt;code&gt;session与Cookie的区别：
+    1. session存储数据在服务器端，Cookie在客户端
+    2. session没有数据大小限制，Cookie有
+    3. session数据安全，Cookie相对于不安全
+&lt;/code&gt;&lt;/pre
+      
     
     </summary>
     
-      <category term="学习合集" scheme="http://zengbolin.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%90%88%E9%9B%86/"/>
-    
-    
-      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
-    
-      <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
-    <title>pyspider框架爆599证书问题</title>
-    <link href="http://zengbolin.github.io/2019/05/09/pyspider%E6%A1%86%E6%9E%B6%E7%88%86599%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98/"/>
-    <id>http://zengbolin.github.io/2019/05/09/pyspider框架爆599证书问题/</id>
-    <published>2019-05-09T12:30:08.000Z</published>
-    <updated>2019-05-09T13:39:19.423Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/redis%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/"/>
+    <id>http://zengbolin.github.io/2020/07/25/redis存储结构/</id>
+    <published>2020-07-25T04:51:18.832Z</published>
+    <updated>2020-06-07T15:07:13.530Z</updated>
     
-    <content type="html"><![CDATA[<p>真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了</p><a id="more"></a><blockquote><p>真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了</p></blockquote><h5 id="报599错："><a href="#报599错：" class="headerlink" title="报599错："></a>报599错：</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">HTTP <span class="number">599</span>: SSL certificate problem: unable to get local issuer certificate </span><br><span class="line">[E <span class="number">161018</span> <span class="number">21</span>:<span class="number">56</span>:<span class="number">36</span> base_handler:<span class="number">195</span>] HTTP <span class="number">599</span>: SSL certificate problem: unable to get local issuer certificate </span><br><span class="line">Traceback (most recent call last): </span><br><span class="line">File “C:\Python27\lib\site-packages\pyspider\libs\base_handler.py”, line <span class="number">188</span>, <span class="keyword">in</span> run_task </span><br><span class="line">result = self._run_task(task, response) </span><br><span class="line">File “C:\Python27\lib\site-packages\pyspider\libs\base_handler.py”, line <span class="number">167</span>, <span class="keyword">in</span> _run_task </span><br><span class="line">response.raise_for_status() </span><br><span class="line">File “C:\Python27\lib\site-packages\pyspider\libs\response.py”, line <span class="number">190</span>, <span class="keyword">in</span> raise_for_status </span><br><span class="line"><span class="keyword">raise</span> http_error </span><br><span class="line">HTTPError: HTTP <span class="number">599</span>: SSL certificate problem: unable to get local issuer certificate</span><br></pre></td></tr></table></figure><h5 id="原因分析："><a href="#原因分析：" class="headerlink" title="原因分析："></a>原因分析：</h5><p>因为https协议需要对证书进行验证导致，对访问https网络需要证书</p><h5 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h5><p>在两个抓取函数中加入<strong><em>不要检验证书</em></strong>:<code>validate_cert=False</code><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">self.crawl(<span class="string">'https://www.tripadvisor.cn/Attractions-g255060-Activities-c47-Sydney_New_South_Wales.html'</span>,validate_cert=<span class="literal">False</span>, callback=self.index_page)</span><br><span class="line">self.crawl(each.attr.href,validate_cert=<span class="literal">False</span>, callback=self.detail_page)</span><br></pre></td></tr></table></figure></p><p>问题解决！！！</p>]]></content>
+    <content type="html"><![CDATA[<h5 id="redis存储的是：key-value格式的数据，其中key都是字符串，value有5种不同的数据结构"><a href="#redis存储的是：key-value格式的数据，其中key都是字符串，value有5种不同的数据结构" class="headerlink" title="redis存储的是：key,value格式的数据，其中key都是字符串，value有5种不同的数据结构"></a>redis存储的是：key,value格式的数据，其中key都是字符串，value有5种不同的数据结构</h5><ul><li>value的数据结构：<br>  1) 字符串类型 string<br>  2) 哈希类型 hash ： map格式<br>  3) 列表类型 list ： linkedlist格式。支持重复元素<br>  4) 集合类型 set  ： 不允许重复元素<br>  5) 有序集合类型 sortedset：不允许重复元素，且元素有顺序</li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;真的是一波未平一波又起，降低自己的python版本后，进入pyspider框架之后，输入网址就立马报错。也只能立即找寻谷歌了&lt;/p&gt;
+      
+      
+        &lt;h5 id=&quot;redis存储的是：key-value格式的数据，其中key都是字符串，value有5种不同的数据结构&quot;&gt;&lt;a href=&quot;#redis存储的是：key-value格式的数据，其中key都是字符串，value有5种不同的数据结构&quot; class=&quot;headerlin
+      
     
     </summary>
     
-      <category term="错误解决合集" scheme="http://zengbolin.github.io/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E5%90%88%E9%9B%86/"/>
-    
-    
-      <category term="python" scheme="http://zengbolin.github.io/tags/python/"/>
-    
-      <category term="爬虫" scheme="http://zengbolin.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
   <entry>
-    <title>百度网盘小神器，你值得拥有！</title>
-    <link href="http://zengbolin.github.io/2019/05/09/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%B0%8F%E7%A5%9E%E5%99%A8%EF%BC%8C%E4%BD%A0%E5%80%BC%E5%BE%97%E6%8B%A5%E6%9C%89!/"/>
-    <id>http://zengbolin.github.io/2019/05/09/百度网盘小神器，你值得拥有!/</id>
-    <published>2019-05-09T01:30:08.000Z</published>
-    <updated>2019-05-09T13:43:26.496Z</updated>
+    <title></title>
+    <link href="http://zengbolin.github.io/2020/07/25/maven%E6%8A%A5%E9%94%99/"/>
+    <id>http://zengbolin.github.io/2020/07/25/maven报错/</id>
+    <published>2020-07-25T04:51:18.815Z</published>
+    <updated>2020-06-12T10:48:19.575Z</updated>
     
-    <content type="html"><![CDATA[<p>我们来介绍几款不会封号的百度网盘小神器</p><a id="more"></a><h3 id="我们来介绍几款不会封号的百度网盘小神器"><a href="#我们来介绍几款不会封号的百度网盘小神器" class="headerlink" title="我们来介绍几款不会封号的百度网盘小神器"></a>我们来介绍几款不会封号的百度网盘小神器</h3><blockquote><p>可能，现在在中国吧，最好用的网盘之一就是百度网盘，但是呢，百度网盘却以它那昂贵的会员费出名，而且限速贼厉害。明明在我家里宽带可以达到10M/s，但是在百度云里面，它把你限速到100k/s，我真的是服。因此，我在这里向大家推荐几个百度网盘小神器，愿能助君一把。</p></blockquote><h4 id="PanDownload"><a href="#PanDownload" class="headerlink" title="PanDownload"></a><strong>PanDownload</strong></h4><ol><li>它没有封号风险，因为你压根都可以不登录你自己的百度账号。</li><li>直接使用分享链接下载，就很方便</li><li>当然你还可以登录你自己的百度账号下载网盘的东西。</li></ol><blockquote><p>链接奉上:<strong><code>http://pandownload.com/</code></strong></p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/11019384-fef66c8f19322216.jpg?imageMogr2/auto-orient/strip" alt="pandownload操作"></p><h4 id="速盘"><a href="#速盘" class="headerlink" title="速盘"></a><strong>速盘</strong></h4><ol><li>免下载，免登陆，和第一款软件相似</li><li>自带搜索资源功能，具体功能自己实现吧</li></ol><blockquote><p>链接奉上：<strong><code>https://www.speedpan.com/</code></strong></p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/11019384-b7a8f498d124a45f.jpg?imageMogr2/auto-orient/strip" alt="速盘操作"></p><h4 id="proxyee-Dowm"><a href="#proxyee-Dowm" class="headerlink" title="proxyee-Dowm"></a><strong>proxyee-Dowm</strong></h4><ol><li>它是一个谷歌浏览器的插件，非常好用</li><li>可以在线解压文件</li></ol><blockquote><p>链接奉上：<strong><code>https://github.com/proxyee-down-org/proxyee-down</code></strong></p></blockquote><p><strong>安装步骤</strong></p><ul><li>先点击安装</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-b39350732200ea17.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="proxyee-Dowm"></p><ul><li>再点击“是”，用来安装证书</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-27bda737e590e3a7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="要点击“是”"></p><ul><li>点击安装，再点击左上角的全局代理</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-8b6efd7c621c2a9d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="安装"></p><p><img src="http://upload-images.jianshu.io/upload_images/11019384-0e850df7af37f790.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="全局代理"></p><ul><li>在打开上述全局代理之后，随便打开一个百度云链接，都会多出现一个【pd下载】，直接点击直链下载即可。会满速下载的哦</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/11019384-23706c3dd136ed14.jpg?imageMogr2/auto-orient/strip" alt="满速下载哦"></p><hr><p><code>本文的三款百度网盘神器，小编体验良好，可以摆脱百度网盘超级会员了。</code>本文所用的部分图片源于公众号“资源库爱分享”，有侵权请联系我删除。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>java web 基础，报错：java.lang.NullPointerException: inStream parameter is null</p></blockquote><p>注意：<br>maven 下的配置文件应该放到 resorces 下，也就是需要将druid.properties 放到 resources 目录下</p><p>问题：<br>该错误的原因是，读取不到 properties 配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream(&quot;/druid.properties&quot;);</span><br></pre></td></tr></table></figure></p><p>这是默认写法，应改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream(&quot;druid.properties&quot;);</span><br></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;我们来介绍几款不会封号的百度网盘小神器&lt;/p&gt;
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;java web 基础，报错：java.lang.NullPointerException: inStream parameter is null&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意：&lt;br&gt;maven 下的配置文件应该放到 resor
+      
     
     </summary>
     
-      <category term="私人干货" scheme="http://zengbolin.github.io/categories/%E7%A7%81%E4%BA%BA%E5%B9%B2%E8%B4%A7/"/>
-    
-    
-      <category term="下载" scheme="http://zengbolin.github.io/tags/%E4%B8%8B%E8%BD%BD/"/>
-    
-      <category term="软件" scheme="http://zengbolin.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
