@@ -2115,7 +2115,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4fffff;
+  background: #c17aff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3214,8 +3214,8 @@ pre {
   border: 1px solid #d6d6d6;
 }
 * {
-  cursor: url("https://ws2.sinaimg.cn/large/8a973ec5ly1g21cq3ynz9j200w00wjr5.jpg"), auto !important;
+  cursor: url("https://ae06.alicdn.com/kf/H769c262613a94871b875f564df8d424bw.png"), auto !important;
 }
 :active {
-  cursor: url("https://ws2.sinaimg.cn/large/8a973ec5ly1g21cq3ynz9j200w00wjr5.jpg"), auto !important;
+  cursor: url("hhttps://ae06.alicdn.com/kf/H769c262613a94871b875f564df8d424bw.png"), auto !important;
 }

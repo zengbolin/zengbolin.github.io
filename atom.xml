@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://zengbolin.github.io/"/>
-  <updated>2020-07-20T03:44:03.646Z</updated>
+  <updated>2020-05-16T01:42:25.766Z</updated>
   <id>http://zengbolin.github.io/</id>
   
   <author>
@@ -15,403 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F/"/>
-    <id>http://zengbolin.github.io/2020/07/25/远程调用方式/</id>
-    <published>2020-07-25T04:51:19.104Z</published>
-    <updated>2020-07-20T03:44:03.646Z</updated>
-    
-    <content type="html"><![CDATA[<p>常见的远程调用方式有以下2种：</p><ul><li><p>RPC：Remote Produce Call远程过程调用，类似的还有RMI。自定义数据格式，基于原生TCP通信，速度快，效率高。早期的webservice，现在热门的dubbo，都是RPC的典型代表</p></li><li><p>Http：http其实是一种网络传输协议，基于TCP，规定了数据传输的格式。现在客户端浏览器与服务端通信基本都是采用Http协议，也可以用来进行远程服务调用。缺点是消息封装臃肿，优势是对服务的提供和调用方没有任何技术限定，自由灵活，更符合微服务理念。</p><p>  现在热门的Rest风格，就可以通过http协议来实现。</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;常见的远程调用方式有以下2种：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;RPC：Remote Produce Call远程过程调用，类似的还有RMI。自定义数据格式，基于原生TCP通信，速度快，效率高。早期的webservice，现在热门的dubbo，都是RPC的典型代表&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/PV%E4%B8%8EUV/"/>
-    <id>http://zengbolin.github.io/2020/07/25/PV与UV/</id>
-    <published>2020-07-25T04:51:19.095Z</published>
-    <updated>2020-07-22T01:46:26.712Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><p>PV：(page view)，即页面浏览量；</p><p>  用户每1次对网站中的每个网页访问均被记录1次。用户对同一页面的多次访问，访问量累计</p></li><li><p>UV：(unique visitor)，独立访客</p><p>  指访问某个站点或点击某条新闻的不同IP地址的人数。在同一天内，uv只记录第一次进入网站的具有独立IP的访问者，在同一天内再次访问该网站则不计数。</p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;PV：(page view)，即页面浏览量；&lt;/p&gt;
-&lt;p&gt;  用户每1次对网站中的每个网页访问均被记录1次。用户对同一页面的多次访问，访问量累计&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;UV：(unique visitor)，独立访客&lt;/p&gt;
-&lt;p&gt;  指访问
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
-    <id>http://zengbolin.github.io/2020/07/25/跨域问题/</id>
-    <published>2020-07-25T04:51:19.086Z</published>
-    <updated>2020-07-24T01:46:42.908Z</updated>
-    
-    <content type="html"><![CDATA[<p>跨域：浏览器对于javascript的同源策略的限制 。</p><p>以下情况都属于跨域：</p><table><thead><tr><th>跨域原因说明</th><th>示例</th></tr></thead><tbody><tr><td>域名不同</td><td><code>www.jd.com</code> 与 <code>www.taobao.com</code></td></tr><tr><td>域名相同，端口不同</td><td><code>www.jd.com:8080</code> 与 <code>www.jd.com:8081</code></td></tr><tr><td>二级域名不同</td><td><code>item.jd.com</code> 与 <code>miaosha.jd.com</code></td></tr></tbody></table><p>如果<strong>域名和端口都相同，但是请求路径不同</strong>，不属于跨域，如：</p><p><code>www.jd.com/item</code> </p><p><code>www.jd.com/goods</code></p><p>http和https也属于跨域</p><p><strong>目前比较常用的跨域解决方案有3种：</strong></p><ul><li><p>Jsonp</p><p>  最早的解决方案，利用script标签可以跨域的原理实现。</p><p>  限制：</p><ul><li>需要服务的支持</li><li>只能发起GET请求</li></ul></li><li><p>nginx反向代理</p><p>  思路是：利用nginx把跨域反向代理为不跨域，支持各种请求方式</p><p>  缺点：需要在nginx进行额外配置，语义不清晰 </p></li><li><p>CORS</p><p>  规范化的跨域请求解决方案，安全可靠。</p><p>  优势：</p><ul><li>在服务端进行控制是否允许跨域，可自定义规则</li><li><p>支持各种请求方式</p><p>缺点：</p></li><li><p>会产生额外的请求</p></li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;跨域：浏览器对于javascript的同源策略的限制 。&lt;/p&gt;
-&lt;p&gt;以下情况都属于跨域：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;跨域原因说明&lt;/th&gt;
-&lt;th&gt;示例&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;域名不同&lt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/SQL%E8%AF%AD%E6%B3%95where%E4%B8%8Ehaving%E5%8C%BA%E5%88%AB/"/>
-    <id>http://zengbolin.github.io/2020/07/25/SQL语法where与having区别/</id>
-    <published>2020-07-25T04:51:19.077Z</published>
-    <updated>2020-04-12T01:34:35.378Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>简单记录where和having关键字的区别</p></blockquote><ol><li>where在分组之前进行限定，如果不满足条件，则不参与分组。having在分组之后进行限定，如果不满足结果，则不会被查询出来。</li><li>where后不可以跟聚合函数，having可以进行聚合函数的判断。</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;简单记录where和having关键字的区别&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;where在分组之前进行限定，如果不满足条件，则不参与分组。having在分组之后进行限定，如果不满足结果，则不会被查询出来。&lt;/li&gt;
-&lt;li&gt;w
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F/"/>
-    <id>http://zengbolin.github.io/2020/07/25/数据库设计范式/</id>
-    <published>2020-07-25T04:51:19.045Z</published>
-    <updated>2020-04-12T14:43:09.011Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="数据库设计的范式"><a href="#数据库设计的范式" class="headerlink" title="数据库设计的范式"></a>数据库设计的范式</h4><ul><li><p>概念: 设计关系数据库时，遵从不同的规范要求，设计出合理的关系型数据库，这些不同的规范要求被称为不同的范式，各种范式呈递次规范，越高的范式数据库冗余越小。(必须先遵循前面所有范式要求)</p></li><li><p>分类:</p><ol><li>第一范式(1NF):<strong>每一列都是不可分割的原子数据项。(只能是单列)</strong></li><li>第二范式(2NF):<strong>在1NF的基础上，非码属性必须完全依赖于候选码（在1NF基础上消除非主属性对主码的部分函数依赖）</strong></li></ol><ul><li>几个概念:<ol><li>函数依赖: A–&gt;B,如果通过A属性(属性组)的值，可以确定唯一B属性的值。则称B依赖于A。</li><li>完全函数依赖：A–&gt;B,如果A是一个属性组，则B属性值的确定需要依赖A属性组中所有的属性值。</li><li>部分函数依赖：A–&gt;B,如果A是一个属性组，则B属性值的确定需要依赖A属性组中某一些值即可。</li><li>传递函数依赖：A–&gt;B,B–&gt;C。如果通过A属性(属性组)的值，可以确定唯一B属性的值，在通过B属性(属性组)的值可以确定唯一C属性的值，就为C传递函数依赖于A。</li><li>码：如果在一张表中，一个属性或属性组，被其他所有属性所完全依赖，则称这个属性(属性组)为该表的码<ul><li>主属性: 码属性组中的所有属性</li><li>非主属性: 除过码属性组的属性</li></ul></li></ol></li></ul><ol start="3"><li><strong>第三范式(3NF):在2NF基础上，任何非主属性不依赖于其它非主属性（在2NF基础上消除传递依赖）</strong></li></ol></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;数据库设计的范式&quot;&gt;&lt;a href=&quot;#数据库设计的范式&quot; class=&quot;headerlink&quot; title=&quot;数据库设计的范式&quot;&gt;&lt;/a&gt;数据库设计的范式&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;概念: 设计关系数据库时，遵从不同的规范要求，设计出合理的关系型数据库，这
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/%E6%97%A0%E6%A0%87%E9%A2%98Markdown/"/>
-    <id>http://zengbolin.github.io/2020/07/25/无标题Markdown/</id>
-    <published>2020-07-25T04:51:19.037Z</published>
-    <updated>2020-04-13T13:49:57.118Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E7%BA%BF%E5%88%B7USB3.0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://zengbolin.github.io/2020/07/25/小米手机线刷USB3.0的问题/</id>
-    <published>2020-07-25T04:51:19.003Z</published>
-    <updated>2020-04-13T15:34:25.373Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>使用小米线刷工具线刷我自己的小米六，突然发现进度条时间一直增加，而且刷不进去。然后我就知道不行了。经过度娘，最终发现是USB3.0的问题。以下就是解决办法。</p></blockquote><p>问题:<br><img src="https://tvax2.sinaimg.cn/large/8a973ec5gy1gdsey0e5o3j21110evmxl.jpg" alt="线刷问题"></p><p>解决办法1: 换电脑，将数据线插入USB2.0接口<br>解决办法2: 复制以下代码，新建txt文件粘贴进去，然后修改后缀名为bat。右键以管理员权限运行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;osvc&quot; /t REG_BINARY /d &quot;0000&quot; /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;SkipContainerIdQuery&quot; /t REG_BINARY /d &quot;01000000&quot; /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;SkipBOSDescriptorQuery&quot; /t REG_BINARY /d &quot;01000000&quot; /f</span><br><span class="line"> </span><br><span class="line">pause</span><br></pre></td></tr></table></figure></p><p>还有还原方法: 打开注册表，删除新增的注册表。打开搜索，搜索regedit。搜索HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\，并删除以下三个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\osvc</span><br><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\SkipContainerIdQuery</span><br><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\SkipBOSDescriptorQuery</span><br></pre></td></tr></table></figure></p><p>最后搞定问题:<br><img src="https://tvax2.sinaimg.cn/large/8a973ec5gy1gdsf2dyyx7j21110evt91.jpg" alt="搞定问题"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;使用小米线刷工具线刷我自己的小米六，突然发现进度条时间一直增加，而且刷不进去。然后我就知道不行了。经过度娘，最终发现是USB3.0的问题。以下就是解决办法。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;问题:&lt;br&gt;&lt;img src=&quot;https:/
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E7%9A%84%E5%9B%9B%E5%A4%A7%E7%89%B9%E5%BE%81/"/>
-    <id>http://zengbolin.github.io/2020/07/25/数据库事务的四大特征/</id>
-    <published>2020-07-25T04:51:18.994Z</published>
-    <updated>2020-04-14T02:04:55.298Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>事务的四大特征:</strong></p><ol><li>原子性: 是不可分割的最小操作单位，要么同时成功，要么同时失败。</li><li>持久性: 当事务提交或回滚后，数据库会持久化保存数据。</li><li>隔离性: 多个事务之间，相互独立。</li><li>一致性: 事务操作前后，数据总量不变</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;strong&gt;事务的四大特征:&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;原子性: 是不可分割的最小操作单位，要么同时成功，要么同时失败。&lt;/li&gt;
-&lt;li&gt;持久性: 当事务提交或回滚后，数据库会持久化保存数据。&lt;/li&gt;
-&lt;li&gt;隔离性: 多个事务之间，相互独立。&lt;/
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E5%AF%86%E7%A0%81/"/>
-    <id>http://zengbolin.github.io/2020/07/25/修改数据库管理员密码/</id>
-    <published>2020-07-25T04:51:18.984Z</published>
-    <updated>2020-04-14T05:45:15.358Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>当忘记了root的密码的时候，就需要修改其密码</p></blockquote><ol><li><p>打开cmd，使用管理员运行。输入<figure class="highlight plain"><figcaption><span>stop mtsql```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 使用无验证方式启动mysql服务：```mysqld --skip-grant-tables</span><br></pre></td></tr></table></figure></p></li><li><p>打开新的命令行窗口,直接输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4. 开始修改管理员密码，```use mysql;```--&gt;```update user set password = password(&apos;新密码&apos;) where user = &apos;root&apos;</span><br></pre></td></tr></table></figure></p></li><li><p>关闭cmd，打开任务管理器结束mysqld.exe进程，ok完成修改。</p></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;当忘记了root的密码的时候，就需要修改其密码&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;打开cmd，使用管理员运行。输入&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;stop
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/JDBC%E7%9A%84%E6%9B%B4%E6%96%B0sql%E7%9A%84%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://zengbolin.github.io/2020/07/25/JDBC的更新sql的对象/</id>
-    <published>2020-07-25T04:51:18.974Z</published>
-    <updated>2020-04-14T09:54:48.715Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>记下每个方法所针对的对象</p></blockquote><ol><li><code>int executeUpdate(String sql)</code>: 执行DML语句(insert、update、delete)、DDL(create,alter,drop)语句.</li><li><code>ResultSet executeQuery(String sql)</code>: 执行DQL语句(select).</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;记下每个方法所针对的对象&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;int executeUpdate(String sql)&lt;/code&gt;: 执行DML语句(insert、update、delete)、DDL(create
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/get%E5%92%8Cpost%E6%8F%90%E4%BA%A4%E6%96%B9%E5%BC%8F%E5%8C%BA%E5%88%AB/"/>
-    <id>http://zengbolin.github.io/2020/07/25/get和post提交方式区别/</id>
-    <published>2020-07-25T04:51:18.964Z</published>
-    <updated>2020-04-18T03:21:22.867Z</updated>
-    
-    <content type="html"><![CDATA[<p>get:</p><pre><code>1. 请求参数会在地址栏中显示，会封装在请求行中2. 请求参数长度是有限制的3. 不太安全</code></pre><p>post:</p><pre><code>1. 请求参数不会在地址栏中显示，会封装在请求体中。2. 请求参数的长度没有限制3. 比较安全</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;get:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1. 请求参数会在地址栏中显示，会封装在请求行中
-2. 请求参数长度是有限制的
-3. 不太安全
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;post:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1. 请求参数不会在地址栏中显示，会封装在请求体中。
-2. 请求
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86--%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E4%BD%93%E7%B3%BB/"/>
-    <id>http://zengbolin.github.io/2020/07/25/计算机组成原理--冯诺依曼体系/</id>
-    <published>2020-07-25T04:51:18.930Z</published>
-    <updated>2020-05-04T01:23:56.456Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="冯诺依曼体系"><a href="#冯诺依曼体系" class="headerlink" title="冯诺依曼体系"></a>冯诺依曼体系</h4><h5 id="概念-将程序指令和数据一起存储的计算机设计概念结构-存储程序指令设计通用电路-。"><a href="#概念-将程序指令和数据一起存储的计算机设计概念结构-存储程序指令设计通用电路-。" class="headerlink" title="概念: 将程序指令和数据一起存储的计算机设计概念结构(存储程序指令设计通用电路)。"></a>概念: 将程序指令和数据一起存储的计算机设计概念结构(存储程序指令设计通用电路)。</h5><h5 id="出现原因："><a href="#出现原因：" class="headerlink" title="出现原因："></a>出现原因：</h5><ul><li>早期计算机仅含固定用途程序</li><li>改变程序得更改结构，重新设计电路<h5 id="体系要求："><a href="#体系要求：" class="headerlink" title="体系要求："></a>体系要求：</h5></li><li>必须有一个存储器</li><li>必须有一个控制器</li><li>必须有一个运算器</li><li>必须有输入设备</li><li>必须有输出设备<h5 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h5></li><li>能够把需要的程序和数据送到计算机中</li><li>能够长期记忆程序、数据、中间结果及最终运算结果的能力</li><li>能够具备算术、逻辑运算和数据传送等数据加工处理的能力</li><li>能够按照要求将处理结果输出给用户<h5 id="早期结构体系："><a href="#早期结构体系：" class="headerlink" title="早期结构体系："></a>早期结构体系：</h5><img src="https://i.loli.net/2020/05/04/YKyqowpWCQiTIPl.png" alt="结构"><blockquote><p>冯诺依曼瓶颈问题: CPU和存储器速率之间的问题无法调和。CPU经常空转等待数据传输。</p></blockquote><h5 id="现代计算机的结构"><a href="#现代计算机的结构" class="headerlink" title="现代计算机的结构"></a>现代计算机的结构</h5><img src="https://i.loli.net/2020/05/04/U6zE7XKGRunOcDp.png" alt="image.png"><blockquote><p>为了解决CPU与存储设备之间的性能差异问题，以存储器为核心。</p></blockquote></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;冯诺依曼体系&quot;&gt;&lt;a href=&quot;#冯诺依曼体系&quot; class=&quot;headerlink&quot; title=&quot;冯诺依曼体系&quot;&gt;&lt;/a&gt;冯诺依曼体系&lt;/h4&gt;&lt;h5 id=&quot;概念-将程序指令和数据一起存储的计算机设计概念结构-存储程序指令设计通用电路-。&quot;&gt;&lt;a href
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B1%82%E6%AC%A1%E5%92%8C%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-    <id>http://zengbolin.github.io/2020/07/25/计算机层次和编程语言/</id>
-    <published>2020-07-25T04:51:18.919Z</published>
-    <updated>2020-05-04T01:57:49.973Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="程序翻译和程序解释"><a href="#程序翻译和程序解释" class="headerlink" title="程序翻译和程序解释"></a>程序翻译和程序解释</h4><ul><li>计算机执行得指令都是L0</li><li>翻译过程生成新的L0程序，解释过程不生成新的L0程序</li><li>解释过程由L0编写的解释器去解释L1程序<h5 id="常见语言分类"><a href="#常见语言分类" class="headerlink" title="常见语言分类:"></a>常见语言分类:</h5></li><li>程序翻译: C/C++、Object-C、Golang</li><li>程序解释： Python、PHP、Javascript</li><li>翻译+解释: Java、C#<h5 id="HZ-赫兹-每秒中的周期性变动重复次数的计量-2GHz-2-1000-3-Hz-每秒20亿次-。"><a href="#HZ-赫兹-每秒中的周期性变动重复次数的计量-2GHz-2-1000-3-Hz-每秒20亿次-。" class="headerlink" title="HZ(赫兹):每秒中的周期性变动重复次数的计量(2GHz = 2 * 1000^3 Hz = 每秒20亿次)。"></a>HZ(赫兹):每秒中的周期性变动重复次数的计量(2GHz = 2 * 1000^3 Hz = 每秒20亿次)。</h5></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h4 id=&quot;程序翻译和程序解释&quot;&gt;&lt;a href=&quot;#程序翻译和程序解释&quot; class=&quot;headerlink&quot; title=&quot;程序翻译和程序解释&quot;&gt;&lt;/a&gt;程序翻译和程序解释&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;计算机执行得指令都是L0&lt;/li&gt;
-&lt;li&gt;翻译过程生成新的L0程序，解
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/HTTP%E5%8D%8F%E8%AE%AE/"/>
-    <id>http://zengbolin.github.io/2020/07/25/HTTP协议/</id>
-    <published>2020-07-25T04:51:18.899Z</published>
-    <updated>2020-05-13T07:49:51.802Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><p>概念：Hyper Text Transfer Protocol 超文本传输协议</p><ul><li>传输协议：定义了，客户端和服务器端通信时，发送数据的格式</li><li><p>特点：</p><ol><li>基于TCP/IP的高级协议</li><li>默认端口号:80</li><li>基于请求/响应模型的:一次请求对应一次响应</li><li>无状态的：每次请求之间相互独立，不能交互数据</li></ol></li><li><p>历史版本：</p><ul><li>1.0：每一次请求响应都会建立新的连接</li><li>1.1：复用连接</li></ul></li></ul></li><li><p>请求消息数据格式</p><ol><li><p>请求行<br> 请求方式 请求url 请求协议/版本<br> GET /login.html    HTTP/1.1</p><ul><li>请求方式：<ul><li>HTTP协议有7中请求方式，常用的有2种<ul><li>GET：<ol><li>请求参数在请求行中，在url后。</li><li>请求的url长度有限制的</li><li>不太安全</li></ol></li><li>POST：<ol><li>请求参数在请求体中</li><li>请求的url长度没有限制的</li><li>相对安全</li></ol></li></ul></li></ul></li></ul></li><li><p>请求头：客户端浏览器告诉服务器一些信息<br> 请求头名称: 请求头值</p><ul><li><p>常见的请求头：</p><ol><li><p>User-Agent：浏览器告诉服务器，我访问你使用的浏览器版本信息</p><ul><li>可以在服务器端获取该头的信息，解决浏览器的兼容性问题</li></ul></li><li><p>Referer：<a href="http://localhost/login.html" target="_blank" rel="noopener">http://localhost/login.html</a></p><ul><li>告诉服务器，我(当前请求)从哪里来？<ul><li>作用：<ol><li>防盗链：</li><li>统计工作：</li></ol></li></ul></li></ul></li></ol></li></ul></li><li>请求空行<br> 空行，就是用于分割POST请求的请求头，和请求体的。</li><li>请求体(正文)：<ul><li>封装POST请求消息的请求参数的</li></ul></li></ol></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;概念：Hyper Text Transfer Protocol 超文本传输协议&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;传输协议：定义了，客户端和服务器端通信时，发送数据的格式&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;特点：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;基于TCP/IP的高级协议&lt;/li
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91%E5%92%8C%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE/"/>
-    <id>http://zengbolin.github.io/2020/07/25/请求转发和共享数据/</id>
-    <published>2020-07-25T04:51:18.887Z</published>
-    <updated>2020-05-15T01:50:07.701Z</updated>
-    
-    <content type="html"><![CDATA[<pre><code> 请求转发：一种在服务器内部的资源跳转方式    1. 步骤：        1. 通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path)        2. 使用RequestDispatcher对象来进行转发：forward(ServletRequest request, ServletResponse response)     2. 特点：        1. 浏览器地址栏路径不发生变化        2. 只能转发到当前服务器内部资源中。        3. 转发是一次请求共享数据：        * 域对象：一个有作用范围的对象，可以在范围内共享数据        * request域：代表一次请求的范围，一般用于请求转发的多个资源中共享数据        * 方法：            1. void setAttribute(String name,Object obj):存储数据            2. Object getAttitude(String name):通过键获取值            3. void removeAttribute(String name):通过键移除键值对</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;pre&gt;&lt;code&gt; 请求转发：一种在服务器内部的资源跳转方式
-    1. 步骤：
-        1. 通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path)
-        2. 使
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/HTTP%E5%93%8D%E5%BA%94/"/>
-    <id>http://zengbolin.github.io/2020/07/25/HTTP响应/</id>
-    <published>2020-07-25T04:51:18.858Z</published>
-    <updated>2020-05-15T07:53:07.557Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>请求消息：客户端发送给服务器端的数据<ul><li>数据格式：<ol><li>请求行</li><li>请求头</li><li>请求空行</li><li>请求体</li></ol></li></ul></li><li>响应消息：服务器端发送给客户端的数据<ul><li>数据格式：<ol><li>响应行<ol><li>组成：协议/版本 响应状态码 状态码描述</li><li>响应状态码：服务器告诉客户端浏览器本次请求和响应的一个状态。<ol><li>状态码都是3位数字 </li><li>分类：<ol><li>1xx：服务器就收客户端消息，但没有接受完成，等待一段时间后，发送1xx多状态码</li><li>2xx：成功。代表：200</li><li>3xx：重定向。代表：302(重定向)，304(访问缓存)</li><li>4xx：客户端错误。<ul><li>代表：<ul><li>404（请求路径没有对应的资源） </li><li>405：请求方式没有对应的doXxx方法</li></ul></li></ul></li><li>5xx：服务器端错误。代表：500(服务器内部出现异常)</li></ol></li></ol></li></ol></li></ol></li></ul></li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ol&gt;
-&lt;li&gt;请求消息：客户端发送给服务器端的数据&lt;ul&gt;
-&lt;li&gt;数据格式：&lt;ol&gt;
-&lt;li&gt;请求行&lt;/li&gt;
-&lt;li&gt;请求头&lt;/li&gt;
-&lt;li&gt;请求空行&lt;/li&gt;
-&lt;li&gt;请求体&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;响应消息：服务器端发送给客
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title></title>
@@ -442,36 +45,103 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/session%E4%B8%8ECookie%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://zengbolin.github.io/2020/07/25/session与Cookie的区别/</id>
-    <published>2020-07-25T04:51:18.840Z</published>
-    <updated>2020-05-19T13:20:00.604Z</updated>
+    <title>Spring框架中bean的生命周期</title>
+    <link href="http://zengbolin.github.io/2020/07/18/Spring%E6%A1%86%E6%9E%B6%E4%B8%ADbean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    <id>http://zengbolin.github.io/2020/07/18/Spring框架中bean的生命周期/</id>
+    <published>2020-07-18T11:21:43.000Z</published>
+    <updated>2020-07-25T05:51:40.318Z</updated>
     
-    <content type="html"><![CDATA[<pre><code>session与Cookie的区别：    1. session存储数据在服务器端，Cookie在客户端    2. session没有数据大小限制，Cookie有    3. session数据安全，Cookie相对于不安全</code></pre>]]></content>
+    <content type="html"><![CDATA[<h5 id="单例对象"><a href="#单例对象" class="headerlink" title="单例对象"></a>单例对象</h5><pre><code>* 出生: 当容器创建时对象出生* 活着: 只要容器还在，对象就一直活着* 死亡: 容器销毁，对象消亡* 总结: 单例对象的生命周期和容器相同</code></pre><h5 id="多例对象"><a href="#多例对象" class="headerlink" title="多例对象"></a>多例对象</h5><pre><code>* 出生: 当我们使用对象时spring框架为我们创建* 活着: 对象只要是在使用过程就一直活着* 死亡: 当对象长时间不用，且没有别的对象引用时，由Java的垃圾回收机制回收</code></pre>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;pre&gt;&lt;code&gt;session与Cookie的区别：
-    1. session存储数据在服务器端，Cookie在客户端
-    2. session没有数据大小限制，Cookie有
-    3. session数据安全，Cookie相对于不安全
-&lt;/code&gt;&lt;/pre
+        &lt;h5 id=&quot;单例对象&quot;&gt;&lt;a href=&quot;#单例对象&quot; class=&quot;headerlink&quot; title=&quot;单例对象&quot;&gt;&lt;/a&gt;单例对象&lt;/h5&gt;&lt;pre&gt;&lt;code&gt;* 出生: 当容器创建时对象出生
+* 活着: 只要容器还在，对象就一直活着
+* 死亡: 容器销毁，对象消亡
+
       
     
     </summary>
     
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="Spring" scheme="http://zengbolin.github.io/tags/Spring/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/redis%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/"/>
-    <id>http://zengbolin.github.io/2020/07/25/redis存储结构/</id>
-    <published>2020-07-25T04:51:18.832Z</published>
-    <updated>2020-06-07T15:07:13.530Z</updated>
+    <title>SQL语法where与having区别</title>
+    <link href="http://zengbolin.github.io/2020/06/20/SQL%E8%AF%AD%E6%B3%95where%E4%B8%8Ehaving%E5%8C%BA%E5%88%AB/"/>
+    <id>http://zengbolin.github.io/2020/06/20/SQL语法where与having区别/</id>
+    <published>2020-06-20T10:21:43.000Z</published>
+    <updated>2020-07-25T05:42:58.945Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>简单记录where和having关键字的区别</p></blockquote><ol><li>where在分组之前进行限定，如果不满足条件，则不参与分组。having在分组之后进行限定，如果不满足结果，则不会被查询出来。</li><li>where后不可以跟聚合函数，having可以进行聚合函数的判断。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;简单记录where和having关键字的区别&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;where在分组之前进行限定，如果不满足条件，则不参与分组。having在分组之后进行限定，如果不满足结果，则不会被查询出来。&lt;/li&gt;
+&lt;li&gt;w
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="数据库" scheme="http://zengbolin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PV与UV</title>
+    <link href="http://zengbolin.github.io/2020/06/18/PV%E4%B8%8EUV/"/>
+    <id>http://zengbolin.github.io/2020/06/18/PV与UV/</id>
+    <published>2020-06-18T04:21:43.000Z</published>
+    <updated>2020-07-25T05:38:27.336Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p>PV：(page view)，即页面浏览量；</p><p>  用户每1次对网站中的每个网页访问均被记录1次。用户对同一页面的多次访问，访问量累计</p></li><li><p>UV：(unique visitor)，独立访客</p><p>  指访问某个站点或点击某条新闻的不同IP地址的人数。在同一天内，uv只记录第一次进入网站的具有独立IP的访问者，在同一天内再次访问该网站则不计数。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;PV：(page view)，即页面浏览量；&lt;/p&gt;
+&lt;p&gt;  用户每1次对网站中的每个网页访问均被记录1次。用户对同一页面的多次访问，访问量累计&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;UV：(unique visitor)，独立访客&lt;/p&gt;
+&lt;p&gt;  指访问
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>redis存储结构</title>
+    <link href="http://zengbolin.github.io/2020/06/17/redis%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/"/>
+    <id>http://zengbolin.github.io/2020/06/17/redis存储结构/</id>
+    <published>2020-06-17T11:21:43.000Z</published>
+    <updated>2020-07-25T05:51:14.816Z</updated>
     
     <content type="html"><![CDATA[<h5 id="redis存储的是：key-value格式的数据，其中key都是字符串，value有5种不同的数据结构"><a href="#redis存储的是：key-value格式的数据，其中key都是字符串，value有5种不同的数据结构" class="headerlink" title="redis存储的是：key,value格式的数据，其中key都是字符串，value有5种不同的数据结构"></a>redis存储的是：key,value格式的数据，其中key都是字符串，value有5种不同的数据结构</h5><ul><li>value的数据结构：<br>  1) 字符串类型 string<br>  2) 哈希类型 hash ： map格式<br>  3) 列表类型 list ： linkedlist格式。支持重复元素<br>  4) 集合类型 set  ： 不允许重复元素<br>  5) 有序集合类型 sortedset：不允许重复元素，且元素有顺序</li></ul>]]></content>
     
@@ -484,15 +154,51 @@
     
     </summary>
     
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="数据库" scheme="http://zengbolin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://zengbolin.github.io/2020/07/25/maven%E6%8A%A5%E9%94%99/"/>
-    <id>http://zengbolin.github.io/2020/07/25/maven报错/</id>
-    <published>2020-07-25T04:51:18.815Z</published>
-    <updated>2020-06-12T10:48:19.575Z</updated>
+    <title>远程调用方式</title>
+    <link href="http://zengbolin.github.io/2020/05/20/%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F/"/>
+    <id>http://zengbolin.github.io/2020/05/20/远程调用方式/</id>
+    <published>2020-05-20T03:21:43.000Z</published>
+    <updated>2020-07-25T05:50:00.834Z</updated>
+    
+    <content type="html"><![CDATA[<p>常见的远程调用方式有以下2种：</p><ul><li><p>RPC：Remote Produce Call远程过程调用，类似的还有RMI。自定义数据格式，基于原生TCP通信，速度快，效率高。早期的webservice，现在热门的dubbo，都是RPC的典型代表</p></li><li><p>Http：http其实是一种网络传输协议，基于TCP，规定了数据传输的格式。现在客户端浏览器与服务端通信基本都是采用Http协议，也可以用来进行远程服务调用。缺点是消息封装臃肿，优势是对服务的提供和调用方没有任何技术限定，自由灵活，更符合微服务理念。</p><p>  现在热门的Rest风格，就可以通过http协议来实现。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;常见的远程调用方式有以下2种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;RPC：Remote Produce Call远程过程调用，类似的还有RMI。自定义数据格式，基于原生TCP通信，速度快，效率高。早期的webservice，现在热门的dubbo，都是RPC的典型代表&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="前端" scheme="http://zengbolin.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>maven报错</title>
+    <link href="http://zengbolin.github.io/2020/05/18/maven%E6%8A%A5%E9%94%99/"/>
+    <id>http://zengbolin.github.io/2020/05/18/maven报错/</id>
+    <published>2020-05-18T03:21:43.000Z</published>
+    <updated>2020-07-25T05:50:56.241Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>java web 基础，报错：java.lang.NullPointerException: inStream parameter is null</p></blockquote><p>注意：<br>maven 下的配置文件应该放到 resorces 下，也就是需要将druid.properties 放到 resources 目录下</p><p>问题：<br>该错误的原因是，读取不到 properties 配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream(&quot;/druid.properties&quot;);</span><br></pre></td></tr></table></figure></p><p>这是默认写法，应改为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">InputStream is = JDBCUtils.class.getClassLoader().getResourceAsStream(&quot;druid.properties&quot;);</span><br></pre></td></tr></table></figure></p>]]></content>
     
@@ -508,6 +214,398 @@
     
     </summary>
     
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="maven" scheme="http://zengbolin.github.io/tags/maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>session与Cookie的区别</title>
+    <link href="http://zengbolin.github.io/2020/05/17/session%E4%B8%8ECookie%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://zengbolin.github.io/2020/05/17/session与Cookie的区别/</id>
+    <published>2020-05-17T09:21:43.000Z</published>
+    <updated>2020-07-25T05:41:36.409Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">session与Cookie的区别：</span><br><span class="line">1. session存储数据在服务器端，Cookie在客户端</span><br><span class="line">2. session没有数据大小限制，Cookie有</span><br><span class="line">3. session数据安全，Cookie相对于不安全</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight tex&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP响应</title>
+    <link href="http://zengbolin.github.io/2020/05/15/HTTP%E5%93%8D%E5%BA%94/"/>
+    <id>http://zengbolin.github.io/2020/05/15/HTTP响应/</id>
+    <published>2020-05-15T07:53:43.000Z</published>
+    <updated>2020-07-25T05:50:24.031Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>请求消息：客户端发送给服务器端的数据<ul><li>数据格式：<ol><li>请求行</li><li>请求头</li><li>请求空行</li><li>请求体</li></ol></li></ul></li><li>响应消息：服务器端发送给客户端的数据<ul><li>数据格式：<ol><li>响应行<pre><code>1. 组成：协议/版本 响应状态码 状态码描述    2. 响应状态码：服务器告诉客户端浏览器本次请求和响应的一个状态。    1. 状态码都是3位数字       2. 分类：                1. 1xx：服务器就收客户端消息，但没有接受完成，等待一段时间后，发送1xx多状态码                    2. 2xx：成功。代表：200                        3. 3xx：重定向。代表：302(重定向)，304(访问缓存)                            4. 4xx：客户端错误。      * 代表：                * 404（请求路径没有对应的资源）                     * 405：请求方式没有对应的doXxx方法  5. 5xx：服务器端错误。代表：500(服务器内部出现异常)</code></pre></li></ol></li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;请求消息：客户端发送给服务器端的数据&lt;ul&gt;
+&lt;li&gt;数据格式：&lt;ol&gt;
+&lt;li&gt;请求行&lt;/li&gt;
+&lt;li&gt;请求头&lt;/li&gt;
+&lt;li&gt;请求空行&lt;/li&gt;
+&lt;li&gt;请求体&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;响应消息：服务器端发送给客
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="请求方式" scheme="http://zengbolin.github.io/tags/%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP协议</title>
+    <link href="http://zengbolin.github.io/2020/05/13/HTTP%E5%8D%8F%E8%AE%AE/"/>
+    <id>http://zengbolin.github.io/2020/05/13/HTTP协议/</id>
+    <published>2020-05-13T07:49:43.000Z</published>
+    <updated>2020-07-25T05:50:31.115Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p>概念：Hyper Text Transfer Protocol 超文本传输协议</p><ul><li>传输协议：定义了，客户端和服务器端通信时，发送数据的格式</li><li><p>特点：</p><ol><li>基于TCP/IP的高级协议</li><li>默认端口号:80</li><li>基于请求/响应模型的:一次请求对应一次响应</li><li>无状态的：每次请求之间相互独立，不能交互数据</li></ol></li><li><p>历史版本：</p><ul><li>1.0：每一次请求响应都会建立新的连接</li><li>1.1：复用连接</li></ul></li></ul></li><li><p>请求消息数据格式</p><ol><li><p>请求行<br> 请求方式 请求url 请求协议/版本<br> GET /login.html    HTTP/1.1</p><ul><li>请求方式：<ul><li>HTTP协议有7中请求方式，常用的有2种<ul><li>GET：<ol><li>请求参数在请求行中，在url后。</li><li>请求的url长度有限制的</li><li>不太安全</li></ol></li><li>POST：<ol><li>请求参数在请求体中</li><li>请求的url长度没有限制的</li><li>相对安全</li></ol></li></ul></li></ul></li></ul></li><li><p>请求头：客户端浏览器告诉服务器一些信息<br> 请求头名称: 请求头值</p><ul><li><p>常见的请求头：</p><ol><li><p>User-Agent：浏览器告诉服务器，我访问你使用的浏览器版本信息</p><ul><li>可以在服务器端获取该头的信息，解决浏览器的兼容性问题</li></ul></li><li><p>Referer：<a href="http://localhost/login.html" target="_blank" rel="noopener">http://localhost/login.html</a></p><ul><li>告诉服务器，我(当前请求)从哪里来？<ul><li>作用：<ol><li>防盗链：</li><li>统计工作：</li></ol></li></ul></li></ul></li></ol></li></ul></li><li>请求空行<br> 空行，就是用于分割POST请求的请求头，和请求体的。</li><li>请求体(正文)：<ul><li>封装POST请求消息的请求参数的</li></ul></li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;概念：Hyper Text Transfer Protocol 超文本传输协议&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;传输协议：定义了，客户端和服务器端通信时，发送数据的格式&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;特点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;基于TCP/IP的高级协议&lt;/li
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="请求方式" scheme="http://zengbolin.github.io/tags/%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机组成原理--冯诺依曼体系</title>
+    <link href="http://zengbolin.github.io/2020/04/25/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86--%E5%86%AF%E8%AF%BA%E4%BE%9D%E6%9B%BC%E4%BD%93%E7%B3%BB/"/>
+    <id>http://zengbolin.github.io/2020/04/25/计算机组成原理--冯诺依曼体系/</id>
+    <published>2020-04-25T03:21:43.000Z</published>
+    <updated>2020-07-25T05:44:40.802Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="冯诺依曼体系"><a href="#冯诺依曼体系" class="headerlink" title="冯诺依曼体系"></a>冯诺依曼体系</h4><h5 id="概念-将程序指令和数据一起存储的计算机设计概念结构-存储程序指令设计通用电路-。"><a href="#概念-将程序指令和数据一起存储的计算机设计概念结构-存储程序指令设计通用电路-。" class="headerlink" title="概念: 将程序指令和数据一起存储的计算机设计概念结构(存储程序指令设计通用电路)。"></a>概念: 将程序指令和数据一起存储的计算机设计概念结构(存储程序指令设计通用电路)。</h5><h5 id="出现原因："><a href="#出现原因：" class="headerlink" title="出现原因："></a>出现原因：</h5><ul><li>早期计算机仅含固定用途程序</li><li>改变程序得更改结构，重新设计电路<h5 id="体系要求："><a href="#体系要求：" class="headerlink" title="体系要求："></a>体系要求：</h5></li><li>必须有一个存储器</li><li>必须有一个控制器</li><li>必须有一个运算器</li><li>必须有输入设备</li><li>必须有输出设备<h5 id="功能："><a href="#功能：" class="headerlink" title="功能："></a>功能：</h5></li><li>能够把需要的程序和数据送到计算机中</li><li>能够长期记忆程序、数据、中间结果及最终运算结果的能力</li><li>能够具备算术、逻辑运算和数据传送等数据加工处理的能力</li><li>能够按照要求将处理结果输出给用户<h5 id="早期结构体系："><a href="#早期结构体系：" class="headerlink" title="早期结构体系："></a>早期结构体系：</h5><img src="https://i.loli.net/2020/05/04/YKyqowpWCQiTIPl.png" alt="结构"><blockquote><p>冯诺依曼瓶颈问题: CPU和存储器速率之间的问题无法调和。CPU经常空转等待数据传输。</p></blockquote><h5 id="现代计算机的结构"><a href="#现代计算机的结构" class="headerlink" title="现代计算机的结构"></a>现代计算机的结构</h5><img src="https://i.loli.net/2020/05/04/U6zE7XKGRunOcDp.png" alt="image.png"><blockquote><p>为了解决CPU与存储设备之间的性能差异问题，以存储器为核心。</p></blockquote></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;冯诺依曼体系&quot;&gt;&lt;a href=&quot;#冯诺依曼体系&quot; class=&quot;headerlink&quot; title=&quot;冯诺依曼体系&quot;&gt;&lt;/a&gt;冯诺依曼体系&lt;/h4&gt;&lt;h5 id=&quot;概念-将程序指令和数据一起存储的计算机设计概念结构-存储程序指令设计通用电路-。&quot;&gt;&lt;a href
+      
+    
+    </summary>
+    
+      <category term="计算机组成原理" scheme="http://zengbolin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="计算机组成原理" scheme="http://zengbolin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>请求转发和共享数据</title>
+    <link href="http://zengbolin.github.io/2020/04/20/%E8%AF%B7%E6%B1%82%E8%BD%AC%E5%8F%91%E5%92%8C%E5%85%B1%E4%BA%AB%E6%95%B0%E6%8D%AE/"/>
+    <id>http://zengbolin.github.io/2020/04/20/请求转发和共享数据/</id>
+    <published>2020-04-20T03:21:43.000Z</published>
+    <updated>2020-07-25T05:46:46.404Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> 请求转发：一种在服务器内部的资源跳转方式</span><br><span class="line">1. 步骤：</span><br><span class="line">1. 通过request对象获取请求转发器对象：RequestDispatcher getRequestDispatcher(String path)</span><br><span class="line">2. 使用RequestDispatcher对象来进行转发：forward(ServletRequest request, ServletResponse response) </span><br><span class="line"></span><br><span class="line">2. 特点：</span><br><span class="line">1. 浏览器地址栏路径不发生变化</span><br><span class="line">2. 只能转发到当前服务器内部资源中。</span><br><span class="line">3. 转发是一次请求</span><br><span class="line"></span><br><span class="line">共享数据：</span><br><span class="line">* 域对象：一个有作用范围的对象，可以在范围内共享数据</span><br><span class="line">* request域：代表一次请求的范围，一般用于请求转发的多个资源中共享数据</span><br><span class="line">* 方法：</span><br><span class="line">1. void setAttribute(String name,Object obj):存储数据</span><br><span class="line">2. Object getAttitude(String name):通过键获取值</span><br><span class="line">3. void removeAttribute(String name):通过键移除键值对</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="前端" scheme="http://zengbolin.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机层次和编程语言</title>
+    <link href="http://zengbolin.github.io/2020/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B1%82%E6%AC%A1%E5%92%8C%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    <id>http://zengbolin.github.io/2020/04/20/计算机层次和编程语言/</id>
+    <published>2020-04-20T03:21:43.000Z</published>
+    <updated>2020-07-25T05:44:09.984Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="程序翻译和程序解释"><a href="#程序翻译和程序解释" class="headerlink" title="程序翻译和程序解释"></a>程序翻译和程序解释</h4><ul><li>计算机执行得指令都是L0</li><li>翻译过程生成新的L0程序，解释过程不生成新的L0程序</li><li>解释过程由L0编写的解释器去解释L1程序<h5 id="常见语言分类"><a href="#常见语言分类" class="headerlink" title="常见语言分类:"></a>常见语言分类:</h5></li><li>程序翻译: C/C++、Object-C、Golang</li><li>程序解释： Python、PHP、Javascript</li><li>翻译+解释: Java、C#</li></ul><h5 id="HZ-赫兹-每秒中的周期性变动重复次数的计量-2GHz-2-1000-3-Hz-每秒20亿次-。"><a href="#HZ-赫兹-每秒中的周期性变动重复次数的计量-2GHz-2-1000-3-Hz-每秒20亿次-。" class="headerlink" title="HZ(赫兹):每秒中的周期性变动重复次数的计量(2GHz = 2 * 1000^3 Hz = 每秒20亿次)。"></a>HZ(赫兹):每秒中的周期性变动重复次数的计量(2GHz = 2 * 1000^3 Hz = 每秒20亿次)。</h5>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;程序翻译和程序解释&quot;&gt;&lt;a href=&quot;#程序翻译和程序解释&quot; class=&quot;headerlink&quot; title=&quot;程序翻译和程序解释&quot;&gt;&lt;/a&gt;程序翻译和程序解释&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;计算机执行得指令都是L0&lt;/li&gt;
+&lt;li&gt;翻译过程生成新的L0程序，解
+      
+    
+    </summary>
+    
+      <category term="计算机组成原理" scheme="http://zengbolin.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="计算机组成原理" scheme="http://zengbolin.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>跨域问题</title>
+    <link href="http://zengbolin.github.io/2020/04/20/%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
+    <id>http://zengbolin.github.io/2020/04/20/跨域问题/</id>
+    <published>2020-04-20T03:21:43.000Z</published>
+    <updated>2020-07-25T05:45:50.861Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="跨域：浏览器对于javascript的同源策略的限制-。"><a href="#跨域：浏览器对于javascript的同源策略的限制-。" class="headerlink" title="跨域：浏览器对于javascript的同源策略的限制 。"></a>跨域：浏览器对于javascript的同源策略的限制 。</h4><p>以下情况都属于跨域：</p><table><thead><tr><th>跨域原因说明</th><th>示例</th></tr></thead><tbody><tr><td>域名不同</td><td><code>www.jd.com</code> 与 <code>www.taobao.com</code></td></tr><tr><td>域名相同，端口不同</td><td><code>www.jd.com:8080</code> 与 <code>www.jd.com:8081</code></td></tr><tr><td>二级域名不同</td><td><code>item.jd.com</code> 与 <code>miaosha.jd.com</code></td></tr></tbody></table><p>如果<strong>域名和端口都相同，但是请求路径不同</strong>，不属于跨域，如：</p><p><code>www.jd.com/item</code> </p><p><code>www.jd.com/goods</code></p><p>http和https也属于跨域</p><p><strong>目前比较常用的跨域解决方案有3种：</strong></p><ul><li><p>Jsonp</p><p>  最早的解决方案，利用script标签可以跨域的原理实现。</p><p>  限制：</p><ul><li>需要服务的支持</li><li>只能发起GET请求</li></ul></li><li><p>nginx反向代理</p><p>  思路是：利用nginx把跨域反向代理为不跨域，支持各种请求方式</p><p>  缺点：需要在nginx进行额外配置，语义不清晰 </p></li><li><p>CORS</p><p>  规范化的跨域请求解决方案，安全可靠。</p><p>  优势：</p><ul><li>在服务端进行控制是否允许跨域，可自定义规则</li><li><p>支持各种请求方式</p><p>缺点：</p></li><li><p>会产生额外的请求</p></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;跨域：浏览器对于javascript的同源策略的限制-。&quot;&gt;&lt;a href=&quot;#跨域：浏览器对于javascript的同源策略的限制-。&quot; class=&quot;headerlink&quot; title=&quot;跨域：浏览器对于javascript的同源策略的限制 。&quot;&gt;&lt;/a&gt;跨域
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="前端" scheme="http://zengbolin.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>修改数据库管理员密码</title>
+    <link href="http://zengbolin.github.io/2020/04/20/%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%91%98%E5%AF%86%E7%A0%81/"/>
+    <id>http://zengbolin.github.io/2020/04/20/修改数据库管理员密码/</id>
+    <published>2020-04-20T03:21:43.000Z</published>
+    <updated>2020-07-25T05:49:29.767Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>当忘记了root的密码的时候，就需要修改其密码</p></blockquote><ol><li><p>打开cmd，使用管理员运行。输入<figure class="highlight plain"><figcaption><span>stop mtsql```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 使用无验证方式启动mysql服务：```mysqld --skip-grant-tables</span><br></pre></td></tr></table></figure></p></li><li><p>打开新的命令行窗口,直接输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4. 开始修改管理员密码，```use mysql;```--&gt;```update user set password = password(&apos;新密码&apos;) where user = &apos;root&apos;</span><br></pre></td></tr></table></figure></p></li><li><p>关闭cmd，打开任务管理器结束mysqld.exe进程，ok完成修改。</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;当忘记了root的密码的时候，就需要修改其密码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;打开cmd，使用管理员运行。输入&lt;figure class=&quot;highlight plain&quot;&gt;&lt;figcaption&gt;&lt;span&gt;stop
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="数据库" scheme="http://zengbolin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小米手机线刷USB3.0的问题</title>
+    <link href="http://zengbolin.github.io/2020/04/20/%E5%B0%8F%E7%B1%B3%E6%89%8B%E6%9C%BA%E7%BA%BF%E5%88%B7USB3.0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://zengbolin.github.io/2020/04/20/小米手机线刷USB3.0的问题/</id>
+    <published>2020-04-20T03:21:43.000Z</published>
+    <updated>2020-07-25T05:48:50.710Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>使用小米线刷工具线刷我自己的小米六，突然发现进度条时间一直增加，而且刷不进去。然后我就知道不行了。经过度娘，最终发现是USB3.0的问题。以下就是解决办法。</p></blockquote><p>问题:<br><img src="https://tvax2.sinaimg.cn/large/8a973ec5gy1gdsey0e5o3j21110evmxl.jpg" alt="线刷问题"></p><p>解决办法1: 换电脑，将数据线插入USB2.0接口<br>解决办法2: 复制以下代码，新建txt文件粘贴进去，然后修改后缀名为bat。右键以管理员权限运行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;osvc&quot; /t REG_BINARY /d &quot;0000&quot; /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;SkipContainerIdQuery&quot; /t REG_BINARY /d &quot;01000000&quot; /f</span><br><span class="line">reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100&quot; /v &quot;SkipBOSDescriptorQuery&quot; /t REG_BINARY /d &quot;01000000&quot; /f</span><br><span class="line"> </span><br><span class="line">pause</span><br></pre></td></tr></table></figure></p><p>还有还原方法: 打开注册表，删除新增的注册表。打开搜索，搜索regedit。搜索HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\，并删除以下三个文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\osvc</span><br><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\SkipContainerIdQuery</span><br><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\usbflags\18D1D00D0100\SkipBOSDescriptorQuery</span><br></pre></td></tr></table></figure></p><p>最后搞定问题:<br><img src="https://tvax2.sinaimg.cn/large/8a973ec5gy1gdsf2dyyx7j21110evt91.jpg" alt="搞定问题"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;使用小米线刷工具线刷我自己的小米六，突然发现进度条时间一直增加，而且刷不进去。然后我就知道不行了。经过度娘，最终发现是USB3.0的问题。以下就是解决办法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;问题:&lt;br&gt;&lt;img src=&quot;https:/
+      
+    
+    </summary>
+    
+      <category term="手机问题" scheme="http://zengbolin.github.io/categories/%E6%89%8B%E6%9C%BA%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="手机" scheme="http://zengbolin.github.io/tags/%E6%89%8B%E6%9C%BA/"/>
+    
+      <category term="问题" scheme="http://zengbolin.github.io/tags/%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>get和post提交方式区别</title>
+    <link href="http://zengbolin.github.io/2020/04/18/get%E5%92%8Cpost%E6%8F%90%E4%BA%A4%E6%96%B9%E5%BC%8F%E5%8C%BA%E5%88%AB/"/>
+    <id>http://zengbolin.github.io/2020/04/18/get和post提交方式区别/</id>
+    <published>2020-04-18T03:21:43.000Z</published>
+    <updated>2020-07-25T05:50:17.018Z</updated>
+    
+    <content type="html"><![CDATA[<p>get:</p><pre><code>1. 请求参数会在地址栏中显示，会封装在请求行中2. 请求参数长度是有限制的3. 不太安全</code></pre><p>post:</p><pre><code>1. 请求参数不会在地址栏中显示，会封装在请求体中。2. 请求参数的长度没有限制3. 比较安全</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;get:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 请求参数会在地址栏中显示，会封装在请求行中
+2. 请求参数长度是有限制的
+3. 不太安全
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;post:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 请求参数不会在地址栏中显示，会封装在请求体中。
+2. 请求
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="请求方式" scheme="http://zengbolin.github.io/tags/%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JDBC的更新sql的对象</title>
+    <link href="http://zengbolin.github.io/2020/04/14/JDBC%E7%9A%84%E6%9B%B4%E6%96%B0sql%E7%9A%84%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://zengbolin.github.io/2020/04/14/JDBC的更新sql的对象/</id>
+    <published>2020-04-14T03:21:43.000Z</published>
+    <updated>2020-07-25T05:50:40.217Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>记下每个方法所针对的对象</p></blockquote><ol><li><code>int executeUpdate(String sql)</code>: 执行DML语句(insert、update、delete)、DDL(create,alter,drop)语句.</li><li><code>ResultSet executeQuery(String sql)</code>: 执行DQL语句(select).</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;记下每个方法所针对的对象&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;int executeUpdate(String sql)&lt;/code&gt;: 执行DML语句(insert、update、delete)、DDL(create
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="JDBC" scheme="http://zengbolin.github.io/tags/JDBC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据库设计范式</title>
+    <link href="http://zengbolin.github.io/2020/03/20/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F/"/>
+    <id>http://zengbolin.github.io/2020/03/20/数据库设计范式/</id>
+    <published>2020-03-20T03:21:43.000Z</published>
+    <updated>2020-07-25T05:47:24.504Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="数据库设计的范式"><a href="#数据库设计的范式" class="headerlink" title="数据库设计的范式"></a>数据库设计的范式</h4><ul><li><p>概念: 设计关系数据库时，遵从不同的规范要求，设计出合理的关系型数据库，这些不同的规范要求被称为不同的范式，各种范式呈递次规范，越高的范式数据库冗余越小。(必须先遵循前面所有范式要求)</p></li><li><p>分类:</p><ol><li>第一范式(1NF):<strong>每一列都是不可分割的原子数据项。(只能是单列)</strong></li><li>第二范式(2NF):<strong>在1NF的基础上，非码属性必须完全依赖于候选码（在1NF基础上消除非主属性对主码的部分函数依赖）</strong></li></ol><ul><li>几个概念:<ol><li>函数依赖: A–&gt;B,如果通过A属性(属性组)的值，可以确定唯一B属性的值。则称B依赖于A。</li><li>完全函数依赖：A–&gt;B,如果A是一个属性组，则B属性值的确定需要依赖A属性组中所有的属性值。</li><li>部分函数依赖：A–&gt;B,如果A是一个属性组，则B属性值的确定需要依赖A属性组中某一些值即可。</li><li>传递函数依赖：A–&gt;B,B–&gt;C。如果通过A属性(属性组)的值，可以确定唯一B属性的值，在通过B属性(属性组)的值可以确定唯一C属性的值，就为C传递函数依赖于A。</li><li>码：如果在一张表中，一个属性或属性组，被其他所有属性所完全依赖，则称这个属性(属性组)为该表的码<ul><li>主属性: 码属性组中的所有属性</li><li>非主属性: 除过码属性组的属性</li></ul></li></ol></li></ul><ol start="3"><li><strong>第三范式(3NF):在2NF基础上，任何非主属性不依赖于其它非主属性（在2NF基础上消除传递依赖）</strong></li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;数据库设计的范式&quot;&gt;&lt;a href=&quot;#数据库设计的范式&quot; class=&quot;headerlink&quot; title=&quot;数据库设计的范式&quot;&gt;&lt;/a&gt;数据库设计的范式&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;概念: 设计关系数据库时，遵从不同的规范要求，设计出合理的关系型数据库，这
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="数据库" scheme="http://zengbolin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据库事务的四大特征</title>
+    <link href="http://zengbolin.github.io/2020/03/20/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1%E7%9A%84%E5%9B%9B%E5%A4%A7%E7%89%B9%E5%BE%81/"/>
+    <id>http://zengbolin.github.io/2020/03/20/数据库事务的四大特征/</id>
+    <published>2020-03-20T03:21:43.000Z</published>
+    <updated>2020-07-25T05:48:04.045Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>事务的四大特征:</strong></p><ol><li>原子性: 是不可分割的最小操作单位，要么同时成功，要么同时失败。</li><li>持久性: 当事务提交或回滚后，数据库会持久化保存数据。</li><li>隔离性: 多个事务之间，相互独立。</li><li>一致性: 事务操作前后，数据总量不变</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;事务的四大特征:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;原子性: 是不可分割的最小操作单位，要么同时成功，要么同时失败。&lt;/li&gt;
+&lt;li&gt;持久性: 当事务提交或回滚后，数据库会持久化保存数据。&lt;/li&gt;
+&lt;li&gt;隔离性: 多个事务之间，相互独立。&lt;/
+      
+    
+    </summary>
+    
+      <category term="java开发" scheme="http://zengbolin.github.io/categories/java%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="java" scheme="http://zengbolin.github.io/tags/java/"/>
+    
+      <category term="数据库" scheme="http://zengbolin.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
