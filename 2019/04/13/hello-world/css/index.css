@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background-color: #f3f3f3;
+}
+
+.gf {
+    vertical-align: middle;
+    display: table-cell;
+    text-align-all: center;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
